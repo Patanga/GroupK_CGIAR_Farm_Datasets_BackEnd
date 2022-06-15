@@ -1,6 +1,9 @@
-# API Usage wzj
+# API Usage
 ## data
-
+#### get
+#### post
+#### put
+#### delete
 #
 ## projectData
 #### get
