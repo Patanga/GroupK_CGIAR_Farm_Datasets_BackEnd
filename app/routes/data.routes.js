@@ -5,7 +5,7 @@ module.exports = app => {
   
   // Define REST APIs
   // Retrieve data by dataType
-  router.get("/raw_data/:datatype", data.findDataByDataType);
+  router.get("/raw_data/:datatype", data.findRawDataByDataType);
 
   router.get("/food_security", data.getAllFoodSecurity);
 
