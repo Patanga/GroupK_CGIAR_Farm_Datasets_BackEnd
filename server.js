@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({ limit: "200mb", extended: true }));
 
 
 
-{/* 
+//{/* 
 // 配置tunnel映射 wzj
 const tunnel = require("tunnel-ssh");
 const sshTunnelConfig = {
@@ -87,7 +87,7 @@ app.get("/", (req, res) => {
 
 // Define routes
 require("./app/routes/projectData.routes")(app);
-
+require("./app/routes/data.routes")(app);
 
 
 // Set port, Listen for requests
