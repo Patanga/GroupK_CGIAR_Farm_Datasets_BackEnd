@@ -1,6 +1,7 @@
 const assert = require("assert");
-const processor = require("../app/controllers/dataProcessor.js");
 const dt = require("../data_test/data_test.js");
+const dataList = require("./foodSecurity.test.js").dataList;
+const processor = require("../app/controllers/dataProcessor.js");
 
 const selectKeys = [
   "id_hh",
@@ -18,28 +19,30 @@ const badSeason = processor.foodConsumedBadSeason;
 const lastMonth = processor.foodConsumedLastMonth;
 
 
+const selectedDataList = processor.getSelectedRawData(dt.indicatorDataList, dt.processedDataList);
+
 describe("testProcessor", () => {
-  const rawDataList = processor.getRawData(dt.indicatorDataList, dt.processedDataList);
-  //console.log(rawDataList[3]);
+
   const propFixed3 = [
     ["id_unique", "0ccb14dd3c0262f22a30120f5e65b721"],
+    ["id_country", "Burkina Faso"],
+    ["region", "hauts bassins"],
     ["id_proj", "cir"],
     ["id_form", "bf_cir_2018"],
-    ["id_country", ],
-    ["region", "hauts bassins"]
   ];
   const propAPI3 = [
-    ["api_hfias_status", ],
-    ["api_food_shortage_months", ],
-    ["api_food_shortage_months_num", ],
+    ["api_hfias_status", "moderately_fi"],
+    ["api_food_shortage_months", ["Jan", "Dec"]],
+    ["api_food_shortage_months_num", 2],
     ["api_hdds_good_season", ],
     ["api_hdds_bad_season", ],
   ];
 
   it("test_getDataForAPI", () => {
-    let result = processor.getDataForAPI(rawDataList);
-    console.log(result);
-    console.log(result[3]);
+    console.log(selectedDataList[3]);
+    let result = processor.getDataForAPI(selectedDataList);
+    //console.log(result);
+    //console.log(result[3]);
 
     propFixed3.forEach(prop => {
       assert.equal(result[3][prop[0]], prop[1]);
@@ -47,13 +50,42 @@ describe("testProcessor", () => {
 
   });
 
+});
+
+describe("testHFIAS", () => {
+
+  it("test_getHFIAS", () => {
+    //console.log(dataList);
+    assert.equal(processor.getHFIAS(dataList[0]).api_hfias_status, "moderately_fi");
+    assert.equal(processor.getHFIAS(dataList[1]).api_hfias_status, "severely_fi");
+    assert.equal(processor.getHFIAS(dataList[2]).api_hfias_status, "moderately_fi");
+    assert.equal(processor.getHFIAS(dataList[3]).api_hfias_status, "moderately_fi");
+    assert.equal(processor.getHFIAS(dataList[4]).api_hfias_status, null);
+    assert.equal(processor.getHFIAS(dataList[5]).api_hfias_status, null);
+    assert.equal(processor.getHFIAS(dataList[6]).api_hfias_status, "food_secure");
+    assert.equal(processor.getHFIAS(dataList[7]).api_hfias_status, "food_secure");
+    assert.equal(processor.getHFIAS(dataList[8]).api_hfias_status, "mildly_fi");
+    assert.equal(processor.getHFIAS(dataList[9]).api_hfias_status, "mildly_fi");
+  });
+
+  it("test_isStandardHFIAS", () => {
+    assert.equal(processor.isStandardHFIAS("s"), false);
+    assert.equal(processor.isStandardHFIAS(""), false);
+    assert.equal(processor.isStandardHFIAS(null), false);
+    assert.equal(processor.isStandardHFIAS("moderateLY_FI"), true);
+  });
+
+});
+
+describe("testFoodShortage", () => {
+
   it("test_getFoodShortage", () => {
-    let result0 = processor.getFoodShortage(rawDataList[0]);
+    let result0 = processor.getFoodShortage(selectedDataList[0]);
     //console.log(result0);
     assert.equal(result0["api_food_shortage_months_num"], 2);
     assert.equal(result0["api_food_shortage_months"][0], "Aug");
 
-    let result8 = processor.getFoodShortage(rawDataList[8]);
+    let result8 = processor.getFoodShortage(selectedDataList[8]);
     //console.log(rawDataList[8]);
     assert.equal(result8["api_food_shortage_months_num"], 3);
     assert.equal(result8["api_food_shortage_months"][1], "Jun");
@@ -75,12 +107,12 @@ describe("testProcessor", () => {
 
 });
 
+
 describe("testFilter", () => {
 
-  it("test_getRawData", () => {
-    let resultList = processor.getRawData(dt.indicatorDataList, dt.processedDataList);
-    //console.log(resultList);
-    assert.equal(resultList.length, 65);
+  it("test_getSelectedRawData", () => {
+    //console.log(selectedDataList);
+    assert.equal(selectedDataList.length, 65);
   });
 
   it("test_pick", () => {

@@ -7,7 +7,7 @@ const data = require("../models/data.model.js");
 
 // Retrieve data by condition from the MongoDB database
 // Must have dataType !!
-const getData = async (dataType, project, form) => {
+const getRawData = async (dataType, project, form) => {
   const projectID = project || {$ne: undefined};
   const formID = form || {$ne: undefined};
   let condition = {dataType: dataType, projectID: projectID, formID: formID};
@@ -18,22 +18,23 @@ const getData = async (dataType, project, form) => {
 };
 
 //
-const getRawData = async (project, form) => {
-  const indicatorDataList = await getData("indicator_data", project, form);
-  const processedDataList = await getData("processed_data", project, form);
-  const rawData = dataProcessor.getRawData(indicatorDataList, processedDataList);
-  console.log(rawData.length + ": getRawData"); // wzj
-  return rawData;
+const buildAPIData = async (project, form) => {
+  const indicatorDataList = await getRawData("indicator_data", project, form);
+  const processedDataList = await getRawData("processed_data", project, form);
+  const selectedRawData = dataProcessor.getSelectedRawData(indicatorDataList, processedDataList);
+  const dataForAPI = dataProcessor.getDataForAPI(selectedRawData)
+  console.log(dataForAPI.length + ": APIData"); // wzj
+  return dataForAPI;
 };
 
 
 // Retrieve data by dataType
-exports.findDataByDataType = (req, res) => {
+exports.findRawDataByDataType = (req, res) => {
   const dataType = req.params.datatype;
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
-  getData(dataType, projectID, formID)
+  getRawData(dataType, projectID, formID)
     .then(data => {
       console.log(data.length + ": findDataByDataType"); // wzj
       res.send(data);
@@ -45,11 +46,12 @@ exports.findDataByDataType = (req, res) => {
     });
 };
 
+//
 exports.getAllFoodSecurity = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
-  getRawData(projectID, formID)
+  buildAPIData(projectID, formID)
     .then(data => {
       console.log(data.length); // wzj
       res.send(data);
@@ -66,7 +68,7 @@ exports.findHFIAS = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
-  getData("indicator_data", projectID, formID)
+  buildAPIData(projectID, formID)
     .then(data => {
       console.log(data.length); // wzj
       res.send(foodSecurity.count(data));

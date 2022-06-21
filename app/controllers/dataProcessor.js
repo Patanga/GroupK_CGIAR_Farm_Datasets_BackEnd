@@ -98,6 +98,8 @@ keysOfProcessed = keysOfProcessed.concat(foodConsumedGoodSeason,
 
 let keysOfOmit = [
   "foodshortagetime_months_which",
+  "hfias_status",
+  "fies_score",
 ];
 
 const months = ["jan","feb","mar","apr",
@@ -107,13 +109,20 @@ const months = ["jan","feb","mar","apr",
 
 
 //
-exports.getRawData = (indicatorDataList, processedDataList) => {
+exports.getSelectedRawData = (indicatorDataList, processedDataList) => {
   let dataListOfIndicator = indicatorDataList.map(indicatorData => indicatorData.data);
   let rawDataOfIndicator = dataListOfIndicator.map(data => pickProperties(data, keysOfIndicator));
-  rawDataOfIndicator.sort(funcSortById);
+  let idListOfIndicator = rawDataOfIndicator.map(data => data.id_unique);
 
   let dataListOfProcessed = processedDataList.map(processedData => processedData.data);
   let rawDataOfProcessed = dataListOfProcessed.map(data => pickProperties(data, keysOfProcessed));
+  let idListOfProcessed = rawDataOfProcessed.map(data => data.id_unique);
+
+  // 取id的交集后排序 wzj
+  const intersect = idListOfIndicator.filter(id => idListOfProcessed.includes(id));
+  rawDataOfIndicator = rawDataOfIndicator.filter(data => intersect.includes(data.id_unique));
+  rawDataOfProcessed = rawDataOfProcessed.filter(data => intersect.includes(data.id_unique));
+  rawDataOfIndicator.sort(funcSortById);
   rawDataOfProcessed.sort(funcSortById);
 
   let rawData = rawDataOfProcessed.map((obj, index) => {
@@ -128,15 +137,17 @@ exports.getRawData = (indicatorDataList, processedDataList) => {
 
 
 //
-exports.getDataForAPI = (rawDataList) => {
-  return rawDataList.map(rawDataObj => {
+exports.getDataForAPI = (selectedDataList) => {
+  return selectedDataList.map(selectedDataObj => {
     let newObj = {};
-    Object.assign(newObj, rawDataObj, getFoodShortage(rawDataObj));
+    Object.assign( newObj, selectedDataObj, getFoodShortage(selectedDataObj),
+      getHFIAS(selectedDataObj) );
     return omitProperties(newObj, keysOfOmit);
   });
 };
 
 
+//
 const getFoodShortage = (dataObj) => {
   let monthsStr = dataObj.foodshortagetime_months_which;
   let monthList = [];
@@ -146,10 +157,55 @@ const getFoodShortage = (dataObj) => {
     monthList = monthList.map(month => funcTitleCase(month));
   }
 
-  return {api_food_shortage_months: monthList,
-    api_food_shortage_months_num: monthList.length};
+  return { api_food_shortage_months: monthList,
+    api_food_shortage_months_num: monthList.length };
 };
 exports.getFoodShortage = getFoodShortage; // export for test
+
+const funcTitleCase = (str) => {
+  return str.replace(/^[a-z]/, L => L.toUpperCase());
+};
+exports.funcTitleCase = funcTitleCase; // export for test
+
+
+//
+const getHFIAS = (dataObj) => {
+  let fiesScore = parseInt(dataObj.fies_score);
+  let hfiasTmp = dataObj.hfias_status;
+  let hfiasStatus;
+  if (!isNaN(fiesScore)) {
+    if (fiesScore === 0) {
+      hfiasStatus = "food_secure";
+    } else if (fiesScore === 1) {
+      hfiasStatus = "mildly_fi";
+    } else if (fiesScore >= 2 && fiesScore <= 4) {
+      hfiasStatus = "moderately_fi";
+    } else if (fiesScore > 4) {
+      hfiasStatus = "severely_fi";
+    } else {
+      hfiasStatus = isStandardHFIAS(hfiasTmp) ? hfiasTmp.toLowerCase() : null;
+    }
+  } else {
+    hfiasStatus = isStandardHFIAS(hfiasTmp) ? hfiasTmp.toLowerCase() : null;
+  }
+
+  return { api_hfias_status: hfiasStatus };
+}
+exports.getHFIAS = getHFIAS; // export for test
+
+const isStandardHFIAS = (string) => {
+  if (typeof(string) !== "string") {
+    return false;
+  }
+  const standardHFIAS = [
+    "food_secure",
+    "mildly_fi",
+    "moderately_fi",
+    "severely_fi",
+  ];
+  return standardHFIAS.includes(string.toLowerCase());
+}
+exports.isStandardHFIAS = isStandardHFIAS; // export for test
 
 
 //
@@ -185,7 +241,3 @@ const funcSortById = (a,b) => {
   }
 };
 
-const funcTitleCase = (str) => {
-  return str.replace(/^[a-z]/, L => L.toUpperCase());
-};
-exports.funcTitleCase = funcTitleCase; // export for test

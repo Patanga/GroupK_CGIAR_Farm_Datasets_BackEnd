@@ -1,6 +1,6 @@
 
 // wzj
-exports.count = (indicatorDataList) => {
+exports.count = (DataForAPIList) => {
   function insert(hfiasStatus, treeNode) {
     if (treeNode === null) {
       treeNode = {
@@ -30,8 +30,8 @@ exports.count = (indicatorDataList) => {
   }
 
   let root = null;
-  indicatorDataList.forEach(data => {
-    let hfiasStatus = getHFIAS(data);
+  DataForAPIList.forEach(data => {
+    let hfiasStatus = data.api_hfias_status;
     if(hfiasStatus !== null) {
       root = insert(hfiasStatus, root);
     }
@@ -42,40 +42,3 @@ exports.count = (indicatorDataList) => {
 
 
 
-const getHFIAS = (indicatorData) => {
-  let fiesScore = parseInt(indicatorData.data.fies_score);
-  let hfiasTmp = indicatorData.data.hfias_status;
-  let hfiasStatus;
-  if (!isNaN(fiesScore)) {
-    if (fiesScore === 0) {
-      hfiasStatus = "food_secure";
-    } else if (fiesScore === 1) {
-      hfiasStatus = "mildly_fi";
-    } else if (fiesScore >= 2 && fiesScore <= 4) {
-      hfiasStatus = "moderately_fi";
-    } else if (fiesScore > 4) {
-      hfiasStatus = "severely_fi";
-    } else {
-      hfiasStatus = isStandardHFIAS(hfiasTmp) ? hfiasTmp.toLowerCase() : null;
-    }
-  } else {
-    hfiasStatus = isStandardHFIAS(hfiasTmp) ? hfiasTmp.toLowerCase() : null;
-  }
-
-  return hfiasStatus;
-}
-exports.getHFIAS = getHFIAS; // export for test
-
-const isStandardHFIAS = (string) => {
-  if (typeof(string) !== "string") {
-    return false;
-  }
-  const standardHFIAS = [
-    "food_secure",
-    "mildly_fi",
-    "moderately_fi",
-    "severely_fi",
-  ];
-  return standardHFIAS.includes(string.toLowerCase());
-}
-exports.isStandardHFIAS = isStandardHFIAS; // export for test
