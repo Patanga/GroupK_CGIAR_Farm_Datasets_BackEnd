@@ -1,0 +1,15 @@
+{
+  "name": "rhomis-dashboard-api",
+  "version": "0.0.1",
+  "description": "Rhomis database api for dashboard project",
+  "main": "app.js",
+  "author": "E Yang",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.3.4"
+  }
+}

@@ -1,0 +1,89 @@
+// 0. Preprocess
+    the value in the DB are all string type, parse first
+
+// Stacked Bar Chart
+// 1. Direct from DB
+    id: id_unique
+    income_crops: crop_income_lcu_per_year
+    income_lstk: livestock_income_lcu_per_year
+    income_off_farm: off_farm_income_lcu_per_year
+    consumed_crops: value_crop_consumed_lcu_per_hh_per_year
+    consumed_lstk: value_livestock_products_consumed_lcu_per_hh_per_year
+// 2. Additional data for convertion
+// 2.1. lcu to ppp
+    conversion_rate: currency_conversion_lcu_to_ppp
+// 2.2. per household to per mae
+    mae: hh_size_mae
+// 2.3. per year to per day
+    sample_year_of_collection: year
+// 3. Calculate TVA for every sample and sort
+// 4. Output data structure
+    {
+        id_unique: String
+        income_crops_ppp_per_mae_per_d: Number
+        income_lstk_ppp_per_mae_per_d: Number
+        income_off_farm_ppp_per_mae_per_d: Number
+        consumed_crops_ppp_per_mae_per_d: Number
+        consumed_lstk_ppp_per_mae_per_d: Number
+        tva_ppp_per_mae_per_d: Number
+    }
+
+// Pie Chart
+// Since the record already has the field(total_income_lcu_per_year),
+// we can use this to convert into per hh per mae in ppp
+// But we can also use the data from stacked bar chart to cal the sum
+// 1. Direct from DB
+    id: id_unique
+    total_income: total_income_lcu_per_year
+// 2. Additional data for convertion
+// 2.1. lcu to ppp
+    conversion_rate: currency_conversion_lcu_to_ppp
+// 2.2. per householde to per mae
+    mae: hh_size_mae
+// 2.3. per year to per day
+    sample_year_of_collection: year
+// 3. Calculate sum for every sample
+// 4. Output data structure
+    {
+        total_sample_cnt: Number
+        under_1_usd_cnt: Number
+        _1to1_9_cnt: Number
+        above_1_9_cnt: Number
+    }
+
+// Box and Whisker Plots 
+// 1. Direct from DB
+    id: id_unique
+    income_crops: crop_income_lcu_per_year
+    income_lstk: livestock_income_lcu_per_year
+    income_off_farm: off_farm_income_lcu_per_year
+    consumed_crops: value_crop_consumed_lcu_per_hh_per_year
+    consumed_lstk: value_livestock_products_consumed_lcu_per_hh_per_year
+// 2. Additional data for convertion
+// 2.1. lcu to ppp
+    conversion_rate: currency_conversion_lcu_to_ppp
+// 2.2. per householde to per mae
+    mae: hh_size_mae
+// 3. Calculate
+// 4. Output data structure
+    {
+        income_crops_ppp_per_mae: []
+        income_lstk_ppp_per_mae: []
+        income_off_farm_ppp_per_mae: []
+        consumed_crops_ppp_per_mae: []
+        consumed_lstk_ppp_per_mae: []
+    }
+
+
+
+// Q1: per mae or per person
+// Q2: Box and whisker plots, is anual value per mae/person or per household
+// Q3: invalid record, such as 
+    1. Missing data or country code(id_uique: 36f52b0cec9931577d2d0bb4ae1135a2)
+        Missing id_form, id_proj, year, currency conversion rate(id_uique: ddf956648857a6b00ef494665a54671f)
+    2. Abnormal number(record error?)
+        c7a06254972fcbc72e4722558dd33a7a
+        livestock_income_lcu_per_year: 170107098639
+        total_income_lcu_per_year: 3.402142e+11
+        off_farm_income_lcu_per_year: 1.701071e+11
+// Q4: no metadata in the database
