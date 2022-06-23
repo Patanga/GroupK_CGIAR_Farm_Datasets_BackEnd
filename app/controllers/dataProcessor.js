@@ -136,18 +136,19 @@ exports.getSelectedRawData = (indicatorDataList, processedDataList) => {
 };
 
 
-//
+// ?
 exports.getDataForAPI = (selectedDataList) => {
   return selectedDataList.map(selectedDataObj => {
     let newObj = {};
     Object.assign( newObj, selectedDataObj, getFoodShortage(selectedDataObj),
       getHFIAS(selectedDataObj) );
+    // 为什么要omit数据？
     return omitProperties(newObj, keysOfOmit);
   });
 };
 
 
-//
+// getLivestockFrequency
 const getFoodShortage = (dataObj) => {
   let monthsStr = dataObj.foodshortagetime_months_which;
   let monthList = [];
@@ -241,3 +242,164 @@ const funcSortById = (a,b) => {
   }
 };
 
+// Huiying's
+const LivestockKeys = [
+  //keysForGeneral
+  "id_unique",
+  "id_country",
+  "region",
+  "id_proj",
+  "id_form",
+
+  //keysForChart1_Chart2
+  /* For each household, sum up their value of key in keysForChart1_Chart2
+   */
+  "livestock_heads_cattle",
+  "livestock_heads_sheep",
+  "livestock_heads_goats",
+  "livestock_heads_pigs",
+  "livestock_heads_chicken",
+  "livestock_heads_otherpoultry",
+  "livestock_heads_rabbits",
+  "livestock_heads_fish",
+  "livestock_heads_other_lstk",
+  "livestock_heads_other2_lstk",
+  "livestock_heads_other3_lstk",
+  "livestock_heads_donkeys_horses",
+  "livestock_heads_bees",
+
+  //keysForChart3
+  /* There are three type of conducts - meat, eggs, milk
+     Every conducts have 5 data
+     For each household and each conduct, sum up their "<conduct>_sold_prop_numeric_<x>" and "<conduct>_conosumed_prop_numeric_<x>"
+   */
+  "meat_sold_prop_numeric_1",
+  "meat_consumed_props_numeric_1",
+  "meat_sold_prop_numeric_2",
+  "meat_consumed_props_numeric_2",
+  "meat_sold_prop_numeric_3",
+  "meat_consumed_props_numeric_3",
+  "meat_sold_prop_numeric_4",
+  "meat_consumed_props_numeric_4",
+  "meat_sold_prop_numeric_5",
+  "meat_consumed_props_numeric_5",
+
+  "eggs_sold_prop_numeric_1",
+  "eggs_consumed_prop_numeric_1",
+  "eggs_sold_prop_numeric_2",
+  "eggs_consumed_prop_numeric_2",
+  "eggs_sold_prop_numeric_3",
+  "eggs_consumed_prop_numeric_3",
+  "eggs_sold_prop_numeric_4",
+  "eggs_consumed_prop_numeric_4",
+  "eggs_sold_prop_numeric_5",
+  "eggs_consumed_prop_numeric_5",
+
+  "milk_sold_prop_numeric_1",
+  "milk_consumed_prop_numeric_1",
+  "milk_sold_prop_numeric_2",
+  "milk_consumed_prop_numeric_2",
+  "milk_sold_prop_numeric_3",
+  "milk_consumed_prop_numeric_3",
+  "milk_sold_prop_numeric_4",
+  "milk_consumed_prop_numeric_4",
+  "milk_sold_prop_numeric_5",
+  "milk_consumed_prop_numeric_5",
+
+  //keysForChart4
+  /* To calculate the portion of "improved"
+     For each household, if there is "improved"(string) in the value of keys, this household has improved breeds
+     The result should be (household which has improved breeds/household number)
+   */
+  "livestock_name_1",
+  "livestock_breeds_1",
+  "livestock_name_2",
+  "livestock_breeds_2",
+  "livestock_name_3",
+  "livestock_breeds_3",
+  "livestock_name_4",
+  "livestock_breeds_4",
+  "livestock_name_5",
+  "livestock_breeds_5",
+]
+
+// indicatorData× processedData√
+const getRawData = (processedDataList) => {
+  let dataList = processedDataList.map(processedData => processedData.data);
+  let rawData = dataList.map(data => pickProperties(data, LivestockKeys));
+  console.log(rawData.length);
+  return rawData;
+};
+exports.getRawData = getRawData;
+
+// Huiying's - 雷点：不知道rawData长啥样
+const getLivestockData = (livestockDataList) => {
+  let LivestockDataList = livestockDataList.map(livestockData => livestockData.data);
+  let rawData = LivestockDataList.map(data => pickProperties(data, LivestockKeys));
+  console.log(rawData.length);
+  return rawData;
+}
+exports.getLivestockData = getLivestockData;
+
+// Huiying's
+// 参考getFoodShortage
+// 给下面的getLivestockDataForAPI用
+// 统计livestock_heads_<name> 的total value
+const getLivestockFrequency = (dataObj) => {
+  // value -> int
+  // How to make these a list?
+  let cattle = dataObj.livestock_heads_cattle;
+  let sheep = dataObj.livestock_heads_sheep;
+  let goats = dataObj.livestock_heads_goats;
+  let pigs = dataObj.livestock_heads_pigs;
+  let chicken = dataObj.livestock_heads_chicken;
+  let otherPoultry = dataObj.livestock_heads_otherpoultry;
+  let rabbits = dataObj.livestock_heads_rabbits;
+  let fish = dataObj.livestock_heads_fish;
+  let other_lstk = dataObj.livestock_heads_other_lstk;
+  let other2_lstk = dataObj.livestock_heads_other2_lstk;
+  let other3_lstk = dataObj.livestock_heads_other3_lstk;
+  let donkeys_horses = dataObj.livestock_heads_donkeys_horses;
+  let bees = dataObj.livestock_heads_bees;
+
+  // 成功解析了呀
+  let cattle_amount = parseFloat(cattle);
+  let sheep_amount = parseFloat(sheep);
+  let goats_amount = parseFloat(goats);
+  let pigs_amount = parseFloat(pigs);
+  let chicken_amount = parseFloat(chicken);
+  let otherPoultry_amount = parseFloat(otherPoultry);
+  let rabbits_amount = parseFloat(rabbits);
+  let fish_amount = parseFloat(fish);
+  let other_lstk_amount = parseFloat(other_lstk);
+  let other2_lstk_amount = parseFloat(other2_lstk);
+  let other3_lstk_amount = parseFloat(other3_lstk);
+  let donkeys_horses_amount = parseFloat(donkeys_horses);
+  let bees_amount = parseFloat(bees);
+
+  return {
+    cattle: cattle_amount,
+    sheep: sheep_amount,
+    goats: goats_amount,
+    pigs: pigs_amount,
+    chicken: chicken_amount,
+    otherPoultry: otherPoultry_amount,
+    rabbits: rabbits_amount,
+    fish: fish_amount,
+    other_lstk: other_lstk_amount,
+    other2_lstk: other2_lstk_amount,
+    other3_lstk: other3_lstk_amount,
+    donkeys_horses: donkeys_horses_amount,
+    bees: bees_amount,
+  }
+};
+
+// 参考getDataForAPI
+// selectedDataList should be "livestock_heads_cattle" etc
+exports.getLivestockDataForAPI = (selectedDataList) => {
+  return selectedDataList.map(selectedDataObj => {
+    let newObj = {};
+    Object.assign( newObj, selectedDataObj, getLivestockFrequency(selectedDataObj) );
+    return newObj;
+  });
+};

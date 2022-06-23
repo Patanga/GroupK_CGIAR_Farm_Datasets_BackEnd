@@ -17,6 +17,13 @@ module.exports = app => {
 
   router.get("/food_security/food_consumed");
 
+  // Huiying's
+  router.get("/livestock/livestock_kept_frequency", data.getLivestockKeptFrequency);
+
+  router.get("/livestock/use_of_products", data.getUseOfProducts);
+
+  router.get("/livestock/improved_breeds", data.getImprovedBreeds);
+
 
   app.use("/api/data", router);
 }
