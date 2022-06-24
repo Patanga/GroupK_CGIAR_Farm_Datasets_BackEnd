@@ -11,8 +11,11 @@
 /api/data/food_security/hfias?projectid=xxx&formid=xxx\
 \
 /api/data/food_security/food_shortage\
+/api/data/food_security/food_shortage?projectid=xxx&formid=xxx\
+\
 /api/data/food_security/hdds\
-/api/data/food_security/food_consumed\
+\
+/api/data/food_security/food_consumed
 
 #### post
 #### put

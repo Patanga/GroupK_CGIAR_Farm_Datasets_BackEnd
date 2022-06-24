@@ -102,10 +102,8 @@ let keysOfOmit = [
   "fies_score",
 ];
 
-const months = ["jan","feb","mar","apr",
-  "may","jun","jul","aug",
-  "sep","oct","nov","dec"
-];
+const months = [ "jan", "feb", "mar", "apr", "may", "jun",
+  "jul", "aug", "sep", "oct", "nov", "dec" ];
 
 
 //
@@ -140,8 +138,8 @@ exports.getSelectedRawData = (indicatorDataList, processedDataList) => {
 exports.getDataForAPI = (selectedDataList) => {
   return selectedDataList.map(selectedDataObj => {
     let newObj = {};
-    Object.assign( newObj, selectedDataObj, getFoodShortage(selectedDataObj),
-      getHFIAS(selectedDataObj) );
+    Object.assign( newObj, selectedDataObj, getHFIAS(selectedDataObj),
+      getFoodShortage(selectedDataObj) );
     return omitProperties(newObj, keysOfOmit);
   });
 };
