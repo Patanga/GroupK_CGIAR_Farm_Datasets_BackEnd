@@ -17,23 +17,57 @@ exports.frequency = (DataForApiList) => { // 应该是传进来的数据
     let beesAmount = 0;
 
     // 对传进来的数据进行统计 - 加和
-    // 为啥加和出来之后是null呢？？
+    // 为啥加和出来之后是null呢？？ - 因为没有去掉na的数据
     DataForApiList.forEach(data => {
-        cattleAmount += data.cattle;
-        sheepAmount += data.sheep;
-        goatsAmount += data.goats;
-        pigsAmount += data.pigs;
-        chickenAmount += data.chicken;
-        otherPoultryAmount += data.otherPoultry;
-        rabbitsAmount += data.rabbits;
-        fishAmount += data.fish;
-        other_lstkAmount += data.other_lstk;
-        other2_lstkAmount += data.other2_lstk;
-        other3_lstkAmount += data.other3_lstk;
-        donkeys_horsesAmount += data.donkeys_horses;
-        beesAmount += data.bees;
+        if (isNumber(data.cattle)){
+            cattleAmount += data.cattle;
+        }
+        if (isNumber(data.sheep)){
+            sheepAmount += data.sheep;
+        }
+        if (isNumber(data.goats)){
+            goatsAmount += data.goats;
+        }
+        if (isNumber(data.pigs)){
+            pigsAmount += data.pigs;
+        }
+        if (isNumber(data.chicken)){
+            chickenAmount += data.chicken;
+        }
+        if (isNumber(data.otherPoultry)){
+            otherPoultryAmount += data.otherPoultry;
+        }
+        if (isNumber(data.rabbits)){
+            rabbitsAmount += data.rabbits;
+        }
+        if (isNumber(data.fish)){
+            fishAmount += data.fish;
+        }
+        if (isNumber(data.other_lstk)){
+            other_lstkAmount += data.other_lstk;
+        }
+        if (isNumber(data.other2_lstk)){
+            other2_lstkAmount += data.other2_lstk;
+        }
+        if (isNumber(data.other3_lstk)){
+            other3_lstkAmount += data.other3_lstk;
+        }
+        if (isNumber(data.donkeys_horses)){
+            donkeys_horsesAmount += data.donkeys_horses;
+        }
+        if (isNumber(data.bees)){
+            beesAmount += data.bees;
+        }
     })
 
+    function isNumber(val){
+        let regPos = /^[0-9]+.?[0-9]*/; //判断是否是数字。
+        if(regPos.test(val) ){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     // 最终需要的数据格式
     // ["<livestock specie>" : <int>]

@@ -251,7 +251,7 @@ const LivestockKeys = [
   "id_proj",
   "id_form",
 
-  //keysForChart1_Chart2
+  //keys For Chart1 & Chart2
   /* For each household, sum up their value of key in keysForChart1_Chart2
    */
   "livestock_heads_cattle",
@@ -268,7 +268,7 @@ const LivestockKeys = [
   "livestock_heads_donkeys_horses",
   "livestock_heads_bees",
 
-  //keysForChart3
+  //keys For Chart3
   /* There are three type of conducts - meat, eggs, milk
      Every conducts have 5 data
      For each household and each conduct, sum up their "<conduct>_sold_prop_numeric_<x>" and "<conduct>_conosumed_prop_numeric_<x>"
@@ -306,7 +306,7 @@ const LivestockKeys = [
   "milk_sold_prop_numeric_5",
   "milk_consumed_prop_numeric_5",
 
-  //keysForChart4
+  //keys For Chart4
   /* To calculate the portion of "improved"
      For each household, if there is "improved"(string) in the value of keys, this household has improved breeds
      The result should be (household which has improved breeds/household number)
@@ -361,6 +361,12 @@ const getLivestockFrequency = (dataObj) => {
   let other3_lstk = dataObj.livestock_heads_other3_lstk;
   let donkeys_horses = dataObj.livestock_heads_donkeys_horses;
   let bees = dataObj.livestock_heads_bees;
+
+  // 如果是na的话，改成0 - 没成功
+  if (cattle === "NA") {
+    cattle = "0" ;
+  }
+
 
   // 成功解析了呀
   let cattle_amount = parseFloat(cattle);
