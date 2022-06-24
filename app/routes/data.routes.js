@@ -11,7 +11,7 @@ module.exports = app => {
 
   router.get("/food_security/hfias", data.findHFIAS);
 
-  router.get("/food_security/food_shortage");
+  router.get("/food_security/food_shortage", data.findFoodSecurity);
 
   router.get("/food_security/hdds");
 

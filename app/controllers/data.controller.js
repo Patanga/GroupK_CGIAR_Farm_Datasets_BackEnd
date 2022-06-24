@@ -71,7 +71,23 @@ exports.findHFIAS = (req, res) => {
   buildAPIData(projectID, formID)
     .then(data => {
       console.log(data.length); // wzj
-      res.send(foodSecurity.count(data));
+      res.send(foodSecurity.count(data, "HFIAS"));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findFoodSecurity = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(foodSecurity.buildFoodSecurityData(data));
     })
     .catch(err => {
       res.status(500).send(
