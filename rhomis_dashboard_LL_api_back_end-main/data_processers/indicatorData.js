@@ -4,12 +4,13 @@ const lodash = require('lodash')
 const data = require("../models/data")
 const selectKeys = [
     "id_unique",
+    "id_country",
+    "region",
+    "id_proj",
     "id_form",
     "gps_lat",//个人
     "gps_lon",//个人
-    "id_proj",
-    "id_country",
-    "region",
+    
     "offfarm_income_proportion",//个人
     "offfarm_incomes",//个人
     "spending_off_farm_income",//个人
