@@ -100,6 +100,68 @@ let keysOfOmit = [
   "foodshortagetime_months_which",
   "hfias_status",
   "fies_score",
+
+  // Huiying's
+    // Dashboard 1 & 2
+  "livestock_heads_cattle",
+  "livestock_heads_sheep",
+  "livestock_heads_goats",
+  "livestock_heads_pigs",
+  "livestock_heads_chicken",
+  "livestock_heads_otherpoultry",
+  "livestock_heads_rabbits",
+  "livestock_heads_fish",
+  "livestock_heads_other_lstk",
+  "livestock_heads_other2_lstk",
+  "livestock_heads_other3_lstk",
+  "livestock_heads_donkeys_horses",
+  "livestock_heads_bees",
+
+    // Dashboard 3
+  "meat_sold_props_numeric_1",
+  "meat_consumed_props_numeric_1",
+  "meat_sold_props_numeric_2",
+  "meat_consumed_props_numeric_2",
+  "meat_sold_props_numeric_3",
+  "meat_consumed_props_numeric_3",
+  "meat_sold_props_numeric_4",
+  "meat_consumed_props_numeric_4",
+  "meat_sold_props_numeric_5",
+  "meat_consumed_props_numeric_5",
+
+  "eggs_sold_prop_numeric_1",
+  "eggs_consumed_prop_numeric_1",
+  "eggs_sold_prop_numeric_2",
+  "eggs_consumed_prop_numeric_2",
+  "eggs_sold_prop_numeric_3",
+  "eggs_consumed_prop_numeric_3",
+  "eggs_sold_prop_numeric_4",
+  "eggs_consumed_prop_numeric_4",
+  "eggs_sold_prop_numeric_5",
+  "eggs_consumed_prop_numeric_5",
+
+  "milk_sold_prop_numeric_1",
+  "milk_consumed_prop_numeric_1",
+  "milk_sold_prop_numeric_2",
+  "milk_consumed_prop_numeric_2",
+  "milk_sold_prop_numeric_3",
+  "milk_consumed_prop_numeric_3",
+  "milk_sold_prop_numeric_4",
+  "milk_consumed_prop_numeric_4",
+  "milk_sold_prop_numeric_5",
+  "milk_consumed_prop_numeric_5",
+
+    // Dashboard 4
+  "livestock_name_1",
+  "livestock_breeds_1",
+  "livestock_name_2",
+  "livestock_breeds_2",
+  "livestock_name_3",
+  "livestock_breeds_3",
+  "livestock_name_4",
+  "livestock_breeds_4",
+  "livestock_name_5",
+  "livestock_breeds_5",
 ];
 
 const months = ["jan","feb","mar","apr",
@@ -136,19 +198,18 @@ exports.getSelectedRawData = (indicatorDataList, processedDataList) => {
 };
 
 
-// ?
+//
 exports.getDataForAPI = (selectedDataList) => {
   return selectedDataList.map(selectedDataObj => {
     let newObj = {};
     Object.assign( newObj, selectedDataObj, getFoodShortage(selectedDataObj),
       getHFIAS(selectedDataObj) );
-    // 为什么要omit数据？
     return omitProperties(newObj, keysOfOmit);
   });
 };
 
 
-// getLivestockFrequency
+// getLivestockFrequency's Reference
 const getFoodShortage = (dataObj) => {
   let monthsStr = dataObj.foodshortagetime_months_which;
   let monthList = [];
@@ -270,18 +331,18 @@ const LivestockKeys = [
 
   //keys For Chart3
   /* There are three type of conducts - meat, eggs, milk
-     Every conducts have 5 data
-     For each household and each conduct, sum up their "<conduct>_sold_prop_numeric_<x>" and "<conduct>_conosumed_prop_numeric_<x>"
+     Every conduct have 5 data
+     For each household and each conduct, merge their value
    */
-  "meat_sold_prop_numeric_1",
+  "meat_sold_props_numeric_1",
   "meat_consumed_props_numeric_1",
-  "meat_sold_prop_numeric_2",
+  "meat_sold_props_numeric_2",
   "meat_consumed_props_numeric_2",
-  "meat_sold_prop_numeric_3",
+  "meat_sold_props_numeric_3",
   "meat_consumed_props_numeric_3",
-  "meat_sold_prop_numeric_4",
+  "meat_sold_props_numeric_4",
   "meat_consumed_props_numeric_4",
-  "meat_sold_prop_numeric_5",
+  "meat_sold_props_numeric_5",
   "meat_consumed_props_numeric_5",
 
   "eggs_sold_prop_numeric_1",
@@ -332,7 +393,7 @@ const getRawData = (processedDataList) => {
 };
 exports.getRawData = getRawData;
 
-// Huiying's - 雷点：不知道rawData长啥样
+// Huiying's
 const getLivestockData = (livestockDataList) => {
   let LivestockDataList = livestockDataList.map(livestockData => livestockData.data);
   let rawData = LivestockDataList.map(data => pickProperties(data, LivestockKeys));
@@ -342,9 +403,6 @@ const getLivestockData = (livestockDataList) => {
 exports.getLivestockData = getLivestockData;
 
 // Huiying's
-// 参考getFoodShortage
-// 给下面的getLivestockDataForAPI用
-// 统计livestock_heads_<name> 的total value
 const getLivestockFrequency = (dataObj) => {
   // value -> int
   // How to make these a list?
@@ -362,13 +420,7 @@ const getLivestockFrequency = (dataObj) => {
   let donkeys_horses = dataObj.livestock_heads_donkeys_horses;
   let bees = dataObj.livestock_heads_bees;
 
-  // 如果是na的话，改成0 - 没成功
-  if (cattle === "NA") {
-    cattle = "0" ;
-  }
-
-
-  // 成功解析了呀
+  //
   let cattle_amount = parseFloat(cattle);
   let sheep_amount = parseFloat(sheep);
   let goats_amount = parseFloat(goats);
@@ -400,12 +452,163 @@ const getLivestockFrequency = (dataObj) => {
   }
 };
 
+function isNumber(val){
+  let regPos = /^[0-9]+.?[0-9]*/; //判断是否是数字。
+  if(regPos.test(val) ){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+const getLivestockUse = (dataObj) => {
+  //
+  let meat_sold;
+  let meat_sold_1 = parseFloat(dataObj.meat_sold_props_numeric_1);
+  let meat_sold_2 = parseFloat(dataObj.meat_sold_props_numeric_2);
+  let meat_sold_3 = parseFloat(dataObj.meat_sold_props_numeric_3);
+  let meat_sold_4 = parseFloat(dataObj.meat_sold_props_numeric_4);
+  let meat_sold_5 = parseFloat(dataObj.meat_sold_props_numeric_5);
+
+  if (isNumber(meat_sold_1) && meat_sold_1 != 0 ||
+      isNumber(meat_sold_2) && meat_sold_2 != 0 ||
+      isNumber(meat_sold_3) && meat_sold_3 != 0 ||
+      isNumber(meat_sold_4) && meat_sold_4 != 0 ||
+      isNumber(meat_sold_5) && meat_sold_5 != 0){
+    meat_sold = 1;
+  } else {
+    meat_sold = 0;
+  }
+
+  let meat_consumed;
+  let meat_consumed_1 = parseFloat(dataObj.meat_consumed_props_numeric_1);
+  let meat_consumed_2 = parseFloat(dataObj.meat_consumed_props_numeric_2);
+  let meat_consumed_3 = parseFloat(dataObj.meat_consumed_props_numeric_3);
+  let meat_consumed_4 = parseFloat(dataObj.meat_consumed_props_numeric_4);
+  let meat_consumed_5 = parseFloat(dataObj.meat_consumed_props_numeric_5);
+
+  if (isNumber(meat_consumed_1) && meat_consumed_1 != 0 ||
+      isNumber(meat_consumed_2) && meat_consumed_2 != 0 ||
+      isNumber(meat_consumed_3) && meat_consumed_3 != 0 ||
+      isNumber(meat_consumed_4) && meat_consumed_4 != 0 ||
+      isNumber(meat_consumed_5) && meat_consumed_5 != 0){
+    meat_consumed = 1;
+  } else {
+    meat_consumed = 0;
+  }
+
+  //
+  let eggs_sold;
+  let eggs_sold_1 = parseFloat(dataObj.eggs_sold_prop_numeric_1);
+  let eggs_sold_2 = parseFloat(dataObj.eggs_sold_prop_numeric_2);
+  let eggs_sold_3 = parseFloat(dataObj.eggs_sold_prop_numeric_3);
+  let eggs_sold_4 = parseFloat(dataObj.eggs_sold_prop_numeric_4);
+  let eggs_sold_5 = parseFloat(dataObj.eggs_sold_prop_numeric_5);
+
+  if (isNumber(eggs_sold_1) && eggs_sold_1 != 0 ||
+      isNumber(eggs_sold_2) && eggs_sold_2 != 0 ||
+      isNumber(eggs_sold_3) && eggs_sold_3 != 0 ||
+      isNumber(eggs_sold_4) && eggs_sold_4 != 0 ||
+      isNumber(eggs_sold_5) && eggs_sold_5 != 0){
+    eggs_sold = 1;
+  } else {
+    eggs_sold = 0;
+  }
+
+  let eggs_consumed;
+  let eggs_consumed_1 = parseFloat(dataObj.eggs_consumed_prop_numeric_1);
+  let eggs_consumed_2 = parseFloat(dataObj.eggs_consumed_prop_numeric_2);
+  let eggs_consumed_3 = parseFloat(dataObj.eggs_consumed_prop_numeric_3);
+  let eggs_consumed_4 = parseFloat(dataObj.eggs_consumed_prop_numeric_4);
+  let eggs_consumed_5 = parseFloat(dataObj.eggs_consumed_prop_numeric_5);
+
+  if (isNumber(eggs_consumed_1) && eggs_consumed_1 != 0 ||
+      isNumber(eggs_consumed_2) && eggs_consumed_2 != 0 ||
+      isNumber(eggs_consumed_3) && eggs_consumed_3 != 0 ||
+      isNumber(eggs_consumed_4) && eggs_consumed_4 != 0 ||
+      isNumber(eggs_consumed_5) && eggs_consumed_5 != 0){
+    eggs_consumed = 1;
+  } else {
+    eggs_consumed = 0;
+  }
+
+  //
+  let milk_sold;
+  let milk_sold_1 = parseFloat(dataObj.milk_sold_prop_numeric_1);
+  let milk_sold_2 = parseFloat(dataObj.milk_sold_prop_numeric_2);
+  let milk_sold_3 = parseFloat(dataObj.milk_sold_prop_numeric_3);
+  let milk_sold_4 = parseFloat(dataObj.milk_sold_prop_numeric_4);
+  let milk_sold_5 = parseFloat(dataObj.milk_sold_prop_numeric_5);
+
+  if (isNumber(milk_sold_1) && milk_sold_1 != 0 ||
+      isNumber(milk_sold_2) && milk_sold_2 != 0 ||
+      isNumber(milk_sold_3) && milk_sold_3 != 0 ||
+      isNumber(milk_sold_4) && milk_sold_4 != 0 ||
+      isNumber(milk_sold_5) && milk_sold_5 != 0){
+    milk_sold = 1;
+  } else {
+    milk_sold = 0;
+  }
+
+  let milk_consumed;
+  let milk_consumed_1 = parseFloat(dataObj.milk_consumed_prop_numeric_1);
+  let milk_consumed_2 = parseFloat(dataObj.milk_consumed_prop_numeric_2);
+  let milk_consumed_3 = parseFloat(dataObj.milk_consumed_prop_numeric_3);
+  let milk_consumed_4 = parseFloat(dataObj.milk_consumed_prop_numeric_4);
+  let milk_consumed_5 = parseFloat(dataObj.milk_consumed_prop_numeric_5);
+
+  if (isNumber(milk_consumed_1) && milk_consumed_1 != 0 ||
+      isNumber(milk_consumed_2) && milk_consumed_2 != 0 ||
+      isNumber(milk_consumed_3) && milk_consumed_3 != 0 ||
+      isNumber(milk_consumed_4) && milk_consumed_4 != 0 ||
+      isNumber(milk_consumed_5) && milk_consumed_5 != 0){
+    milk_consumed = 1;
+  } else {
+    milk_consumed = 0;
+  }
+
+  return {
+    meat_sold: meat_sold,
+    meat_consumed: meat_consumed,
+    eggs_sold: eggs_sold,
+    eggs_consumed: eggs_consumed,
+    milk_sold: milk_sold,
+    milk_consumed: milk_consumed,
+  }
+};
+
+const getLivestockBreeds = (dataObj) => {
+  //
+  let livestock_name_1 = dataObj.livestock_name_1;
+  let livestock_name_2 = dataObj.livestock_name_2;
+  let livestock_name_3 = dataObj.livestock_name_3;
+  let livestock_name_4 = dataObj.livestock_name_4;
+  let livestock_name_5 = dataObj.livestock_name_5;
+
+
+  //
+  let livestock_1_breeds = dataObj.livestock_breeds_1;
+  let livestock_2_breeds = dataObj.livestock_breeds_2;
+  let livestock_3_breeds = dataObj.livestock_breeds_3;
+  let livestock_4_breeds = dataObj.livestock_breeds_4;
+  let livestock_5_breeds = dataObj.livestock_breeds_5;
+
+
+  return {
+    livestock_1: [livestock_name_1, livestock_1_breeds],
+    livestock_2: [livestock_name_2, livestock_2_breeds],
+    livestock_3: [livestock_name_3, livestock_3_breeds],
+    livestock_4: [livestock_name_4, livestock_4_breeds],
+    livestock_5: [livestock_name_5, livestock_5_breeds],
+  }
+};
+
 // 参考getDataForAPI
 // selectedDataList should be "livestock_heads_cattle" etc
 exports.getLivestockDataForAPI = (selectedDataList) => {
   return selectedDataList.map(selectedDataObj => {
     let newObj = {};
-    Object.assign( newObj, selectedDataObj, getLivestockFrequency(selectedDataObj) );
-    return newObj;
+    Object.assign( newObj, selectedDataObj, getLivestockFrequency(selectedDataObj), getLivestockUse(selectedDataObj), getLivestockBreeds(selectedDataObj) );
+    return omitProperties(newObj, keysOfOmit);
   });
 };

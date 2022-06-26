@@ -14,6 +14,7 @@
 /api/data/food_security/hdds\
 /api/data/food_security/food_consumed\
 \
+/api/data/livestock/livestock_kept_all\
 /api/data/livestock/livestock_kept_frequency\
 /api/data/livestock/use_of_products\
 /api/data/livestock/improved_breeds\

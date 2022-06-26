@@ -1,6 +1,4 @@
-//frequency等价于count
-// 传进来的数据形式在dataProcessor里面
-// 建议把这个文件理解为独立出来的数据处理函数（帮data.controller.js做最后的数据规范统一）
+// 可能放在前端
 exports.frequency = (DataForApiList) => { // 应该是传进来的数据
     let cattleAmount = 0;
     let sheepAmount = 0;
@@ -16,8 +14,7 @@ exports.frequency = (DataForApiList) => { // 应该是传进来的数据
     let donkeys_horsesAmount = 0;
     let beesAmount = 0;
 
-    // 对传进来的数据进行统计 - 加和
-    // 为啥加和出来之后是null呢？？ - 因为没有去掉na的数据
+    // Sum up
     DataForApiList.forEach(data => {
         if (isNumber(data.cattle)){
             cattleAmount += data.cattle;
@@ -69,8 +66,7 @@ exports.frequency = (DataForApiList) => { // 应该是传进来的数据
         }
     }
 
-    // 最终需要的数据格式
-    // ["<livestock specie>" : <int>]
+    // Data format should be ["<livestock specie>" : <int>]
     return [{
         "cattle" : cattleAmount,
         "sheep" : sheepAmount,
