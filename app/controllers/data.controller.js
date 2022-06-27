@@ -137,7 +137,39 @@ exports.findTVA = (req,res) => {
   buildAPIData(projectID, formID)
     .then(data => {
       console.log(data.length); // wzj
-      res.send(livelihood.buildFoodConsumedData(data));
+      res.send(livelihood.buildTVA(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findIncomeCat = (req,res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livelihood.buildIncomeCat(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findAnnualValue = (req,res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livelihood.buildAnnualValue(data));
     })
     .catch(err => {
       res.status(500).send(
