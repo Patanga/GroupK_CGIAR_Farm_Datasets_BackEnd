@@ -11,11 +11,11 @@ module.exports = app => {
 
   router.get("/food_security/hfias", data.findHFIAS);
 
-  router.get("/food_security/food_shortage", data.findFoodSecurity);
+  router.get("/food_security/food_shortage", data.findFoodShortage);
 
-  router.get("/food_security/hdds");
+  router.get("/food_security/hdds", data.findHDDS);
 
-  router.get("/food_security/food_consumed");
+  router.get("/food_security/food_consumed", data.findFoodConsumed);
 
 
   app.use("/api/data", router);

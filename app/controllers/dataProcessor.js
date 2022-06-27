@@ -1,25 +1,33 @@
 const foodConsumedGoodSeason = [
   "grainsrootstubers_good_season",
   "legumes_good_season",
+  "nuts_seeds_good_season",
   "veg_leafy_good_season",
   "vita_veg_fruit_good_season",
   "vegetables_good_season",
   "fruits_good_season",
   "meat_good_season",
   "milk_dairy_good_season",
+  "eggs_good_season",
+
   "grains_good_season",
   "roots_tubers_good_season",
+
   "pulses_good_season",
-  "nuts_seeds_good_season",
+
   "milk_good_season",
+
   "organ_meat_good_season",
   "meat_poultry_good_season",
   "fish_seafood_good_season",
-  "eggs_good_season",
+
   "green_veg_good_season",
+
   "vita_veg_good_season",
   "vita_fruits_good_season",
+
   "other_veg_good_season",
+
   "other_fruits_good_season"
 ];
 exports.foodConsumedGoodSeason = foodConsumedGoodSeason; // export for test
@@ -81,7 +89,7 @@ const keysOfIndicator = [
   "fies_score",
   "hdds_good_season",
   "hdds_bad_season",
-  "hdds_last_month",
+  "hdds_last_month"
 ];
 
 let keysOfProcessed = [
@@ -100,10 +108,41 @@ let keysOfOmit = [
   "foodshortagetime_months_which",
   "hfias_status",
   "fies_score",
+  "hdds_good_season",
+  "hdds_bad_season",
+  "hdds_last_month"
 ];
+keysOfOmit = keysOfOmit.concat(foodConsumedGoodSeason,
+  foodConsumedBadSeason,foodConsumedLastMonth);
 
 const months = [ "jan", "feb", "mar", "apr", "may", "jun",
   "jul", "aug", "sep", "oct", "nov", "dec" ];
+
+const foodGroupMap = {
+  grainsrootstubers: "grainsrootstubers",
+  legumes: "legumes",
+  nuts_seeds: "nuts_seeds",
+  veg_leafy: "veg_leafy",
+  vita_veg_fruit: "vita_veg_fruit",
+  vegetables: "vegetables",
+  fruits: "fruits",
+  meat: "meat",
+  milk_dairy: "milk_dairy",
+  eggs: "eggs",
+
+  grains: "grainsrootstubers",
+  roots_tubers: "grainsrootstubers",
+  pulses: "legumes",
+  milk: "milk_dairy",
+  organ_meat: "meat",
+  meat_poultry: "meat",
+  fish_seafood: "meat",
+  green_veg: "veg_leafy",
+  vita_veg: "vita_veg_fruit",
+  vita_fruits: "vita_veg_fruit",
+  other_veg: "vegetables",
+  other_fruits: "fruits"
+}
 
 
 //
@@ -136,14 +175,79 @@ exports.getSelectedRawData = (indicatorDataList, processedDataList) => {
 
 //
 exports.getDataForAPI = (selectedDataList) => {
-  return selectedDataList.map(selectedDataObj => {
+  let result = selectedDataList.map(selectedDataObj => {
     let newObj = {};
     Object.assign( newObj, selectedDataObj, getHFIAS(selectedDataObj),
-      getFoodShortage(selectedDataObj) );
+      getFoodShortage(selectedDataObj), getHDDS(selectedDataObj),
+      getFoodConsumed(selectedDataObj) );
     return omitProperties(newObj, keysOfOmit);
   });
+
+  // 不同时为null，则采用 wzj
+  result.forEach(data => {
+    if(isNaN(data.api_hdds_flush) && !isNaN(data.api_hdds_lean)) {
+      data.api_hdds_flush = data.api_food_flush.length;
+    }
+    if(isNaN(data.api_hdds_lean) && !isNaN(data.api_hdds_flush)) {
+      data.api_hdds_lean = data.api_food_lean.length;
+    }
+  });
+
+  return result;
 };
 
+
+//
+const getFoodConsumed = (dataObj) => {
+  let goodSeason = findFoodGroup(foodConsumedGoodSeason, dataObj);
+  let badSeason = findFoodGroup(foodConsumedBadSeason, dataObj);
+  if(goodSeason.length === 0) {
+    goodSeason = findFoodGroup(foodConsumedLastMonth, dataObj);
+  }
+  if(badSeason.length === 0) {
+    badSeason = findFoodGroup(foodConsumedLastMonth, dataObj);
+  }
+
+  return {
+    api_food_flush: transformFoodGroupType(goodSeason),
+    api_food_lean: transformFoodGroupType(badSeason)
+  };
+};
+exports.getFoodConsumed = getFoodConsumed; // export for test
+
+const findFoodGroup = (foodList, dataObj) => {
+  let result = [];
+  foodList.forEach(food => {
+    let frequency = dataObj[food] || "";
+    frequency = frequency.toLowerCase();
+    if(frequency === "daily" || frequency === "weekly") {
+      result.push(funcGetFoodName(food));
+    }
+  });
+  return result;
+};
+exports.findFoodGroup = findFoodGroup; // export for test
+
+const transformFoodGroupType = (foodList) => {
+  let result = new Set();
+  foodList.forEach(food => {
+    result.add(foodGroupMap[food]);
+  });
+  return Array.from(result);
+};
+exports.transformFoodGroupType = transformFoodGroupType; // export for test
+
+
+//
+const getHDDS = (dataObj) => {
+  let goodSeason = parseInt(dataObj.hdds_good_season) || parseInt(dataObj.hdds_last_month);
+  let badSeason = parseInt(dataObj.hdds_bad_season) || parseInt(dataObj.hdds_last_month);
+  return {
+    api_hdds_flush: goodSeason,
+    api_hdds_lean: badSeason
+  };
+};
+exports.getHDDS = getHDDS;
 
 //
 const getFoodShortage = (dataObj) => {
@@ -155,8 +259,7 @@ const getFoodShortage = (dataObj) => {
     monthList = monthList.map(month => funcTitleCase(month));
   }
 
-  return { api_food_shortage_months: monthList,
-    api_food_shortage_months_num: monthList.length };
+  return { api_food_shortage_months: monthList };
 };
 exports.getFoodShortage = getFoodShortage; // export for test
 
@@ -239,3 +342,11 @@ const funcSortById = (a,b) => {
   }
 };
 
+//
+const funcGetFoodName = (foodStr) => {
+  let tmpList = foodStr.split("_");
+  tmpList.pop();
+  tmpList.pop();
+  return tmpList.join("_");
+};
+exports.funcGetFoodName = funcGetFoodName; // export for test
