@@ -1,4 +1,5 @@
 const foodSecurity = require("./foodSecurity.js");
+const livelihood = require("./livelihood.js");
 const dataProcessor = require("./dataProcessor.js");
 
 // Get Schema
@@ -17,12 +18,16 @@ const getRawData = async (dataType, project, form) => {
   return resultData;
 };
 
-//
+// Last step of the rawdata process
+// Adding average income per mae per day in USD for grouping
+// EYang
 const buildAPIData = async (project, form) => {
   const indicatorDataList = await getRawData("indicator_data", project, form);
   const processedDataList = await getRawData("processed_data", project, form);
   const selectedRawData = dataProcessor.getSelectedRawData(indicatorDataList, processedDataList);
-  const dataForAPI = dataProcessor.getDataForAPI(selectedRawData)
+  let dataForAPI = dataProcessor.getDataForAPI(selectedRawData)
+  // Calculate and append income attribute
+  dataForAPI = dataForAPI.map(doc => dataProcessor.calAppendIncome(doc));
   console.log(dataForAPI.length + ": APIData"); // wzj
   return dataForAPI;
 };
@@ -128,3 +133,51 @@ exports.findFoodConsumed = (req, res) => {
     });
 };
 
+// Livelihood by EYang
+exports.findTVA = (req,res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livelihood.buildTVA(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findIncomeCat = (req,res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livelihood.buildIncomeCat(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findAnnualValue = (req,res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livelihood.buildAnnualValue(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}

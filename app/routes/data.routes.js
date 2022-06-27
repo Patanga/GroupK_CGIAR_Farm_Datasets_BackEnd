@@ -17,6 +17,13 @@ module.exports = app => {
 
   router.get("/food_security/food_consumed", data.findFoodConsumed);
 
+  // Livelihood
+  router.get("/livelihood/tva", data.findTVA);
+  router.get("/livelihood/income_cat", data.findIncomeCat);
+  router.get("/livelihood/annual_value", data.findAnnualValue);
+
+
+
 
   app.use("/api/data", router);
 }
