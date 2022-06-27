@@ -212,6 +212,25 @@ exports.getDataForAPI = (selectedDataList) => {
   return result;
 };
 
+// Calculate the total income of a sample
+// Convert value in ppp USD
+// Per mae per day
+// Returns with a new key named 'api_tot_ppp_income_pd_pmae' appended.
+exports.calAppendIncome = (doc) => {
+  if (!doc) return null;
+  // parse numbers first
+  const year = parseInt(doc.year)
+  const days = (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) ? 366 : 365
+  const mae = parseFloat(doc.hh_size_mae)
+  const rate = parseFloat(doc.currency_conversion_lcu_to_ppp)
+  // Does it need illegal value like null check here?
+  if (!year || !days || !mae || !rate) {
+    console.log('Invalid record for calAppendIncome, id_uique: ' + doc.id_unique)
+    console.log('year: ' + year + ' mae:' + mae + ' rate: ' + rate)
+    return null
+  }
+  return { ...doc, api_tot_ppp_income_pd_pmae: doc.total_income_lcu_per_year / rate / mae / days }
+}
 
 //
 const getFoodConsumed = (dataObj) => {

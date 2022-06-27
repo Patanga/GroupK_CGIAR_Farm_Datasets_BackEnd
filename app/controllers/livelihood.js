@@ -1,5 +1,3 @@
-
-
 const numKeys = [
     "year",
     "hh_size_members",
@@ -64,7 +62,6 @@ const calAppendTVA = (doc) => {
         consumed_crop_ppp_per_mae_per_d: c_crop / rate / mae / days,
         consumed_lstk_ppp_per_mae_per_d: c_lstk / rate / mae / days,
     }
-    console.log("income_lstk_ppp_per_mae_per_d: " + con.income_lstk_ppp_per_mae_per_d);
 
     // Calculate TVA (total value of activities) for this record
     // ** Using per MAE here not per person

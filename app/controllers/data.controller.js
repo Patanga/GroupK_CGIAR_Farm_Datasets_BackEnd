@@ -18,12 +18,16 @@ const getRawData = async (dataType, project, form) => {
   return resultData;
 };
 
-//
+// Last step of the rawdata process
+// Adding average income per mae per day in USD for grouping
+// EYang
 const buildAPIData = async (project, form) => {
   const indicatorDataList = await getRawData("indicator_data", project, form);
   const processedDataList = await getRawData("processed_data", project, form);
   const selectedRawData = dataProcessor.getSelectedRawData(indicatorDataList, processedDataList);
-  const dataForAPI = dataProcessor.getDataForAPI(selectedRawData)
+  let dataForAPI = dataProcessor.getDataForAPI(selectedRawData)
+  // Calculate and append income attribute
+  dataForAPI = dataForAPI.map(doc => dataProcessor.calAppendIncome(doc));
   console.log(dataForAPI.length + ": APIData"); // wzj
   return dataForAPI;
 };
