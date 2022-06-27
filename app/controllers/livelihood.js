@@ -91,46 +91,30 @@ exports.buildTVA = (dataForAPIList) => {
 }
 
 exports.buildIncomeCat = (dataForAPIList) => {
-    // parse numbers
-    let parsedData = dataForAPIList.map(doc => parseData(doc, numKeys))
-    // pie data are counters for total_income_ppp_per_mae_per_d
     let pieCntData = {
         under_1_usd_cnt: 0,
         _1to1_9_cnt: 0,
         above_1_9_cnt: 0,
     }
-    for (var j in parsedData) {
-        const year = parsedData[j].year
-        const days = (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) ? 366 : 365
-        const mae = parsedData[j].hh_size_mae
-        const rate = parsedData[j].currency_conversion_lcu_to_ppp
-        // Does it need illegal value like null check here?
-        if (!year || !days || !mae || !rate) {
-            console.log('Invalid record for LL pie, id_uique: ' + parsedData[j].id_unique)
-            console.log('year: ' + year + ' mae:' + mae + ' rate: ' + rate)
-            continue
+
+    dataForAPIList.map(doc => {
+        if(doc.api_tot_ppp_income_pd_pmae > 1.9){
+            pieCntData.above_1_9_cnt++;
         }
-        const doc = {
-            id_unique: parsedData[j].id_unique,
-            total_income_ppp_per_mae_per_d: parsedData[j].total_income_lcu_per_year / rate / mae / days,
+        else if(doc.api_tot_ppp_income_pd_pmae > 1){
+            pieCntData._1to1_9_cnt++;
         }
-        if (doc.total_income_ppp_per_mae_per_d < 1) {
-            pieCntData.under_1_usd_cnt++
+        else if(!doc.api_tot_ppp_income_pd_pmae) {
+            pieCntData.under_1_usd_cnt++;
         }
-        else if (doc.total_income_ppp_per_mae_per_d > 1.9) {
-            pieCntData.above_1_9_cnt++
-        }
-        else {
-            pieCntData._1to1_9_cnt++
-        }
-    }
+        // Null value not counted
+    })
     // format data for echarts
-    const pieData = [
-        { value: pieCntData.under_1_usd_cnt, name: '< 1 USD' },
-        { value: pieCntData._1to1_9_cnt, name: '1 to 1.99 USD' },
-        { value: pieCntData.above_1_9_cnt, name: '> 1.99 USD' },
+    return [
+        {value: pieCntData.under_1_usd_cnt, name: '< 1 USD'},
+        {value: pieCntData._1to1_9_cnt, name: '1 to 1.99 USD'},
+        {value: pieCntData.above_1_9_cnt, name: '> 1.99 USD'},
     ]
-    return pieData
 }
 
 exports.buildAnnualValue = (dataForAPIList) => {
