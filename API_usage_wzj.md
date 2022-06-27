@@ -14,8 +14,10 @@
 /api/data/food_security/food_shortage?projectid=xxx&formid=xxx\
 \
 /api/data/food_security/hdds\
+/api/data/food_security/hdds?projectid=xxx&formid=xxx\
 \
-/api/data/food_security/food_consumed
+/api/data/food_security/food_consumed\
+/api/data/food_security/food_consumed?projectid=xxx&formid=xxx
 
 #### post
 #### put

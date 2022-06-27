@@ -80,14 +80,46 @@ exports.findHFIAS = (req, res) => {
     });
 };
 
-exports.findFoodSecurity = (req, res) => {
+exports.findFoodShortage = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
   buildAPIData(projectID, formID)
     .then(data => {
       console.log(data.length); // wzj
-      res.send(foodSecurity.buildFoodSecurityData(data));
+      res.send(foodSecurity.buildFoodShortageData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findHDDS = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(foodSecurity.buildHDDSData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findFoodConsumed = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(foodSecurity.buildFoodConsumedData(data));
     })
     .catch(err => {
       res.status(500).send(
