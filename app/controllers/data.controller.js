@@ -1,4 +1,5 @@
 const foodSecurity = require("./foodSecurity.js");
+const livelihood = require("./livelihood.js");
 const dataProcessor = require("./dataProcessor.js");
 
 // Get Schema
@@ -128,3 +129,19 @@ exports.findFoodConsumed = (req, res) => {
     });
 };
 
+// Livelihood by EYang
+exports.findTVA = (req,res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livelihood.buildFoodConsumedData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
