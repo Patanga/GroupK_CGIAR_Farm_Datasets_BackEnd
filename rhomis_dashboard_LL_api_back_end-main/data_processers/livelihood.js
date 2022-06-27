@@ -79,7 +79,9 @@ const hisGram = async () => {
     output['70%']=(percent_change.most/count)*100
     output['90%']=(percent_change.all/count)*100
     //未对所需要的小数点后取几位进行计算
-    return output
+    var ne = Object.entries(output)
+    return ne
+
 }
 
 
@@ -182,8 +184,17 @@ const pie=async ()=>{
     output.forEach(function(item){
         obj[item] = obj[item] ? obj[item]+1 : 1
     })
+    
+    var json = Object.entries(obj)
+    var keys = Object.keys(obj)
+    var values = Object.values(obj)
+    var final = []
+    for(var i=0;i<json.length;i++){
+        var container = {value:values[i],name:keys[i]}
+        final.push(container)
+    }
 
-    return obj
+    return final
 
 }
 
@@ -208,7 +219,8 @@ const barChart = async() =>{
         obj[item] = obj[item] ? obj[item]+1 : 1
     })
 
-    return obj
+    var ne = Object.entries(obj)
+    return ne
 
 }
 
@@ -267,7 +279,8 @@ const monGram = async() =>{
         obj[item] = obj[item] ? obj[item]+1 : 1
     })
 
-    return obj
+    var ne = Object.entries(obj)
+    return ne
 
 }
 

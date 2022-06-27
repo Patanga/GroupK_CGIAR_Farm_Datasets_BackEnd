@@ -20,17 +20,7 @@ const selectKeys = [
     "offfarm_month_4",//个人
     "offfarm_month_5",//个人
     "offfarm_month_6",//个人
-    "year",
-    "hh_size_members",
-    "hh_size_mae",
-    "currency_conversion_lcu_to_ppp",
-    "currency_conversion_factor_year",
-    "crop_income_lcu_per_year",
-    "livestock_income_lcu_per_year",
-    "total_income_lcu_per_year",
-    "off_farm_income_lcu_per_year",
-    "value_crop_consumed_lcu_per_hh_per_year",
-    "value_livestock_products_consumed_lcu_per_hh_per_year",
+
 ]
 
 const stringKeys = [
