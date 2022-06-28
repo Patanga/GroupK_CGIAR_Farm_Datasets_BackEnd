@@ -13,58 +13,59 @@ const box_whisker = async () => {
     var boxData = []
     var xName = [];//存储横坐标名字
     for(var i=0;i<data.length;i++){//遍历所有household 把所有cropname不重复地填充进去
-        if(xName.indexOf(data[i].crop_name_1)<0){
-            xName.push(data[i].crop_name_1);
+
+        if(xName.indexOf(data[i].crop_name_1[0])<0){
+            xName.push(data[i].crop_name_1[0]);
         }
-        if(xName.indexOf(data[i].crop_name_2)<0){
-            xName.push(data[i].crop_name_2);
+        if(xName.indexOf(data[i].crop_name_2[0])<0){
+            xName.push(data[i].crop_name_2[0]);
         }
-        if(xName.indexOf(data[i].crop_name_3)<0){
-            xName.push(data[i].crop_name_3);
+        if(xName.indexOf(data[i].crop_name_3[0])<0){
+            xName.push(data[i].crop_name_3[0]);
         }
-        if(xName.indexOf(data[i].crop_name_4)<0){
-            xName.push(data[i].crop_name_4);
+        if(xName.indexOf(data[i].crop_name_4[0])<0){
+            xName.push(data[i].crop_name_4[0]);
         }
-        if(xName.indexOf(data[i].crop_name_5)<0){
-            xName.push(data[i].crop_name_5);
+        if(xName.indexOf(data[i].crop_name_5[0])<0){
+            xName.push(data[i].crop_name_5[0]);
         }
-        if(xName.indexOf(data[i].crop_name_6)<0){
-            xName.push(data[i].crop_name_6);
+        if(xName.indexOf(data[i].crop_name_6[0])<0){
+            xName.push(data[i].crop_name_6[0]);
         }
-        if(xName.indexOf(data[i].crop_name_7)<0){
-            xName.push(data[i].crop_name_7);
+        if(xName.indexOf(data[i].crop_name_7[0])<0){
+            xName.push(data[i].crop_name_7[0]);
         }
-        if(xName.indexOf(data[i].crop_name_8)<0){
-            xName.push(data[i].crop_name_8);
+        if(xName.indexOf(data[i].crop_name_8[0])<0){
+            xName.push(data[i].crop_name_8[0]);
         }
     }
     for(var i=0;i<xName.length;i++){//对于每一个crop
         const name = xName[i];//获取本次循环的cropname
         var dataArray = [];//新建数组存储该crop的产量
         for(var j in data){//遍历每一户，若种植的八种crop中有该crop，且产量为有效数字，则将该产量数字push到dataArray[]中
-            if(data[j].crop_name_1==name&&Number.isFinite(data[j].crop_harvest_kg_per_year_1)){
-                dataArray.push(data[j].crop_harvest_kg_per_year_1);
+            if(data[j].crop_name_1[0]==name&&Number.isFinite(data[j].crop_name_1[1])){
+                dataArray.push(data[j].crop_name_1[1]);
             }
-            if(data[j].crop_name_2==name&&Number.isFinite(data[j].crop_harvest_kg_per_year_2)){
-                dataArray.push(data[j].crop_harvest_kg_per_year_2);
+            if(data[j].crop_name_2[0]==name&&Number.isFinite(data[j].crop_name_2[1])){
+                dataArray.push(data[j].crop_name_2[1]);
             }
-            if(data[j].crop_name_3==name&&Number.isFinite(data[j].crop_harvest_kg_per_year_3)){
-                dataArray.push(data[j].crop_harvest_kg_per_year_3);
+            if(data[j].crop_name_3[0]==name&&Number.isFinite(data[j].crop_name_3[1])){
+                dataArray.push(data[j].crop_name_3[1]);
             }
-            if(data[j].crop_name_4==name&&Number.isFinite(data[j].crop_harvest_kg_per_year_4)){
-                dataArray.push(data[j].crop_harvest_kg_per_year_4);
+            if(data[j].crop_name_4[0]==name&&Number.isFinite(data[j].crop_name_4[1])){
+                dataArray.push(data[j].crop_name_4[1]);
             }
-            if(data[j].crop_name_5==name&&Number.isFinite(data[j].crop_harvest_kg_per_year_5)){
-                dataArray.push(data[j].crop_harvest_kg_per_year_5);
+            if(data[j].crop_name_5[0]==name&&Number.isFinite(data[j].crop_name_5[1])){
+                dataArray.push(data[j].crop_name_5[1]);
             }
-            if(data[j].crop_name_6==name&&Number.isFinite(data[j].crop_harvest_kg_per_year_6)){
-                dataArray.push(data[j].crop_harvest_kg_per_year_6);
+            if(data[j].crop_name_6[0]==name&&Number.isFinite(data[j].crop_name_6[1])){
+                dataArray.push(data[j].crop_name_6[1]);
             }
-            if(data[j].crop_name_7==name&&Number.isFinite(data[j].crop_harvest_kg_per_year_7)){
-                dataArray.push(data[j].crop_harvest_kg_per_year_7);
+            if(data[j].crop_name_7[0]==name&&Number.isFinite(data[j].crop_name_7[1])){
+                dataArray.push(data[j].crop_name_7[1]);
             }
-            if(data[j].crop_name_8==name&&Number.isFinite(data[j].crop_harvest_kg_per_year_8)){
-                dataArray.push(data[j].crop_harvest_kg_per_year_8);
+            if(data[j].crop_name_8[0]==name&&Number.isFinite(data[j].crop_name_8[1])){
+                dataArray.push(data[j].crop_name_8[1]);
             }
         }
         const doc = {
@@ -159,81 +160,11 @@ const histogram = async () => {
 const groupedBar = async () => {
     const data = await getData()
     const barData = []
-
     for(var i in data){
-        //Does it need illegal value like null check here?
-        //NA全部换成0
-        //consumed
-        var i_consumed1 = data[i].crop_consumed_kg_per_year_1
-        var i_consumed2 = data[i].crop_consumed_kg_per_year_2
-        var i_consumed3 = data[i].crop_consumed_kg_per_year_3
-        var i_consumed4 = data[i].crop_consumed_kg_per_year_4
-        var i_consumed5 = data[i].crop_consumed_kg_per_year_5
-        var i_consumed6 = data[i].crop_consumed_kg_per_year_6
-        var i_consumed7 = data[i].crop_consumed_kg_per_year_7
-        var i_consumed8 = data[i].crop_consumed_kg_per_year_8
-        //sold
-        var i_sold1 = data[i].crop_sold_kg_per_year_1
-        var i_sold2 = data[i].crop_sold_kg_per_year_2
-        var i_sold3 = data[i].crop_sold_kg_per_year_3
-        var i_sold4 = data[i].crop_sold_kg_per_year_4
-        var i_sold5 = data[i].crop_sold_kg_per_year_5
-        var i_sold6 = data[i].crop_sold_kg_per_year_6
-        var i_sold7 = data[i].crop_sold_kg_per_year_7
-        var i_sold8 = data[i].crop_sold_kg_per_year_8
-        if(!Number.isFinite(i_consumed1)){
-            i_consumed1=0;
-        }
-        if(!Number.isFinite(i_consumed2)){
-            i_consumed2=0;
-        }
-        if(!Number.isFinite(i_consumed3)){
-            i_consumed3=0;
-        }
-        if(!Number.isFinite(i_consumed4)){
-            i_consumed4=0;
-        }
-        if(!Number.isFinite(i_consumed5)){
-            i_consumed5=0;
-        }
-        if(!Number.isFinite(i_consumed6)){
-            i_consumed6=0;
-        }
-        if(!Number.isFinite(i_consumed7)){
-            i_consumed7=0;
-        }
-        if(!Number.isFinite(i_consumed8)){
-            i_consumed8=0;
-        }
-
-        if(!Number.isFinite(i_sold1)){
-            i_sold1=0;
-        }
-        if(!Number.isFinite(i_sold2)){
-            i_sold2=0;
-        }
-        if(!Number.isFinite(i_sold3)){
-            i_sold3=0;
-        }
-        if(!Number.isFinite(i_sold4)){
-            i_sold4=0;
-        }
-        if(!Number.isFinite(i_sold5)){
-            i_sold5=0;
-        }
-        if(!Number.isFinite(i_sold6)){
-            i_sold6=0;
-        }
-        if(!Number.isFinite(i_sold7)){
-            i_sold7=0;
-        }
-        if(!Number.isFinite(i_sold8)){
-            i_sold8=0;
-        }
         const doc = {
             id_unique: data[i].id_unique,//横轴
-            crop_consumed_avg_kg: (i_consumed1+i_consumed2+i_consumed3+i_consumed4+i_consumed5+i_consumed6+i_consumed7+i_consumed8)/8,//纵轴数据1
-            crop_sold_avg_kg: (i_sold1+i_sold2+i_sold3+i_sold4+i_sold5+i_sold6+i_sold7+i_sold8)/8,//纵轴数据2
+            crop_consumed_avg_kg: data[i].crop_consumed_kg_per_year_1,//纵轴数据1
+            crop_sold_avg_kg: data[i].crop_sold_kg_per_year_1,//纵轴数据2
         }
         barData.push(doc)
     }
