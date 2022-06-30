@@ -1,6 +1,4 @@
 const assert = require("assert");
-const processor = require("../app/controllers/dataProcessor");
-const dt = require("../data_test/data_test");
 
 describe("数据类型相关", () => {
   let a = null;

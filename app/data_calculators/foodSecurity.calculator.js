@@ -108,7 +108,7 @@ exports.buildFoodShortageData = (dataForAPIList) => {
 exports.buildHDDSData = (dataForAPIList) => {
   let resultLean = dataForAPIList.map(dataObj => dataObj.api_hdds_lean);
   let resultFlush = dataForAPIList.map(dataObj => dataObj.api_hdds_flush);
-  return [resultLean, resultFlush];
+  return [resultLean.filter(num => num >= 0), resultFlush.filter(num => num >= 0)];
 };
 
 //

@@ -1,5 +1,5 @@
-const foodSecurity = require("./foodSecurity.js");
-const dataProcessor = require("./dataProcessor.js");
+const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
+const foodSecProcessor = require("../data_processors/foodSecurity.processor.js");
 
 // Get Schema
 const data = require("../models/data.model.js");
@@ -21,8 +21,7 @@ const getRawData = async (dataType, project, form) => {
 const buildAPIData = async (project, form) => {
   const indicatorDataList = await getRawData("indicator_data", project, form);
   const processedDataList = await getRawData("processed_data", project, form);
-  const selectedRawData = dataProcessor.getSelectedRawData(indicatorDataList, processedDataList);
-  const dataForAPI = dataProcessor.getDataForAPI(selectedRawData)
+  const dataForAPI = foodSecProcessor.getDataForAPI(indicatorDataList, processedDataList);
   console.log(dataForAPI.length + ": APIData"); // wzj
   return dataForAPI;
 };
@@ -71,7 +70,7 @@ exports.findHFIAS = (req, res) => {
   buildAPIData(projectID, formID)
     .then(data => {
       console.log(data.length); // wzj
-      res.send(foodSecurity.count(data, "HFIAS"));
+      res.send(foodSecCalculator.count(data, "HFIAS"));
     })
     .catch(err => {
       res.status(500).send(
@@ -87,7 +86,7 @@ exports.findFoodShortage = (req, res) => {
   buildAPIData(projectID, formID)
     .then(data => {
       console.log(data.length); // wzj
-      res.send(foodSecurity.buildFoodShortageData(data));
+      res.send(foodSecCalculator.buildFoodShortageData(data));
     })
     .catch(err => {
       res.status(500).send(
@@ -103,7 +102,7 @@ exports.findHDDS = (req, res) => {
   buildAPIData(projectID, formID)
     .then(data => {
       console.log(data.length); // wzj
-      res.send(foodSecurity.buildHDDSData(data));
+      res.send(foodSecCalculator.buildHDDSData(data));
     })
     .catch(err => {
       res.status(500).send(
@@ -119,7 +118,7 @@ exports.findFoodConsumed = (req, res) => {
   buildAPIData(projectID, formID)
     .then(data => {
       console.log(data.length); // wzj
-      res.send(foodSecurity.buildFoodConsumedData(data));
+      res.send(foodSecCalculator.buildFoodConsumedData(data));
     })
     .catch(err => {
       res.status(500).send(
