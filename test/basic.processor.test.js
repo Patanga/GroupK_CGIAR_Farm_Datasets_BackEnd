@@ -29,6 +29,15 @@ describe("testBasicProcessor", () => {
     assert.equal(selectedDataList.length, 65);
   });
 
+  it("test_getGroupingData", () => {
+    const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList,
+      dt.processedDataList, foodSecProcessor.keysOfSelect);
+    console.log(selectedDataList[0]);
+
+    console.log(basic.getGroupingData(selectedDataList[0]));
+
+  });
+
   it("test_pick", () => {
     let dataI1 = dt.indicatorDataList[0].data;
     let dataP1 = dt.processedDataList[0].data;

@@ -1,10 +1,12 @@
 const liveProcessor = require("../data_processors/livelihoods.processor");
+const livelihood = require("../data_calculators/livelihood.calculator");
 
 const foodSecProcessor = require("../data_processors/foodSecurity.processor.js");
 const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
 
 const livestockProcessor = require("../data_processors/livestock.processor");
 
+const allPagesProcessor = require("../data_processors/allPages.processor");
 
 // Get Schema
 const data = require("../models/data.model.js");
@@ -14,6 +16,7 @@ const APIPageMap = {
   livelihoods: liveProcessor.getDataForAPI,
   foodSecurity: foodSecProcessor.getDataForAPI,
   livestock: livestockProcessor.getDataForAPI,
+  allPages: allPagesProcessor.getDataForAPI,
 };
 
 
@@ -59,6 +62,26 @@ exports.findRawDataByDataType = (req, res) => {
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*              Functions for getting API data for All Pages                */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllPages = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "allPages")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*          Functions for getting API data for Livelihoods Page           */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 exports.getAllLivelihoods = (req, res) => {
@@ -78,6 +101,56 @@ exports.getAllLivelihoods = (req, res) => {
 };
 
 
+// Livelihood by EYang
+exports.findTVA = (req,res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livelihood.buildTVA(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findIncomeCat = (req,res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livelihood.buildIncomeCat(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findAnnualValue = (req,res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livelihood.buildAnnualValue(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*          Functions for getting API data for Food Security Page           */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -94,7 +167,7 @@ exports.getAllFoodSecurity = (req, res) => {
       res.status(500).send(
         {message: err.message || "Some error occurred while retrieving data."}
       );
-    })
+    });
 };
 
 //

@@ -1,4 +1,3 @@
-const data = require("../controllers/data.controller");
 module.exports = app => {
   const express = require("express");
   const router = express.Router();
@@ -8,9 +7,13 @@ module.exports = app => {
   // Retrieve data by dataType
   router.get("/raw_data/:datatype", data.findRawDataByDataType);
 
-  router.get("/all_pages",);
+  router.get("/all_pages", data.getAllPages);
 
-  router.get("/livelihoods", data.getAllLivelihoods);
+  router.get("/livelihood", data.getAllLivelihoods);
+  // Livelihood
+  router.get("/livelihood/tva", data.findTVA);
+  router.get("/livelihood/income_cat", data.findIncomeCat);
+  router.get("/livelihood/annual_value", data.findAnnualValue);
 
   router.get("/food_security", data.getAllFoodSecurity);
   router.get("/food_security/hfias", data.findHFIAS);

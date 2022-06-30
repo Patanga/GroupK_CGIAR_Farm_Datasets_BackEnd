@@ -4,6 +4,7 @@
 /api/data/raw_data/:datatype\
 /api/data/raw_data/:datatype?projectid=xxx&formid=xxx\
 \
+\
 /api/data/food_security\
 /api/data/food_security?projectid=xxx&formid=xxx\
 \
@@ -17,7 +18,12 @@
 /api/data/food_security/hdds?projectid=xxx&formid=xxx\
 \
 /api/data/food_security/food_consumed\
-/api/data/food_security/food_consumed?projectid=xxx&formid=xxx
+/api/data/food_security/food_consumed?projectid=xxx&formid=xxx\
+\
+\
+/api/data/livestock\
+/api/data/livestock?projectid=xxx&formid=xxx\
+\
 
 #### post
 #### put

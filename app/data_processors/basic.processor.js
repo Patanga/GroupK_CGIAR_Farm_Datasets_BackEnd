@@ -86,11 +86,20 @@ exports.getSelectedRawData = getSelectedRawData;
 
 
 //
+const getGroupingData = (dataObj) => {
+  let newObj = {};
+  Object.assign( newObj, getCountry(dataObj));
+  return newObj;
+};
+exports.getGroupingData = getGroupingData;
+
+
+//
 const getCountry = (dataObj) => {
   const country = countryMap[dataObj.id_country.toUpperCase()];
   return {id_country: country};
 };
-exports.getCountry = getCountry;
+
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -99,7 +108,7 @@ exports.getCountry = getCountry;
 //
 const pickProperties = (data, selectKeys) => {
   let properties = selectKeys.map(key => {
-    return (key in data ? {[key] : data[key]} : {})
+    return (key in data ? {[key]: data[key]} : {})
   });
 
   return properties.reduce((preResult, prop) => Object.assign(preResult, prop), {})
@@ -109,7 +118,7 @@ exports.pickProperties = pickProperties; // export for test
 //
 const omitProperties = (data, selectKeys) => {
   let properties = Object.keys(data).map(key => {
-    return (selectKeys.includes(key) ? {} : {[key] : data[key]})
+    return (selectKeys.includes(key) ? {} : {[key]: data[key]})
   });
 
   return properties.reduce((preResult, prop) => Object.assign(preResult, prop), {})
@@ -118,7 +127,7 @@ exports.omitProperties = omitProperties; // export for test
 
 
 //
-const funcSortById = (a,b) => {
+const funcSortById = (a, b) => {
   const idA = a["id_unique"];
   const idB = b["id_unique"];
   if (idA > idB) {

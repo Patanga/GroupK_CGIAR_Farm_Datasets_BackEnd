@@ -1,4 +1,4 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getCountry,
+const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
   omitProperties} = require("./basic.processor.js");
 
 const foodConsumedGoodSeason = [
@@ -118,11 +118,12 @@ let keysOfOmit = [
   "hdds_last_month"
 ];
 keysOfOmit = keysOfOmit.concat(foodConsumedGoodSeason,
-  foodConsumedBadSeason,foodConsumedLastMonth);
+  foodConsumedBadSeason, foodConsumedLastMonth);
+exports.keysOfOmit = keysOfOmit;
 
 
-const months = [ "jan", "feb", "mar", "apr", "may", "jun",
-  "jul", "aug", "sep", "oct", "nov", "dec" ];
+const months = ["jan", "feb", "mar", "apr", "may", "jun",
+  "jul", "aug", "sep", "oct", "nov", "dec"];
 
 const foodGroupMap = {
   grainsrootstubers: "grainsrootstubers",
@@ -155,7 +156,7 @@ const foodGroupMap = {
 const combineAttributes = (selectedDataList) => {
   return selectedDataList.map(selectedDataObj => {
     let newObj = {};
-    Object.assign( newObj, selectedDataObj, getCountry(selectedDataObj),
+    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
       getHFIAS(selectedDataObj), getFoodShortage(selectedDataObj),
       getFoodConsumedAndHDDS(selectedDataObj) );
     return omitProperties(newObj, keysOfOmit);
@@ -216,7 +217,7 @@ const findFoodGroup = (foodList, dataObj) => {
   foodList.forEach(food => {
     let frequency = dataObj[food] || "";
     frequency = frequency.toLowerCase();
-    if(frequency === "daily" || frequency === "weekly") {
+    if (frequency === "daily" || frequency === "weekly") {
       result.push(funcGetFoodName(food));
     }
   });

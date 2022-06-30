@@ -1,4 +1,4 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getCountry,
+const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
   omitProperties} = require("./basic.processor.js");
 
 const crop_consumed_kg_per_year = [
@@ -67,13 +67,14 @@ let keysOfOmit = [
 ];
 keysOfOmit = keysOfOmit.concat(crop_consumed_kg_per_year, crop_sold_kg_per_year,
   crop_name, crop_harvest_kg_per_year);
+exports.keysOfOmit = keysOfOmit;
 
 
 //
 const combineAttributes = (selectedDataList) => {
   return selectedDataList.map(selectedDataObj => {
     let newObj = {};
-    Object.assign( newObj, selectedDataObj, getCountry(selectedDataObj),
+    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
       getAllCrops(selectedDataObj), getCropUsed(selectedDataObj)
       );
     return omitProperties(newObj, keysOfOmit);

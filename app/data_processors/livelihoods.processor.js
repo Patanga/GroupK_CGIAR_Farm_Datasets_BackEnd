@@ -1,5 +1,9 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getCountry,
+const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
   omitProperties} = require("./basic.processor.js");
+
+let keysOfProcessed = [
+];
+keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed);
 
 let keysOfIndicator = [
   "id_unique",
@@ -19,21 +23,22 @@ let keysOfIndicator = [
 
 const keysOfSelect = {
   indicator: keysOfIndicator,
-  processed: keysOfGroupingInProcessed
+  processed: keysOfProcessed
 };
 exports.keysOfSelect = keysOfSelect; // export for test
 
-
 let keysOfOmit = [
 ];
+exports.keysOfOmit = keysOfOmit;
 
 
 //
 const combineAttributes = (selectedDataList) => {
   return selectedDataList.map(selectedDataObj => {
     let newObj = {};
-    Object.assign( newObj, selectedDataObj,
-      calAppendIncome(selectedDataObj), getCountry(selectedDataObj));
+    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
+      calAppendIncome(selectedDataObj)
+    );
     return omitProperties(newObj, keysOfOmit);
   });
 };
@@ -47,6 +52,9 @@ exports.getDataForAPI = (indicatorDataList, processedDataList) => {
 };
 
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*               Functions for getting Average Income data                  */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 // Calculate the total income of a sample
 // Convert value in ppp USD
 // Per mae per day
@@ -68,6 +76,6 @@ const calAppendIncome = (doc) => {
   else {
     res = parseFloat(doc.total_income_lcu_per_year) / days/ mae/ rate;
   }
-  return { ...doc, api_tot_ppp_income_pd_pmae: res}
+  return { api_tot_ppp_income_pd_pmae: res }
 };
 exports.calAppendIncome = calAppendIncome;

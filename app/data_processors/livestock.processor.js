@@ -1,4 +1,4 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getCountry,
+const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
   omitProperties} = require("./basic.processor.js");
 
 //keys For Chart1 & Chart2
@@ -96,13 +96,14 @@ exports.keysOfSelect = keysOfSelect; // export for test
 let keysOfOmit = [
 ];
 keysOfOmit = keysOfOmit.concat(livestock_heads, livestock_products, livestock_breeds);
+exports.keysOfOmit = keysOfOmit;
 
 
 //
 const combineAttributes = (selectedDataList) => {
   return selectedDataList.map(selectedDataObj => {
     let newObj = {};
-    Object.assign( newObj, selectedDataObj, getCountry(selectedDataObj),
+    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
       getLivestockFrequency(selectedDataObj), getLivestockUse(selectedDataObj),
       getLivestockBreeds(selectedDataObj)
     );
