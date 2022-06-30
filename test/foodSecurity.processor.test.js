@@ -8,6 +8,7 @@ const foodSecProcessor = require("../app/data_processors/foodSecurity.processor.
 const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
   foodSecProcessor.keysOfSelect);
 
+
 describe("testProcessor", () => {
   const propFixed3 = [
     ["id_unique", "0ccb14dd3c0262f22a30120f5e65b721"],

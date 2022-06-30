@@ -26,6 +26,7 @@ describe("数据类型相关", () => {
 
   it("test2", () => {
     console.log(parseInt(b));
+    console.log(parseInt("1a"));
     console.log(parseInt("a"));
     console.log(parseInt(null));
   });

@@ -3,6 +3,9 @@ const liveProcessor = require("../data_processors/livelihoods.processor");
 const foodSecProcessor = require("../data_processors/foodSecurity.processor.js");
 const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
 
+const livestockProcessor = require("../data_processors/livestock.processor");
+
+
 // Get Schema
 const data = require("../models/data.model.js");
 
@@ -10,6 +13,7 @@ const data = require("../models/data.model.js");
 const APIPageMap = {
   livelihoods: liveProcessor.getDataForAPI,
   foodSecurity: foodSecProcessor.getDataForAPI,
+  livestock: livestockProcessor.getDataForAPI,
 };
 
 
@@ -156,5 +160,25 @@ exports.findFoodConsumed = (req, res) => {
         {message: err.message || "Some error occurred while retrieving data."}
       );
     });
+};
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*            Functions for getting API data for Livestock Page             */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllLivestock = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "livestock")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    })
 };
 

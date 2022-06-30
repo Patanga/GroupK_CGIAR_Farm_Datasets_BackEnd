@@ -103,6 +103,7 @@ const getAllCrops = (dataObj) => {
 };
 exports.getAllCrops = getAllCrops; // export for test
 
+
 const getCropUsed = (dataObj) => {
   const consumed1 = parseInt(dataObj.crop_consumed_kg_per_year_1) || 0;
   const consumed2 = parseInt(dataObj.crop_consumed_kg_per_year_2) || 0;
