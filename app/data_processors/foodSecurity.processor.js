@@ -177,10 +177,10 @@ exports.getDataForAPI = (indicatorDataList, processedDataList) => {
 const getFoodConsumedAndHDDS = (dataObj) => {
   let goodSeason = findFoodGroup(foodConsumedGoodSeason, dataObj);
   let badSeason = findFoodGroup(foodConsumedBadSeason, dataObj);
-  if(goodSeason.length === 0) {
+  if (goodSeason.length === 0) {
     goodSeason = findFoodGroup(foodConsumedLastMonth, dataObj);
   }
-  if(badSeason.length === 0) {
+  if (badSeason.length === 0) {
     badSeason = findFoodGroup(foodConsumedLastMonth, dataObj);
   }
   const foodFlush = transformFoodGroupType(goodSeason);
@@ -189,15 +189,15 @@ const getFoodConsumedAndHDDS = (dataObj) => {
   let HDDSFlush = parseInt(dataObj.hdds_good_season) || parseInt(dataObj.hdds_last_month);
   let HDDSLean = parseInt(dataObj.hdds_bad_season) || parseInt(dataObj.hdds_last_month);
   // 同时为null，则取-1   wzj
-  if(isNaN(HDDSFlush) && isNaN(HDDSLean)) {
+  if (isNaN(HDDSFlush) && isNaN(HDDSLean)) {
     HDDSFlush = -1;
     HDDSLean = -1;
   }
   // 不同时为null，则采用   wzj
-  if(isNaN(HDDSFlush) && !isNaN(HDDSLean)) {
+  if (isNaN(HDDSFlush) && !isNaN(HDDSLean)) {
     HDDSFlush = foodFlush.length;
   }
-  if(isNaN(HDDSLean) && !isNaN(HDDSFlush)) {
+  if (isNaN(HDDSLean) && !isNaN(HDDSFlush)) {
     HDDSLean = foodLean.length;
   }
 
@@ -246,10 +246,10 @@ exports.funcGetFoodName = funcGetFoodName; // export for test
 /*                 Functions for getting FoodShortage data                  */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 const getFoodShortage = (dataObj) => {
-  let monthsStr = dataObj.foodshortagetime_months_which;
+  const monthsStr = dataObj.foodshortagetime_months_which;
   let monthList = [];
   if (typeof (monthsStr) === "string") {
-    let tmpList = monthsStr.toLowerCase().split(/\s+/); // 正则匹配多个空格 wzj
+    let tmpList = monthsStr.trim().toLowerCase().split(/\s+/); // 正则匹配多个空格 wzj
     monthList = tmpList.filter(month => months.includes(month));
     monthList = monthList.map(month => funcTitleCase(month));
   }

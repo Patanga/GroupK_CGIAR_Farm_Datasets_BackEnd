@@ -7,14 +7,14 @@ module.exports = app => {
   // Retrieve data by dataType
   router.get("/raw_data/:datatype", data.findRawDataByDataType);
 
+  router.get("/all_pages",);
+
+  router.get("/livelihoods", data.getAllLivelihoods);
+
   router.get("/food_security", data.getAllFoodSecurity);
-
   router.get("/food_security/hfias", data.findHFIAS);
-
   router.get("/food_security/food_shortage", data.findFoodShortage);
-
   router.get("/food_security/hdds", data.findHDDS);
-
   router.get("/food_security/food_consumed", data.findFoodConsumed);
 
 

@@ -1,8 +1,16 @@
-const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
+const liveProcessor = require("../data_processors/livelihoods.processor");
+
 const foodSecProcessor = require("../data_processors/foodSecurity.processor.js");
+const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
 
 // Get Schema
 const data = require("../models/data.model.js");
+
+//
+const APIPageMap = {
+  livelihoods: liveProcessor.getDataForAPI,
+  foodSecurity: foodSecProcessor.getDataForAPI,
+};
 
 
 // Retrieve data by condition from the MongoDB database
@@ -18,11 +26,11 @@ const getRawData = async (dataType, project, form) => {
 };
 
 //
-const buildAPIData = async (project, form) => {
+const buildAPIData = async (project, form, pageType) => {
   const indicatorDataList = await getRawData("indicator_data", project, form);
   const processedDataList = await getRawData("processed_data", project, form);
-  const dataForAPI = foodSecProcessor.getDataForAPI(indicatorDataList, processedDataList);
-  console.log(dataForAPI.length + ": APIData"); // wzj
+  const dataForAPI = APIPageMap[pageType](indicatorDataList, processedDataList);
+  console.log(dataForAPI.length + ": APIData of " + pageType); // wzj
   return dataForAPI;
 };
 
@@ -45,12 +53,35 @@ exports.findRawDataByDataType = (req, res) => {
     });
 };
 
-//
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*          Functions for getting API data for Livelihoods Page           */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllLivelihoods = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "livelihoods")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    })
+};
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*          Functions for getting API data for Food Security Page           */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 exports.getAllFoodSecurity = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
-  buildAPIData(projectID, formID)
+  buildAPIData(projectID, formID, "foodSecurity")
     .then(data => {
       console.log(data.length); // wzj
       res.send(data);
@@ -67,7 +98,7 @@ exports.findHFIAS = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
-  buildAPIData(projectID, formID)
+  buildAPIData(projectID, formID, "foodSecurity")
     .then(data => {
       console.log(data.length); // wzj
       res.send(foodSecCalculator.count(data, "HFIAS"));
@@ -83,7 +114,7 @@ exports.findFoodShortage = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
-  buildAPIData(projectID, formID)
+  buildAPIData(projectID, formID, "foodSecurity")
     .then(data => {
       console.log(data.length); // wzj
       res.send(foodSecCalculator.buildFoodShortageData(data));
@@ -99,7 +130,7 @@ exports.findHDDS = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
-  buildAPIData(projectID, formID)
+  buildAPIData(projectID, formID, "foodSecurity")
     .then(data => {
       console.log(data.length); // wzj
       res.send(foodSecCalculator.buildHDDSData(data));
@@ -115,7 +146,7 @@ exports.findFoodConsumed = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
-  buildAPIData(projectID, formID)
+  buildAPIData(projectID, formID, "foodSecurity")
     .then(data => {
       console.log(data.length); // wzj
       res.send(foodSecCalculator.buildFoodConsumedData(data));
