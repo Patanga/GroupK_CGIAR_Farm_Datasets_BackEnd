@@ -1,3 +1,5 @@
+const allPagesProcessor = require("../data_processors/allPages.processor");
+
 const liveProcessor = require("../data_processors/livelihoods.processor");
 const livelihood = require("../data_calculators/livelihood.calculator");
 
@@ -6,7 +8,6 @@ const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.j
 
 const livestockProcessor = require("../data_processors/livestock.processor");
 
-const allPagesProcessor = require("../data_processors/allPages.processor");
 
 // Get Schema
 const data = require("../models/data.model.js");
