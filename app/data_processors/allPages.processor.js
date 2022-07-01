@@ -2,6 +2,7 @@ const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
   omitProperties} = require("./basic.processor.js");
 const foodSecProcessor = require("./foodSecurity.processor");
 const livestockProcessor = require("./livestock.processor");
+const liveProcessor = require("./livelihoods.processor");
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -9,15 +10,20 @@ const livestockProcessor = require("./livestock.processor");
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 const keysOfFoodSec = foodSecProcessor.keysOfSelect;
 const keysOfLivestock = livestockProcessor.keysOfSelect;
+const keysOfLivelihoods = liveProcessor.keysOfSelect;
 
 let keysOfProcessed = new Set([...keysOfGroupingInProcessed,
-  ...keysOfFoodSec.processed, ...keysOfLivestock.processed]);
+  ...keysOfLivelihoods.processed, ...keysOfFoodSec.processed,
+  ...keysOfLivestock.processed
+]);
 
-let keysOfIndicator = new Set([...keysOfFoodSec.indicator,
-  ...keysOfLivestock.indicator]);
+let keysOfIndicator = new Set([...keysOfLivelihoods.indicator,
+  ...keysOfFoodSec.indicator, ...keysOfLivestock.indicator
+]);
 
-let tmpKeysOfOmit = new Set([...foodSecProcessor.keysOfOmit,
-  ...livestockProcessor.keysOfOmit]);
+let tmpKeysOfOmit = new Set([...liveProcessor.keysOfOmit,
+  ...foodSecProcessor.keysOfOmit, ...livestockProcessor.keysOfOmit
+]);
 
 
 const keysOfSelect = {
@@ -33,6 +39,12 @@ exports.keysOfOmit = keysOfOmit; // export for test
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*              Building functions for combining attributes                 */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getLivelihoods = (dataObj) => {
+  let newObj = {};
+  Object.assign( newObj, liveProcessor.calAppendIncome(dataObj) );
+  return newObj;
+}
+
 const getFoodSecData = (dataObj) => {
   let newObj = {};
   Object.assign( newObj, foodSecProcessor.getHFIAS(dataObj),
@@ -57,7 +69,8 @@ const combineAttributes = (selectedDataList) => {
   return selectedDataList.map(selectedDataObj => {
     let newObj = {};
     Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
-      getFoodSecData(selectedDataObj), getLivestockData(selectedDataObj)
+      getLivelihoods(selectedDataObj), getFoodSecData(selectedDataObj),
+      getLivestockData(selectedDataObj)
     );
     return omitProperties(newObj, keysOfOmit);
   });
