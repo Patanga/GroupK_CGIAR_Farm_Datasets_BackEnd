@@ -1,3 +1,6 @@
+const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
+  omitProperties} = require("./basic.processor.js");
+
 const foodConsumedGoodSeason = [
   "grainsrootstubers_good_season",
   "legumes_good_season",
@@ -82,7 +85,13 @@ const foodConsumedLastMonth = [
 ];
 exports.foodConsumedLastMonth = foodConsumedLastMonth; // export for test
 
-let keysOfIndicator = [
+let keysOfProcessed = [
+  "foodshortagetime_months_which"
+];
+keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed,
+  foodConsumedGoodSeason, foodConsumedBadSeason, foodConsumedLastMonth);
+
+const keysOfIndicator = [
   "id_unique",
 
   "hfias_status",
@@ -92,33 +101,13 @@ let keysOfIndicator = [
   "hdds_last_month"
 ];
 
-let keysOfLivelihood = [
-  "year",
-  "hh_size_members",
-  "hh_size_mae",
-  "currency_conversion_lcu_to_ppp",
-  "crop_income_lcu_per_year",
-  "livestock_income_lcu_per_year",
-  "total_income_lcu_per_year",
-  "off_farm_income_lcu_per_year",
-  "value_crop_consumed_lcu_per_hh_per_year",
-  "value_livestock_products_consumed_lcu_per_hh_per_year",
-];
 
-keysOfIndicator = keysOfIndicator.concat(keysOfLivelihood);
+const keysOfSelect = {
+  indicator: keysOfIndicator,
+  processed: keysOfProcessed
+};
+exports.keysOfSelect = keysOfSelect; // export for test
 
-let keysOfProcessed = [
-  "id_unique",
-  "id_country",
-  "region",
-  "id_proj",
-  "id_form",
-
-  "foodshortagetime_months_which"
-];
-
-keysOfProcessed = keysOfProcessed.concat(foodConsumedGoodSeason,
-  foodConsumedBadSeason, foodConsumedLastMonth);
 
 let keysOfOmit = [
   "foodshortagetime_months_which",
@@ -130,6 +119,8 @@ let keysOfOmit = [
 ];
 keysOfOmit = keysOfOmit.concat(foodConsumedGoodSeason,
   foodConsumedBadSeason, foodConsumedLastMonth);
+exports.keysOfOmit = keysOfOmit;
+
 
 const months = ["jan", "feb", "mar", "apr", "may", "jun",
   "jul", "aug", "sep", "oct", "nov", "dec"];
@@ -162,81 +153,29 @@ const foodGroupMap = {
 
 
 //
-exports.getSelectedRawData = (indicatorDataList, processedDataList) => {
-  let dataListOfIndicator = indicatorDataList.map(indicatorData => indicatorData.data);
-  let rawDataOfIndicator = dataListOfIndicator.map(data => pickProperties(data, keysOfIndicator));
-  let idListOfIndicator = rawDataOfIndicator.map(data => data.id_unique);
-
-  let dataListOfProcessed = processedDataList.map(processedData => processedData.data);
-  let rawDataOfProcessed = dataListOfProcessed.map(data => pickProperties(data, keysOfProcessed));
-  let idListOfProcessed = rawDataOfProcessed.map(data => data.id_unique);
-
-  // 取id的交集后排序 wzj
-  const intersect = idListOfIndicator.filter(id => idListOfProcessed.includes(id));
-  rawDataOfIndicator = rawDataOfIndicator.filter(data => intersect.includes(data.id_unique));
-  rawDataOfProcessed = rawDataOfProcessed.filter(data => intersect.includes(data.id_unique));
-  rawDataOfIndicator.sort(funcSortById);
-  rawDataOfProcessed.sort(funcSortById);
-
-  let rawData = rawDataOfProcessed.map((obj, index) => {
+const combineAttributes = (selectedDataList) => {
+  return selectedDataList.map(selectedDataObj => {
     let newObj = {};
-    Object.assign(newObj, obj, rawDataOfIndicator[index]);
-    return newObj;
-  });
-
-  console.log(rawData.length + " records of combination raw data");
-  return rawData;
-};
-
-
-//
-exports.getDataForAPI = (selectedDataList) => {
-  let result = selectedDataList.map(selectedDataObj => {
-    let newObj = {};
-    Object.assign(newObj, selectedDataObj, getHFIAS(selectedDataObj),
-      getFoodShortage(selectedDataObj), getHDDS(selectedDataObj),
-      getFoodConsumed(selectedDataObj));
+    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
+      getHFIAS(selectedDataObj), getFoodShortage(selectedDataObj),
+      getFoodConsumedAndHDDS(selectedDataObj) );
     return omitProperties(newObj, keysOfOmit);
   });
+};
+exports.combineAttributes = combineAttributes;
 
-  // 不同时为null，则采用 wzj
-  result.forEach(data => {
-    if (isNaN(data.api_hdds_flush) && !isNaN(data.api_hdds_lean)) {
-      data.api_hdds_flush = data.api_food_flush.length;
-    }
-    if (isNaN(data.api_hdds_lean) && !isNaN(data.api_hdds_flush)) {
-      data.api_hdds_lean = data.api_food_lean.length;
-    }
-  });
 
-  return result;
+exports.getDataForAPI = (indicatorDataList, processedDataList) => {
+  const selectedDataList = getSelectedRawData(indicatorDataList, processedDataList,
+    keysOfSelect);
+  return combineAttributes(selectedDataList);
 };
 
-// Calculate the total income of a sample
-// Convert value in ppp USD
-// Per mae per day
-// Returns with a new key named 'api_tot_ppp_income_pd_pmae' appended.
-exports.calAppendIncome = (doc) => {
-  // parse numbers first
-  const year = parseInt(doc.year)
-  const days = (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) ? 366 : 365
-  const mae = parseFloat(doc.hh_size_mae)
-  const rate = parseFloat(doc.currency_conversion_lcu_to_ppp)
-  let res = null;
-  // Does it need illegal value like null check here?
-  if (!year || !days || !mae || !rate) {
-    console.log('Invalid record for calAppendIncome, id_uique: ' + doc.id_unique)
-    console.log('year: ' + year + ' mae:' + mae + ' rate: ' + rate)
-    // return null
-  }
-  else {
-    res = parseFloat(doc.total_income_lcu_per_year) / days/ mae/ rate;
-  }
-  return { ...doc, api_tot_ppp_income_pd_pmae: res}
-}
 
-//
-const getFoodConsumed = (dataObj) => {
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*            Functions for getting FoodConsumed and HDDS data              */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getFoodConsumedAndHDDS = (dataObj) => {
   let goodSeason = findFoodGroup(foodConsumedGoodSeason, dataObj);
   let badSeason = findFoodGroup(foodConsumedBadSeason, dataObj);
   if (goodSeason.length === 0) {
@@ -245,13 +184,33 @@ const getFoodConsumed = (dataObj) => {
   if (badSeason.length === 0) {
     badSeason = findFoodGroup(foodConsumedLastMonth, dataObj);
   }
+  const foodFlush = transformFoodGroupType(goodSeason);
+  const foodLean = transformFoodGroupType(badSeason);
+
+  let HDDSFlush = parseInt(dataObj.hdds_good_season) || parseInt(dataObj.hdds_last_month);
+  let HDDSLean = parseInt(dataObj.hdds_bad_season) || parseInt(dataObj.hdds_last_month);
+  // 同时为null，则取-1   wzj
+  if (isNaN(HDDSFlush) && isNaN(HDDSLean)) {
+    HDDSFlush = -1;
+    HDDSLean = -1;
+  }
+  // 不同时为null，则采用   wzj
+  if (isNaN(HDDSFlush) && !isNaN(HDDSLean)) {
+    HDDSFlush = foodFlush.length;
+  }
+  if (isNaN(HDDSLean) && !isNaN(HDDSFlush)) {
+    HDDSLean = foodLean.length;
+  }
 
   return {
-    api_food_flush: transformFoodGroupType(goodSeason),
-    api_food_lean: transformFoodGroupType(badSeason)
+    api_hdds_flush: HDDSFlush,
+    api_hdds_lean: HDDSLean,
+    api_food_flush: foodFlush,
+    api_food_lean: foodLean
   };
 };
-exports.getFoodConsumed = getFoodConsumed; // export for test
+exports.getFoodConsumedAndHDDS = getFoodConsumedAndHDDS; // export for test
+
 
 const findFoodGroup = (foodList, dataObj) => {
   let result = [];
@@ -275,24 +234,23 @@ const transformFoodGroupType = (foodList) => {
 };
 exports.transformFoodGroupType = transformFoodGroupType; // export for test
 
-
-//
-const getHDDS = (dataObj) => {
-  let goodSeason = parseInt(dataObj.hdds_good_season) || parseInt(dataObj.hdds_last_month);
-  let badSeason = parseInt(dataObj.hdds_bad_season) || parseInt(dataObj.hdds_last_month);
-  return {
-    api_hdds_flush: goodSeason,
-    api_hdds_lean: badSeason
-  };
+const funcGetFoodName = (foodStr) => {
+  let tmpList = foodStr.split("_");
+  tmpList.pop();
+  tmpList.pop();
+  return tmpList.join("_");
 };
-exports.getHDDS = getHDDS;
+exports.funcGetFoodName = funcGetFoodName; // export for test
 
-//
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*                 Functions for getting FoodShortage data                  */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 const getFoodShortage = (dataObj) => {
-  let monthsStr = dataObj.foodshortagetime_months_which;
+  const monthsStr = dataObj.foodshortagetime_months_which;
   let monthList = [];
   if (typeof (monthsStr) === "string") {
-    let tmpList = monthsStr.toLowerCase().split(/\s+/); // 正则匹配多个空格 wzj
+    let tmpList = monthsStr.trim().toLowerCase().split(/\s+/); // 正则匹配多个空格 wzj
     monthList = tmpList.filter(month => months.includes(month));
     monthList = monthList.map(month => funcTitleCase(month));
   }
@@ -301,13 +259,16 @@ const getFoodShortage = (dataObj) => {
 };
 exports.getFoodShortage = getFoodShortage; // export for test
 
+
 const funcTitleCase = (str) => {
   return str.replace(/^[a-z]/, L => L.toUpperCase());
 };
 exports.funcTitleCase = funcTitleCase; // export for test
 
 
-//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*                    Functions for getting HFIAS data                      */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 const getHFIAS = (dataObj) => {
   let fiesScore = parseInt(dataObj.fies_score);
   let hfiasTmp = dataObj.hfias_status;
@@ -332,6 +293,7 @@ const getHFIAS = (dataObj) => {
 }
 exports.getHFIAS = getHFIAS; // export for test
 
+
 const isStandardHFIAS = (string) => {
   if (typeof (string) !== "string") {
     return false;
@@ -345,46 +307,3 @@ const isStandardHFIAS = (string) => {
   return standardHFIAS.includes(string.toLowerCase());
 }
 exports.isStandardHFIAS = isStandardHFIAS; // export for test
-
-
-//
-const pickProperties = (data, selectKeys) => {
-  let properties = selectKeys.map(key => {
-    return (key in data ? { [key]: data[key] } : {})
-  });
-
-  return properties.reduce((preResult, prop) => Object.assign(preResult, prop), {})
-}
-exports.pickProperties = pickProperties; // export for test
-
-//
-const omitProperties = (data, selectKeys) => {
-  let properties = Object.keys(data).map(key => {
-    return (selectKeys.includes(key) ? {} : { [key]: data[key] })
-  });
-
-  return properties.reduce((preResult, prop) => Object.assign(preResult, prop), {})
-}
-exports.omitProperties = omitProperties; // export for test
-
-//
-const funcSortById = (a, b) => {
-  const idA = a["id_unique"];
-  const idB = b["id_unique"];
-  if (idA > idB) {
-    return 1;
-  } else if (idA < idB) {
-    return -1;
-  } else {
-    return 0;
-  }
-};
-
-//
-const funcGetFoodName = (foodStr) => {
-  let tmpList = foodStr.split("_");
-  tmpList.pop();
-  tmpList.pop();
-  return tmpList.join("_");
-};
-exports.funcGetFoodName = funcGetFoodName; // export for test

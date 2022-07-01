@@ -1,9 +1,23 @@
-const foodSecurity = require("./foodSecurity.js");
-const livelihood = require("./livelihood.js");
-const dataProcessor = require("./dataProcessor.js");
+const allPagesProcessor = require("../data_processors/allPages.processor");
+
+const liveProcessor = require("../data_processors/livelihoods.processor");
+const livelihood = require("../data_calculators/livelihood.calculator");
+
+const foodSecProcessor = require("../data_processors/foodSecurity.processor.js");
+const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
+
+const livestockProcessor = require("../data_processors/livestock.processor");
 
 // Get Schema
 const data = require("../models/data.model.js");
+
+//
+const APIPageMap = {
+  livelihoods: liveProcessor.getDataForAPI,
+  foodSecurity: foodSecProcessor.getDataForAPI,
+  livestock: livestockProcessor.getDataForAPI,
+  allPages: allPagesProcessor.getDataForAPI,
+};
 
 
 // Retrieve data by condition from the MongoDB database
@@ -18,17 +32,12 @@ const getRawData = async (dataType, project, form) => {
   return resultData;
 };
 
-// Last step of the rawdata process
-// Adding average income per mae per day in USD for grouping
-// EYang
-const buildAPIData = async (project, form) => {
+//
+const buildAPIData = async (project, form, pageType) => {
   const indicatorDataList = await getRawData("indicator_data", project, form);
   const processedDataList = await getRawData("processed_data", project, form);
-  const selectedRawData = dataProcessor.getSelectedRawData(indicatorDataList, processedDataList);
-  let dataForAPI = dataProcessor.getDataForAPI(selectedRawData)
-  // Calculate and append income attribute
-  dataForAPI = dataForAPI.map(doc => dataProcessor.calAppendIncome(doc));
-  console.log(dataForAPI.length + ": APIData"); // wzj
+  const dataForAPI = APIPageMap[pageType](indicatorDataList, processedDataList);
+  console.log(dataForAPI.length + ": APIData of " + pageType); // wzj
   return dataForAPI;
 };
 
@@ -51,12 +60,35 @@ exports.findRawDataByDataType = (req, res) => {
     });
 };
 
-//
-exports.getAllFoodSecurity = (req, res) => {
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*              Functions for getting API data for All Pages                */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllPages = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
-  buildAPIData(projectID, formID)
+  buildAPIData(projectID, formID, "allPages")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*          Functions for getting API data for Livelihoods Page           */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllLivelihoods = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "livelihoods")
     .then(data => {
       console.log(data.length); // wzj
       res.send(data);
@@ -68,70 +100,6 @@ exports.getAllFoodSecurity = (req, res) => {
     })
 };
 
-//
-exports.findHFIAS = (req, res) => {
-  const projectID = req.query.projectid;
-  const formID = req.query.formid;
-
-  buildAPIData(projectID, formID)
-    .then(data => {
-      console.log(data.length); // wzj
-      res.send(foodSecurity.count(data, "HFIAS"));
-    })
-    .catch(err => {
-      res.status(500).send(
-        {message: err.message || "Some error occurred while retrieving data."}
-      );
-    });
-};
-
-exports.findFoodShortage = (req, res) => {
-  const projectID = req.query.projectid;
-  const formID = req.query.formid;
-
-  buildAPIData(projectID, formID)
-    .then(data => {
-      console.log(data.length); // wzj
-      res.send(foodSecurity.buildFoodShortageData(data));
-    })
-    .catch(err => {
-      res.status(500).send(
-        {message: err.message || "Some error occurred while retrieving data."}
-      );
-    });
-};
-
-exports.findHDDS = (req, res) => {
-  const projectID = req.query.projectid;
-  const formID = req.query.formid;
-
-  buildAPIData(projectID, formID)
-    .then(data => {
-      console.log(data.length); // wzj
-      res.send(foodSecurity.buildHDDSData(data));
-    })
-    .catch(err => {
-      res.status(500).send(
-        {message: err.message || "Some error occurred while retrieving data."}
-      );
-    });
-};
-
-exports.findFoodConsumed = (req, res) => {
-  const projectID = req.query.projectid;
-  const formID = req.query.formid;
-
-  buildAPIData(projectID, formID)
-    .then(data => {
-      console.log(data.length); // wzj
-      res.send(foodSecurity.buildFoodConsumedData(data));
-    })
-    .catch(err => {
-      res.status(500).send(
-        {message: err.message || "Some error occurred while retrieving data."}
-      );
-    });
-};
 
 // Livelihood by EYang
 exports.findTVA = (req,res) => {
@@ -181,3 +149,108 @@ exports.findAnnualValue = (req,res) => {
       );
     });
 }
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*          Functions for getting API data for Food Security Page           */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllFoodSecurity = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "foodSecurity")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+//
+exports.findHFIAS = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "foodSecurity")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(foodSecCalculator.count(data, "HFIAS"));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findFoodShortage = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "foodSecurity")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(foodSecCalculator.buildFoodShortageData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findHDDS = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "foodSecurity")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(foodSecCalculator.buildHDDSData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findFoodConsumed = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "foodSecurity")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(foodSecCalculator.buildFoodConsumedData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*            Functions for getting API data for Livestock Page             */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllLivestock = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData(projectID, formID, "livestock")
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    })
+};
