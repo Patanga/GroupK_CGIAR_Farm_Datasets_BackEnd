@@ -104,7 +104,7 @@ describe("testFoodSecurity", () => {
 
   it("test_count_HFIAS", () => {
     let tmpResult = foodSecProcessor.combineAttributes(dataList);
-    //console.log(tmpResult);
+    console.log(tmpResult);
     let result = foodSecCalculator.count(tmpResult, "HFIAS");
     assert.equal(result[0].name, "food_secure");
     assert.equal(result[0].value, 2);
@@ -116,7 +116,7 @@ describe("testFoodSecurity", () => {
     assert.equal(result[3].value, 1);
 
     tmpResult = foodSecProcessor.combineAttributes(selectedDataList);
-    console.log(tmpResult);
+    //console.log(tmpResult);
     result = foodSecCalculator.count(tmpResult, "HFIAS");
     //console.log(result);
     assert.equal(result[0].name, "food_secure");
