@@ -255,4 +255,3 @@ exports.getAllLivestock = (req, res) => {
       );
     })
 };
-

@@ -295,7 +295,7 @@ exports.getHFIAS = getHFIAS; // export for test
 
 
 const isStandardHFIAS = (string) => {
-  if (typeof(string) !== "string") {
+  if (typeof (string) !== "string") {
     return false;
   }
   const standardHFIAS = [
