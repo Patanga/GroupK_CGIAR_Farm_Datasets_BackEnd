@@ -69,8 +69,8 @@ const calAppendIncome = (doc) => {
 
   // Does it need illegal value like null check here?
   if (!year || !days || !mae || !rate) {
-    console.log('Invalid record for calAppendIncome, id_uique: ' + doc.id_unique)
-    console.log('year: ' + year + ' mae:' + mae + ' rate: ' + rate)
+    //console.log('Invalid record for calAppendIncome, id_uique: ' + doc.id_unique)
+    //console.log('year: ' + year + ' mae:' + mae + ' rate: ' + rate)
     // return null
   }
   else {

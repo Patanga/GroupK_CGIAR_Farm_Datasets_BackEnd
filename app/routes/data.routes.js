@@ -9,8 +9,8 @@ module.exports = app => {
 
   router.get("/all_pages", data.getAllPages);
 
-  router.get("/livelihood", data.getAllLivelihoods);
   // Livelihood
+  router.get("/livelihood", data.getAllLivelihoods);
   router.get("/livelihood/tva", data.findTVA);
   router.get("/livelihood/income_cat", data.findIncomeCat);
   router.get("/livelihood/annual_value", data.findAnnualValue);
