@@ -17,7 +17,7 @@ router.get("/livelihood/barChart", async (req, res) => {
 router.get("/livelihood/pie", async (req, res) => {
     res.send(await pie())
 })
-router.get("/livelihood/mongram", async (req, res) => {
+router.get("/livelihood/monGram", async (req, res) => {
     res.send(await monGram())
 })
 router.get("/gps", async (req, res) => {

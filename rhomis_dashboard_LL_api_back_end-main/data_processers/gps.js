@@ -10,10 +10,10 @@ const gps = async() =>{
             continue
         }
 
-        const doc ={
-            gpsLat : data[i].gps_lat,
-            gpsLon : data[i].gps_lon,
-        }
+        const doc =[
+            data[i].gps_lat,
+            data[i].gps_lon,
+        ]
         output.push(doc)
     }
 

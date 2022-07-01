@@ -79,8 +79,8 @@ const hisGram = async () => {
     output['70%']=(percent_change.most/count)*100
     output['90%']=(percent_change.all/count)*100
     //未对所需要的小数点后取几位进行计算
-    var ne = Object.entries(output)
-    return ne
+    
+    return output
 
 }
 
@@ -219,8 +219,8 @@ const barChart = async() =>{
         obj[item] = obj[item] ? obj[item]+1 : 1
     })
 
-    var ne = Object.entries(obj)
-    return ne
+    
+    return obj
 
 }
 
@@ -279,8 +279,8 @@ const monGram = async() =>{
         obj[item] = obj[item] ? obj[item]+1 : 1
     })
 
-    var ne = Object.entries(obj)
-    return ne
+    
+    return obj
 
 }
 
