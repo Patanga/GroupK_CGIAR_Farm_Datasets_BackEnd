@@ -1,6 +1,0 @@
-.env
-.idea/
-node_modules/
-data/
-id_txserver
-.DS_Store
