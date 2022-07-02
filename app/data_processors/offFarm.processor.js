@@ -55,6 +55,8 @@ exports.getDataForAPI = (indicatorDataList, processedDataList) => {
     keysOfSelect);
   return combineAttributes(selectedDataList);
 };
+
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*           Functions for getting offfarm way of spend data                */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -67,7 +69,7 @@ const getOffFarmSpendPie = (dataObj) => {
       result.push(str[i]);
     }
   }
-  return { api_off_farm_spending: result};
+  return { api_off_farm_spending: result };
 };
 exports.getOffFarmSpendPie = getOffFarmSpendPie;
 
@@ -84,7 +86,7 @@ const getOffFarmActivity = (dataObj) => {
       result.push(acts[i]);
     }
   }
-  return { api_off_farm_activities: result};
+  return { api_off_farm_activities: result };
 };
 exports.getOffFarmActivity = getOffFarmActivity;
 
@@ -136,6 +138,7 @@ const getOffFarmMonth = (dataObj) => {
     }
   }
   let result = [...rset];
-  return { api_off_farm_months: result};
+  
+  return { api_off_farm_months: result };
 };
 exports.getOffFarmMonth = getOffFarmMonth;

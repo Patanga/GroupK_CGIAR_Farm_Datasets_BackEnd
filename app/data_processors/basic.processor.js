@@ -96,7 +96,11 @@ exports.getGroupingData = getGroupingData;
 
 //
 const getCountry = (dataObj) => {
-  const country = countryMap[dataObj.id_country.toUpperCase()];
+  let country = "other";
+  if (typeof(dataObj.id_country) === "string") {
+    country = countryMap[dataObj.id_country.toUpperCase()];
+    country = country || "other";
+  }
   return {id_country: country};
 };
 
