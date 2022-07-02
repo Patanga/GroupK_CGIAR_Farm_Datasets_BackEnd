@@ -23,7 +23,8 @@ describe("testProcessor", () => {
     //console.log(selectedDataList[3]);
     let result = livestockProcessor.combineAttributes(selectedDataList);
     //console.log(result);
-    console.log(result[3]);
+    //console.log(result[3]);
+    console.log(result[0]);
 
     const testPropAPI = (obj, props) => {
       assert.equal(obj[props[0][0]], props[0][1]);

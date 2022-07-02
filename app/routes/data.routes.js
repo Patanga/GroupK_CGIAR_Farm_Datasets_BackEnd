@@ -22,6 +22,8 @@ module.exports = app => {
   router.get("/food_security/food_consumed", data.findFoodConsumed);
 
   router.get("/livestock", data.getAllLivestock);
+  router.get("/livestock/frequency", data.findFrequency);
+  router.get("/livestock/heads", data.findHeads);
 
 
   app.use("/api/data", router);

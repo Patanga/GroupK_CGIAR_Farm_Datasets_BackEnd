@@ -172,7 +172,7 @@ const getLivestockFrequency = (dataObj) => {
   };
 
   let animalsKept = Object.entries(animals).filter(
-    animal => !isNaN(animal[1])
+    animal => (!isNaN(animal[1])) && (animal[1] >= 0)
   );
 
   return { api_livestocks_kept: animalsKept };
