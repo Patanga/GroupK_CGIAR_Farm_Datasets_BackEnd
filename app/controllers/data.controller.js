@@ -7,6 +7,7 @@ const foodSecProcessor = require("../data_processors/foodSecurity.processor.js")
 const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
 
 const livestockProcessor = require("../data_processors/livestock.processor");
+const livestockCalculator = require("../data_calculators/livestock.calculator");
 
 
 // Get Schema
@@ -66,7 +67,7 @@ exports.getAllPages = (req, res) => {
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-/*          Functions for getting API data for Livelihoods Page           */
+/*          Functions for getting API data for Livelihoods Page             */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 exports.getAllLivelihoods = (req, res) => {
   const projectID = req.query.projectid;
@@ -237,6 +238,39 @@ exports.getAllLivestock = (req, res) => {
         {message: err.message || "Some error occurred while retrieving data."}
       );
     })
+};
+
+//
+exports.findFrequency = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("livestock", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livestockCalculator.count(data, "Frequency"));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findHeads = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("livestock", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livestockCalculator.buildHeadsData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
 };
 
 
