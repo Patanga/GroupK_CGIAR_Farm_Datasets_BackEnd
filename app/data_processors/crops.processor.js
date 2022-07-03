@@ -44,7 +44,6 @@ const crop_harvest_kg_per_year = [
 ];
 
 let keysOfProcessed = [
-  "landcultivated",
   "crops_all"
 ];
 keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed,
@@ -52,7 +51,8 @@ keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed,
   crop_harvest_kg_per_year);
 
 let keysOfIndicator = [
-  "id_unique"
+  "id_unique",
+  "land_cultivated_ha"
 ];
 
 
@@ -89,7 +89,6 @@ exports.getDataForAPI = (indicatorDataList, processedDataList) => {
   return combineAttributes(selectedDataList);
 };
 
-
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*               Functions for getting All Crops grown data                 */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -105,13 +104,30 @@ const getAllCrops = (dataObj) => {
 exports.getAllCrops = getAllCrops; // export for test
 
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*               Functions for getting Crop used data                 */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 const getCropUsed = (dataObj) => {
   const consumed1 = parseInt(dataObj.crop_consumed_kg_per_year_1) || 0;
   const consumed2 = parseInt(dataObj.crop_consumed_kg_per_year_2) || 0;
+  const consumed3 = parseInt(dataObj.crop_consumed_kg_per_year_3) || 0;
+  const consumed4 = parseInt(dataObj.crop_consumed_kg_per_year_4) || 0;
+  const consumed5 = parseInt(dataObj.crop_consumed_kg_per_year_5) || 0;
+  const consumed6 = parseInt(dataObj.crop_consumed_kg_per_year_6) || 0;
+  const consumed7 = parseInt(dataObj.crop_consumed_kg_per_year_7) || 0;
+  const consumed8 = parseInt(dataObj.crop_consumed_kg_per_year_8) || 0;
 
-  const consumedAve = (consumed1+consumed2) / 8;
+  const sold1 = parseInt(dataObj.crop_sold_kg_per_year_1) || 0;
+  const sold2 = parseInt(dataObj.crop_sold_kg_per_year_2) || 0;
+  const sold3 = parseInt(dataObj.crop_sold_kg_per_year_3) || 0;
+  const sold4 = parseInt(dataObj.crop_sold_kg_per_year_4) || 0;
+  const sold5 = parseInt(dataObj.crop_sold_kg_per_year_5) || 0;
+  const sold6 = parseInt(dataObj.crop_sold_kg_per_year_6) || 0;
+  const sold7 = parseInt(dataObj.crop_sold_kg_per_year_7) || 0;
+  const sold8 = parseInt(dataObj.crop_sold_kg_per_year_8) || 0;
 
-  const soldAve = 8;
+  const consumedAve = (consumed1+consumed2+consumed3+consumed4+consumed5+consumed6+consumed7+consumed8) / 8;
+  const soldAve = (sold1+sold2+sold3+sold4+sold5+sold6+sold7+sold8) / 8;
 
   return {
     api_crop_consumed_kg_per_year: consumedAve,
@@ -119,3 +135,71 @@ const getCropUsed = (dataObj) => {
   };
 };
 exports.getCropUsed = getCropUsed;
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*               Functions for getting Crop yields data                 */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getCropYields = (dataObj) => {
+  var name1 = dataObj.crop_name_1;
+  var name2 = dataObj.crop_name_2;
+  var name3 = dataObj.crop_name_3;
+  var name4 = dataObj.crop_name_4;
+  var name5 = dataObj.crop_name_5;
+  var name6 = dataObj.crop_name_6;
+  var name7 = dataObj.crop_name_7;
+  var name8 = dataObj.crop_name_8;
+  var harvest1 = dataObj.crop_harvest_kg_per_year_1;
+  var harvest2 = dataObj.crop_harvest_kg_per_year_2;
+  var harvest3 = dataObj.crop_harvest_kg_per_year_3;
+  var harvest4 = dataObj.crop_harvest_kg_per_year_4;
+  var harvest5 = dataObj.crop_harvest_kg_per_year_5;
+  var harvest6 = dataObj.crop_harvest_kg_per_year_6;
+  var harvest7 = dataObj.crop_harvest_kg_per_year_7;
+  var harvest8 = dataObj.crop_harvest_kg_per_year_8;
+  let arr1 = [];
+  let arr2 = [];
+  let arr3 = [];
+  let arr4 = [];
+  let arr5 = [];
+  let arr6 = [];
+  let arr7 = [];
+  let arr8 = [];
+  if(typeof (name1) === "string"&&typeof (harvest1) === "number"&&harvest1>=0){
+    arr1 = [name1,harvest1];
+  }
+  if(typeof (name2) === "string"&&typeof (harvest2) === "number"&&harvest2>=0){
+    arr2 = [name2,harvest2];
+  }
+  if(typeof (name3) === "string"&&typeof (harvest3) === "number"&&harvest3>=0){
+    arr3 = [name3,harvest3];
+  }
+  if(typeof (name4) === "string"&&typeof (harvest4) === "number"&&harvest4>=0){
+    arr4 = [name4,harvest4];
+  }
+  if(typeof (name5) === "string"&&typeof (harvest5) === "number"&&harvest5>=0){
+    arr5 = [name5,harvest5];
+  }
+  if(typeof (name6) === "string"&&typeof (harvest6) === "number"&&harvest6>=0){
+    arr6 = [name6,harvest6];
+  }
+  if(typeof (name7) === "string"&&typeof (harvest7) === "number"&&harvest7>=0){
+    arr7 = [name7,harvest7];
+  }
+  if(typeof (name8) === "string"&&typeof (harvest8) === "number"&&harvest8>=0){
+    arr8 = [name8,harvest8];
+  }
+   return {arr1,arr2,arr3,arr4,arr5,arr6,arr7,arr8 }
+};
+exports.getCropYields = getCropYields; // export for test
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*               Functions for getting Crop Land data                 */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getCropLand = (dataObj) => {
+  let landArea = [];
+  if(Number.isFinite(dataObj.land_cultivated_ha)&&dataObj.land_cultivated_ha>=0){
+    landArea = dataObj.land_cultivated_ha
+  }
+  return {landArea};
+};
+exports.getCropLand = getCropLand;
