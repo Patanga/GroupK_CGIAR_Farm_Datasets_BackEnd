@@ -156,39 +156,47 @@ const getCropYields = (dataObj) => {
   var harvest6 = dataObj.crop_harvest_kg_per_year_6;
   var harvest7 = dataObj.crop_harvest_kg_per_year_7;
   var harvest8 = dataObj.crop_harvest_kg_per_year_8;
-  let arr1 = [];
-  let arr2 = [];
-  let arr3 = [];
-  let arr4 = [];
-  let arr5 = [];
-  let arr6 = [];
-  let arr7 = [];
-  let arr8 = [];
+  var name_yield1 = [];
+  var name_yield2 = [];
+  var name_yield3 = [];
+  var name_yield4 = [];
+  var name_yield5 = [];
+  var name_yield6 = [];
+  var name_yield7 = [];
+  var name_yield8 = [];
   if(typeof (name1) === "string"&&typeof (harvest1) === "number"&&harvest1>=0){
-    arr1 = [name1,harvest1];
+    name_yield1.push(name1);
+    name_yield1.push(harvest1);
   }
   if(typeof (name2) === "string"&&typeof (harvest2) === "number"&&harvest2>=0){
-    arr2 = [name2,harvest2];
+    name_yield2.push(name2);
+    name_yield2.push(harvest2);
   }
   if(typeof (name3) === "string"&&typeof (harvest3) === "number"&&harvest3>=0){
-    arr3 = [name3,harvest3];
+    name_yield3.push(name3);
+    name_yield3.push(harvest3);
   }
   if(typeof (name4) === "string"&&typeof (harvest4) === "number"&&harvest4>=0){
-    arr4 = [name4,harvest4];
+    name_yield4.push(name4);
+    name_yield4.push(harvest4);
   }
   if(typeof (name5) === "string"&&typeof (harvest5) === "number"&&harvest5>=0){
-    arr5 = [name5,harvest5];
+    name_yield5.push(name5);
+    name_yield5.push(harvest5);
   }
   if(typeof (name6) === "string"&&typeof (harvest6) === "number"&&harvest6>=0){
-    arr6 = [name6,harvest6];
+    name_yield6.push(name6);
+    name_yield6.push(harvest6);
   }
   if(typeof (name7) === "string"&&typeof (harvest7) === "number"&&harvest7>=0){
-    arr7 = [name7,harvest7];
+    name_yield7.push(name7);
+    name_yield7.push(harvest7);
   }
   if(typeof (name8) === "string"&&typeof (harvest8) === "number"&&harvest8>=0){
-    arr8 = [name8,harvest8];
+    name_yield8.push(name8);
+    name_yield8.push(harvest8);
   }
-   return {arr1,arr2,arr3,arr4,arr5,arr6,arr7,arr8 }
+   return {name_yield1,name_yield2,name_yield3,name_yield4,name_yield5,name_yield6,name_yield7,name_yield8 }
 };
 exports.getCropYields = getCropYields; // export for test
 
@@ -196,7 +204,7 @@ exports.getCropYields = getCropYields; // export for test
 /*               Functions for getting Crop Land data                 */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 const getCropLand = (dataObj) => {
-  let landArea = [];
+  var landArea;
   if(Number.isFinite(dataObj.land_cultivated_ha)&&dataObj.land_cultivated_ha>=0){
     landArea = dataObj.land_cultivated_ha
   }
