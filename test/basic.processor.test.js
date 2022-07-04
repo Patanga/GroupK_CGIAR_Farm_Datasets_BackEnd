@@ -1,6 +1,6 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
-const basic = require("../app/data_processors/basic.processor.js");
+const basic = require("../app/data_processors/grouping.processor.js");
 const foodSecProcessor = require("../app/data_processors/foodSecurity.processor");
 
 

@@ -1,5 +1,5 @@
 const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
-  omitProperties} = require("./basic.processor.js");
+  omitProperties} = require("./grouping.processor.js");
 const foodSecProcessor = require("./foodSecurity.processor");
 const livestockProcessor = require("./livestock.processor");
 const liveProcessor = require("./livelihoods.processor");

@@ -1,11 +1,11 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
-const basic = require("../app/data_processors/basic.processor");
+const index = require("../app/data_processors/all.index");
 const livestockProcessor = require("../app/data_processors/livestock.processor");
 
 
-const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  livestockProcessor.keysOfSelect);
+const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+  index.pageMap["ls"].keysOfSelect);
 
 
 describe("testProcessor", () => {
@@ -20,8 +20,8 @@ describe("testProcessor", () => {
   ];
 
   it("test_getDataForAPI", () => {
-    //console.log(selectedDataList[3]);
-    let result = livestockProcessor.combineAttributes(selectedDataList);
+    console.log(selectedDataList[3]);
+    let result = index.combineAttributes(selectedDataList, "ls");
     //console.log(result);
     //console.log(result[3]);
     console.log(result[0]);

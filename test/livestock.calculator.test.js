@@ -1,7 +1,7 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
 const dataList = dt.dataList;
-const basic = require("../app/data_processors/basic.processor");
+const basic = require("../app/data_processors/grouping.processor");
 const livestockProcessor = require("../app/data_processors/livestock.processor");
 const livestockCalculator = require("../app/data_calculators/livestock.calculator");
 

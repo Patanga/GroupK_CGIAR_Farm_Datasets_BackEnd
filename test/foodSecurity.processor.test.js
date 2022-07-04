@@ -1,12 +1,11 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
 const dataList = dt.dataList;
-const basic = require("../app/data_processors/basic.processor");
-const foodSecProcessor = require("../app/data_processors/foodSecurity.processor.js");
+const index = require("../app/data_processors/all.index");
+const foodSecProcessor = require("../app/data_processors/foodSecurity.processor");
 
-
-const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  foodSecProcessor.keysOfSelect);
+const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+  index.pageMap["fs"].keysOfSelect);
 
 
 describe("testProcessor", () => {
@@ -30,7 +29,7 @@ describe("testProcessor", () => {
 
   it("test_getDataForAPI", () => {
     //console.log(selectedDataList[3]);
-    let result = foodSecProcessor.combineAttributes(selectedDataList);
+    let result = index.combineAttributes(selectedDataList, "fs");
     //console.log(result);
     console.log(result[3]);
 

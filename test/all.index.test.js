@@ -1,11 +1,9 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
 const index = require("../app/data_processors/all.index");
-const offFarmProcessor = require("../app/data_processors/offFarm.processor");
 
 
-const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  index.pageMap["of"].keysOfSelect);
+
 
 
 describe("testProcessor", () => {
@@ -17,13 +15,24 @@ describe("testProcessor", () => {
     ["id_form", "bf_cir_2018"],
   ];
   const propAPI3 = [
+    ["api_hfias_status", "moderately_fi"],
+    ["api_food_shortage_months", ["Jan", "Dec"]],
+    ["api_hdds_flush", 8],
+    ["api_hdds_lean", 3],
+    ["api_food_flush",
+      [ "grainsrootstubers", "legumes", "veg_leafy", "vita_veg_fruit",
+        "vegetables", "meat", "milk_dairy", "eggs" ]],
+    ["api_food_lean", [ "grainsrootstubers", "legumes", "eggs" ]]
   ];
 
-  it("test_getDataForAPI", () => {
+  it("test_basic", () => {
+    const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+      index.pageMap["basic"].keysOfSelect);
+
     console.log(selectedDataList[3]);
-    let result = index.combineAttributes(selectedDataList, "of");
+    let result = index.combineAttributes(selectedDataList, "basic");
     //console.log(result);
-    console.log(result[3]);
+    //console.log(result[3]);
 
     const testPropAPI = (obj, props) => {
       assert.equal(obj[props[0][0]], props[0][1]);
@@ -58,4 +67,31 @@ describe("testProcessor", () => {
     testPropFixed(result[3], propFixed3);
   });
 
+  it("test_all", () => {
+    const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+      index.pageMap["all"].keysOfSelect);
+
+    console.log(selectedDataList[3]);
+    console.log(index.pageMap["all"].getAPIKeys(selectedDataList[3]));
+  });
+
+  it("test_foodSecurity", () => {
+    const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+      index.pageMap["fs"].keysOfSelect);
+
+    console.log(selectedDataList[3]);
+    let result = index.combineAttributes(selectedDataList, "fs");
+    //console.log(result);
+    console.log(result[3]);
+  });
+
+  it("test_keys", () => {
+    //console.log(index.pageMap["all"].keysOfSelect);
+    //console.log(index.pageMap["all"].keysOfOmit);
+
+    //console.log(index.pageMap["basic"].keysOfSelect);
+    //console.log(index.pageMap["basic"].keysOfOmit);
+  });
+
 });
+
