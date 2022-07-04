@@ -1,5 +1,4 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
-  omitProperties} = require("./basic.processor.js");
+const group = require("./grouping.processor.js");
 
 const crop_consumed_kg_per_year = [
   "crop_consumed_kg_per_year_1",
@@ -44,24 +43,30 @@ const crop_harvest_kg_per_year = [
 ];
 
 let keysOfProcessed = [
+  "id_unique",
+
   "crops_all"
 ];
-keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed,
+keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed,
   crop_consumed_kg_per_year, crop_sold_kg_per_year, crop_name,
   crop_harvest_kg_per_year);
 
 let keysOfIndicator = [
   "id_unique",
+
   "land_cultivated_ha"
 ];
 
 
+// Define which original keys to be selected
 const keysOfSelect = {
   indicator: keysOfIndicator,
   processed: keysOfProcessed
 };
-exports.keysOfSelect = keysOfSelect; // export for test
+exports.keysOfSelect = keysOfSelect;
 
+
+// Define which original keys to be omitted
 let keysOfOmit = [
   "crops_all",
   "land_cultivated_ha"
@@ -71,25 +76,15 @@ keysOfOmit = keysOfOmit.concat(crop_consumed_kg_per_year, crop_sold_kg_per_year,
 exports.keysOfOmit = keysOfOmit;
 
 
-//
-const combineAttributes = (selectedDataList) => {
-  return selectedDataList.map(selectedDataObj => {
-    let newObj = {};
-    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
-      getAllCrops(selectedDataObj), getCropUsed(selectedDataObj),
-      getCropYields(selectedDataObj), getCropLand(selectedDataObj)
-      );
-    return omitProperties(newObj, keysOfOmit);
-  });
+// Define how to transform original keys to API keys
+const getAPIKeys = (dataObj) => {
+  let newObj = {};
+  Object.assign(newObj, group.getAPIKeys(dataObj), getAllCrops(dataObj),
+    getCropUsed(dataObj), getCropYields(dataObj), getCropLand(dataObj));
+  return newObj;
 };
-exports.combineAttributes = combineAttributes;
+exports.getAPIKeys = getAPIKeys;
 
-
-exports.getDataForAPI = (indicatorDataList, processedDataList) => {
-  const selectedDataList = getSelectedRawData(indicatorDataList, processedDataList,
-    keysOfSelect);
-  return combineAttributes(selectedDataList);
-};
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*               Functions for getting All Crops grown data                 */
@@ -247,7 +242,7 @@ const getCropYields = (dataObj) => {
     api_name_yield8.push(name8);
     api_name_yield8.push(parseFloat(harvest8));
   }
-   return {api_name_yield1,api_name_yield2,api_name_yield3,api_name_yield4,api_name_yield5,api_name_yield6,api_name_yield7,api_name_yield8 }
+  return {api_name_yield1,api_name_yield2,api_name_yield3,api_name_yield4,api_name_yield5,api_name_yield6,api_name_yield7,api_name_yield8 }
 };
 exports.getCropYields = getCropYields; // export for test
 
