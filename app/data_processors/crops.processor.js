@@ -1,5 +1,4 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
-  omitProperties} = require("./basic.processor.js");
+const group = require("./grouping.processor.js");
 
 const crop_consumed_kg_per_year = [
   "crop_consumed_kg_per_year_1",
@@ -44,14 +43,17 @@ const crop_harvest_kg_per_year = [
 ];
 
 let keysOfProcessed = [
+  "id_unique",
+
   "crops_all"
 ];
-keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed,
+keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed,
   crop_consumed_kg_per_year, crop_sold_kg_per_year, crop_name,
   crop_harvest_kg_per_year);
 
 let keysOfIndicator = [
   "id_unique",
+
   "land_cultivated_ha"
 ];
 
@@ -70,24 +72,15 @@ keysOfOmit = keysOfOmit.concat(crop_consumed_kg_per_year, crop_sold_kg_per_year,
 exports.keysOfOmit = keysOfOmit;
 
 
-//
-const combineAttributes = (selectedDataList) => {
-  return selectedDataList.map(selectedDataObj => {
-    let newObj = {};
-    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
-      getAllCrops(selectedDataObj), getCropUsed(selectedDataObj)
-    );
-    return omitProperties(newObj, keysOfOmit);
-  });
+// Define how to transform original keys to API keys
+const getAPIKeys = (dataObj) => {
+  let newObj = {};
+  Object.assign(newObj, group.getAPIKeys(dataObj),
+    getAllCrops(dataObj), getCropUsed(dataObj));
+  return newObj;
 };
-exports.combineAttributes = combineAttributes;
+exports.getAPIKeys = getAPIKeys;
 
-
-exports.getDataForAPI = (indicatorDataList, processedDataList) => {
-  const selectedDataList = getSelectedRawData(indicatorDataList, processedDataList,
-    keysOfSelect);
-  return combineAttributes(selectedDataList);
-};
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*               Functions for getting All Crops grown data                 */
