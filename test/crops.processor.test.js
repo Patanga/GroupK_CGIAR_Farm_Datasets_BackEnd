@@ -1,31 +1,32 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
-const basic = require("../app/data_processors/grouping.processor");
+const index = require("../app/data_processors/all.index");
 const cropsProcessor = require("../app/data_processors/crops.processor");
 
-const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  cropsProcessor.keysOfSelect);
+const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+  index.pageMap["crops"].keysOfSelect);
+
+
+describe("print", () => {
+
+  it("test_getDataForAPI", () => {
+    let idx = 0;
+    console.log(selectedDataList[idx]);
+    let result = index.combineAttributes(selectedDataList, "crops");
+    //console.log(result);
+    console.log(result[idx]);
+  });
+
+});
 
 
 describe("testProcessor", () => {
 
   it("test_getDataForAPI", () => {
     //console.log(selectedDataList[0]);
-    let result = cropsProcessor.combineAttributes(selectedDataList);
+    let result = index.combineAttributes(selectedDataList, "crops");
     console.log(result);
-    assert.equal(result0["api_food_lean"].includes("vegetables"),
-      true);
 
-
-    //console.log(selectedDataList[8]);
-    let result8 = foodSecProcessor.getFoodConsumedAndHDDS(selectedDataList[8]);
-    //console.log(result8);
-    assert.equal(result8["api_food_flush"].includes("grainsrootstubers"),
-      true);
-    assert.equal(result8["api_food_flush"].includes("vita_veg_fruit"),
-      true);
-    assert.equal(result8["api_food_flush"].includes("meat"),
-      false);
   });
 
 
