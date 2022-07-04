@@ -1,5 +1,4 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
-  omitProperties} = require("./basic.processor.js");
+const group = require("./grouping.processor.js");
 
 const foodConsumedGoodSeason = [
   "grainsrootstubers_good_season",
@@ -86,12 +85,14 @@ const foodConsumedLastMonth = [
 exports.foodConsumedLastMonth = foodConsumedLastMonth; // export for test
 
 let keysOfProcessed = [
+  "id_unique",
+
   "foodshortagetime_months_which"
 ];
-keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed,
+keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed,
   foodConsumedGoodSeason, foodConsumedBadSeason, foodConsumedLastMonth);
 
-const keysOfIndicator = [
+let keysOfIndicator = [
   "id_unique",
 
   "hfias_status",
@@ -102,13 +103,15 @@ const keysOfIndicator = [
 ];
 
 
+// Define which original keys to be selected
 const keysOfSelect = {
   indicator: keysOfIndicator,
   processed: keysOfProcessed
 };
-exports.keysOfSelect = keysOfSelect; // export for test
+exports.keysOfSelect = keysOfSelect;
 
 
+// Define which original keys to be omitted
 let keysOfOmit = [
   "foodshortagetime_months_which",
   "hfias_status",
@@ -120,6 +123,16 @@ let keysOfOmit = [
 keysOfOmit = keysOfOmit.concat(foodConsumedGoodSeason,
   foodConsumedBadSeason, foodConsumedLastMonth);
 exports.keysOfOmit = keysOfOmit;
+
+
+// Define how to transform original keys to API keys
+const getAPIKeys = (dataObj) => {
+  let newObj = {};
+  Object.assign(newObj, group.getAPIKeys(dataObj), getHFIAS(dataObj),
+    getFoodShortage(dataObj), getFoodConsumedAndHDDS(dataObj));
+  return newObj;
+};
+exports.getAPIKeys = getAPIKeys;
 
 
 const months = ["jan", "feb", "mar", "apr", "may", "jun",
@@ -150,26 +163,6 @@ const foodGroupMap = {
   other_veg: "vegetables",
   other_fruits: "fruits"
 }
-
-
-//
-const combineAttributes = (selectedDataList) => {
-  return selectedDataList.map(selectedDataObj => {
-    let newObj = {};
-    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
-      getHFIAS(selectedDataObj), getFoodShortage(selectedDataObj),
-      getFoodConsumedAndHDDS(selectedDataObj) );
-    return omitProperties(newObj, keysOfOmit);
-  });
-};
-exports.combineAttributes = combineAttributes;
-
-
-exports.getDataForAPI = (indicatorDataList, processedDataList) => {
-  const selectedDataList = getSelectedRawData(indicatorDataList, processedDataList,
-    keysOfSelect);
-  return combineAttributes(selectedDataList);
-};
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

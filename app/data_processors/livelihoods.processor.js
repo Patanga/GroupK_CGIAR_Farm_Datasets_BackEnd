@@ -1,9 +1,9 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
-  omitProperties} = require("./basic.processor.js");
+const group = require("./grouping.processor.js");
 
 let keysOfProcessed = [
+  "id_unique"
 ];
-keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed);
+keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed);
 
 let keysOfIndicator = [
   "id_unique",
@@ -21,35 +21,26 @@ let keysOfIndicator = [
 ];
 
 
+// Define which original keys to be selected
 const keysOfSelect = {
   indicator: keysOfIndicator,
   processed: keysOfProcessed
 };
-exports.keysOfSelect = keysOfSelect; // export for test
+exports.keysOfSelect = keysOfSelect;
 
-let keysOfOmit = [
-];
+
+// Define which original keys to be omitted
+let keysOfOmit = [];
 exports.keysOfOmit = keysOfOmit;
 
 
-//
-const combineAttributes = (selectedDataList) => {
-  return selectedDataList.map(selectedDataObj => {
-    let newObj = {};
-    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
-      calAppendIncome(selectedDataObj)
-    );
-    return omitProperties(newObj, keysOfOmit);
-  });
+// Define how to transform original keys to API keys
+const getAPIKeys = (dataObj) => {
+  let newObj = {};
+  Object.assign( newObj, group.getAPIKeys(dataObj), calAppendIncome(dataObj));
+  return newObj;
 };
-exports.combineAttributes = combineAttributes;
-
-
-exports.getDataForAPI = (indicatorDataList, processedDataList) => {
-  const selectedDataList = getSelectedRawData(indicatorDataList, processedDataList,
-    keysOfSelect);
-  return combineAttributes(selectedDataList);
-};
+exports.getAPIKeys = getAPIKeys;
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

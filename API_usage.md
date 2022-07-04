@@ -9,6 +9,10 @@
 /api/data/all_pages?projectid=xxx&formid=xxx\
 \
 \
+/api/data/home\
+/api/data/home?projectid=xxx&formid=xxx\
+\
+\
 /api/data/livelihood\
 /api/data/livelihood?projectid=xxx&formid=xxx\
 \
@@ -38,8 +42,16 @@
 /api/data/food_security/food_consumed?projectid=xxx&formid=xxx\
 \
 \
+/api/data/crops\
+/api/data/crops?projectid=xxx&formid=xxx\
+\
+\
 /api/data/livestock\
 /api/data/livestock?projectid=xxx&formid=xxx\
+\
+\
+/api/data/off_farm\
+/api/data/off_farm?projectid=xxx&formid=xxx\
 \
 
 #### post

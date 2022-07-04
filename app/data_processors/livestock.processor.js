@@ -1,5 +1,4 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
-  omitProperties} = require("./basic.processor.js");
+const group = require("./grouping.processor.js");
 
 //keys For Chart1 & Chart2
 // For each household, sum up their value of key in keysForChart1_Chart2
@@ -78,8 +77,9 @@ const livestock_breeds = [
 ];
 
 let keysOfProcessed = [
+  "id_unique",
 ];
-keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed,
+keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed,
   livestock_heads, livestock_products, livestock_breeds);
 
 let keysOfIndicator = [
@@ -87,37 +87,30 @@ let keysOfIndicator = [
 ];
 
 
+// Define which original keys to be selected
 const keysOfSelect = {
   indicator: keysOfIndicator,
   processed: keysOfProcessed
 };
-exports.keysOfSelect = keysOfSelect; // export for test
+exports.keysOfSelect = keysOfSelect;
 
+
+// Define which original keys to be omitted
 let keysOfOmit = [
 ];
 keysOfOmit = keysOfOmit.concat(livestock_heads, livestock_products, livestock_breeds);
 exports.keysOfOmit = keysOfOmit;
 
 
-//
-const combineAttributes = (selectedDataList) => {
-  return selectedDataList.map(selectedDataObj => {
-    let newObj = {};
-    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
-      getLivestockFrequency(selectedDataObj), getLivestockUse(selectedDataObj),
-      getLivestockBreeds(selectedDataObj)
-    );
-    return omitProperties(newObj, keysOfOmit);
-  });
+// Define how to transform original keys to API keys
+const getAPIKeys = (dataObj) => {
+  let newObj = {};
+  Object.assign( newObj, group.getAPIKeys(dataObj),
+    getLivestockFrequency(dataObj), getLivestockUse(dataObj),
+    getLivestockBreeds(dataObj));
+  return newObj;
 };
-exports.combineAttributes = combineAttributes;
-
-
-exports.getDataForAPI = (indicatorDataList, processedDataList) => {
-  const selectedDataList = getSelectedRawData(indicatorDataList, processedDataList,
-    keysOfSelect);
-  return combineAttributes(selectedDataList);
-};
+exports.getAPIKeys = getAPIKeys;
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

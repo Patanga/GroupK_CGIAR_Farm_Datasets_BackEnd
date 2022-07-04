@@ -1,11 +1,24 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
-const basic = require("../app/data_processors/basic.processor");
+const index = require("../app/data_processors/all.index");
 const liveProcessor = require("../app/data_processors/livelihoods.processor");
 
 
-const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  liveProcessor.keysOfSelect);
+const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+  index.pageMap["livelihoods"].keysOfSelect);
+
+
+describe("print", () => {
+
+  it("test_getDataForAPI", () => {
+    let idx = 6;
+    console.log(selectedDataList[idx]);
+    let result = index.combineAttributes(selectedDataList, "livelihoods");
+    //console.log(result);
+    console.log(result[idx]);
+  });
+
+});
 
 
 describe("testProcessor", () => {
@@ -20,8 +33,8 @@ describe("testProcessor", () => {
   ];
 
   it("test_getDataForAPI", () => {
-    //console.log(selectedDataList[3]);
-    let result = liveProcessor.combineAttributes(selectedDataList);
+    console.log(selectedDataList[3]);
+    let result = index.combineAttributes(selectedDataList, "ll");
     console.log(result);
     //console.log(result[3]);
 
