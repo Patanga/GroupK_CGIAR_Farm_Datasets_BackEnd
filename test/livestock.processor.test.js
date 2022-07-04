@@ -5,7 +5,20 @@ const livestockProcessor = require("../app/data_processors/livestock.processor")
 
 
 const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  index.pageMap["ls"].keysOfSelect);
+  index.pageMap["livestock"].keysOfSelect);
+
+
+describe("print", () => {
+
+  it("test_getDataForAPI", () => {
+    let idx = 0;
+    console.log(selectedDataList[idx]);
+    let result = index.combineAttributes(selectedDataList, "livestock");
+    //console.log(result);
+    console.log(result[idx]);
+  });
+
+});
 
 
 describe("testProcessor", () => {
@@ -21,7 +34,7 @@ describe("testProcessor", () => {
 
   it("test_getDataForAPI", () => {
     console.log(selectedDataList[3]);
-    let result = index.combineAttributes(selectedDataList, "ls");
+    let result = index.combineAttributes(selectedDataList, "livestock");
     //console.log(result);
     //console.log(result[3]);
     console.log(result[0]);

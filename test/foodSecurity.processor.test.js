@@ -5,7 +5,20 @@ const index = require("../app/data_processors/all.index");
 const foodSecProcessor = require("../app/data_processors/foodSecurity.processor");
 
 const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  index.pageMap["fs"].keysOfSelect);
+  index.pageMap["foodSecurity"].keysOfSelect);
+
+
+describe("print", () => {
+
+  it("test_getDataForAPI", () => {
+    let idx = 8;
+    console.log(selectedDataList[idx]);
+    let result = index.combineAttributes(selectedDataList, "foodSecurity");
+    //console.log(result);
+    console.log(result[idx]);
+  });
+
+});
 
 
 describe("testProcessor", () => {
@@ -29,7 +42,7 @@ describe("testProcessor", () => {
 
   it("test_getDataForAPI", () => {
     //console.log(selectedDataList[3]);
-    let result = index.combineAttributes(selectedDataList, "fs");
+    let result = index.combineAttributes(selectedDataList, "foodSecurity");
     //console.log(result);
     console.log(result[3]);
 

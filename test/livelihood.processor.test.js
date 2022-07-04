@@ -5,7 +5,20 @@ const liveProcessor = require("../app/data_processors/livelihoods.processor");
 
 
 const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  index.pageMap["ll"].keysOfSelect);
+  index.pageMap["livelihoods"].keysOfSelect);
+
+
+describe("print", () => {
+
+  it("test_getDataForAPI", () => {
+    let idx = 6;
+    console.log(selectedDataList[idx]);
+    let result = index.combineAttributes(selectedDataList, "livelihoods");
+    //console.log(result);
+    console.log(result[idx]);
+  });
+
+});
 
 
 describe("testProcessor", () => {

@@ -4,10 +4,9 @@ module.exports = app => {
   const data = require("../controllers/data.controller.js");
   
   // Define REST APIs
-  // Retrieve data by dataType
-  router.get("/raw_data/:datatype", data.findRawDataByDataType);
-
   router.get("/all_pages", data.getAllPages);
+
+  router.get("/home", data.getAllHomePage);
 
   // Livelihood
   router.get("/livelihood", data.getAllLivelihoods);
@@ -21,9 +20,17 @@ module.exports = app => {
   router.get("/food_security/hdds", data.findHDDS);
   router.get("/food_security/food_consumed", data.findFoodConsumed);
 
+  router.get("/crops", data.getAllCrops);
+
   router.get("/livestock", data.getAllLivestock);
   router.get("/livestock/frequency", data.findFrequency);
   router.get("/livestock/heads", data.findHeads);
+
+  router.get("/off_farm", data.getAllOffFarm);
+
+
+  // Retrieve data by dataType
+  router.get("/raw_data/:datatype", data.findRawDataByDataType);
 
 
   app.use("/api/data", router);

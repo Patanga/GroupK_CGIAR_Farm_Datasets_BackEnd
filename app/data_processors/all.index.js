@@ -1,5 +1,4 @@
-//Choose which page of API
-const basicProcessor = require("./grouping.processor");
+const groupProcessor = require("./grouping.processor");
 
 const homeProcessor = require("./homePage.processor");
 const liveProcessor = require("./livelihoods.processor");
@@ -9,8 +8,8 @@ const livestockProcessor = require("./livestock.processor");
 const offFarmProcessor = require("./offFarm.processor");
 
 
-const processorList = [basicProcessor, homeProcessor, liveProcessor,
-  foodSecProcessor, livestockProcessor, offFarmProcessor];
+const processorList = [groupProcessor, homeProcessor, liveProcessor,
+  foodSecProcessor, cropsProcessor, livestockProcessor, offFarmProcessor];
 
 const buildProcessorOfAllPages = (processorList) => {
   let keysOfProcessed = processorList.reduce(
@@ -23,6 +22,7 @@ const buildProcessorOfAllPages = (processorList) => {
     []
   );
 
+  // Building all keys
   const keysOfSelect = {
     indicator: Array.from(keysOfIndicator),
     processed: Array.from(keysOfProcessed)
@@ -33,6 +33,7 @@ const buildProcessorOfAllPages = (processorList) => {
     []
   ));
 
+  // Building functions for combining attributes
   const combineKeys = (dataObj) => {
     return processorList.reduce(
       (preResult, proc) => ({...preResult, ...proc.getAPIKeys(dataObj)}), {}
@@ -48,17 +49,18 @@ const buildProcessorOfAllPages = (processorList) => {
 exports.buildProcessorOfAllPages = buildProcessorOfAllPages;  // export for test
 
 
+//Choose which page of API
 const pageMap = {
-  basic: basicProcessor,
+  group: groupProcessor,
 
-  hp: homeProcessor,
-  ll: liveProcessor,
-  fs: foodSecProcessor,
-  cp: cropsProcessor,
-  ls: livestockProcessor,
-  of: offFarmProcessor,
+  home: homeProcessor,
+  livelihoods: liveProcessor,
+  foodSecurity: foodSecProcessor,
+  crops: cropsProcessor,
+  livestock: livestockProcessor,
+  offFarm: offFarmProcessor,
 
-  all: buildProcessorOfAllPages(processorList),
+  allPages: buildProcessorOfAllPages(processorList),
 };
 exports.pageMap = pageMap; // export for test
 
@@ -109,8 +111,6 @@ exports.getDataForAPI = (pageType, indicatorDataList, processedDataList) => {
     pageMap[pageType].keysOfSelect);
   return combineAttributes(selectedDataList, pageType);
 };
-
-
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

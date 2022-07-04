@@ -5,7 +5,20 @@ const offFarmProcessor = require("../app/data_processors/offFarm.processor");
 
 
 const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  index.pageMap["of"].keysOfSelect);
+  index.pageMap["offFarm"].keysOfSelect);
+
+
+describe("print", () => {
+
+  it("test_getDataForAPI", () => {
+    let idx = 6;
+    console.log(selectedDataList[idx]);
+    let result = index.combineAttributes(selectedDataList, "offFarm");
+    //console.log(result);
+    console.log(result[idx]);
+  });
+
+});
 
 
 describe("testProcessor", () => {

@@ -1,11 +1,24 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
-const basic = require("../app/data_processors/grouping.processor");
+const index = require("../app/data_processors/all.index");
 const homeProcessor = require("../app/data_processors/homePage.processor");
 
 
-const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  homeProcessor.keysOfSelect);
+const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+  index.pageMap["home"].keysOfSelect);
+
+
+describe("print", () => {
+
+  it("test_getDataForAPI", () => {
+    let idx = 8;
+    console.log(selectedDataList[idx]);
+    let result = index.combineAttributes(selectedDataList, "home");
+    //console.log(result);
+    console.log(result[idx]);
+  });
+
+});
 
 
 describe("testProcessor", () => {
