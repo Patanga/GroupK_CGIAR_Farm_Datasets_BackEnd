@@ -108,6 +108,14 @@ exports.getAllCrops = getAllCrops; // export for test
 /*               Functions for getting Crop used data                 */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 const getCropUsed = (dataObj) => {
+  const name1 = dataObj.crop_name_1;
+  const name2 = dataObj.crop_name_2;
+  const name3 = dataObj.crop_name_3;
+  const name4 = dataObj.crop_name_4;
+  const name5 = dataObj.crop_name_5;
+  const name6 = dataObj.crop_name_6;
+  const name7 = dataObj.crop_name_7;
+  const name8 = dataObj.crop_name_8;
   const consumed1 = parseInt(dataObj.crop_consumed_kg_per_year_1) || 0;
   const consumed2 = parseInt(dataObj.crop_consumed_kg_per_year_2) || 0;
   const consumed3 = parseInt(dataObj.crop_consumed_kg_per_year_3) || 0;
@@ -116,7 +124,6 @@ const getCropUsed = (dataObj) => {
   const consumed6 = parseInt(dataObj.crop_consumed_kg_per_year_6) || 0;
   const consumed7 = parseInt(dataObj.crop_consumed_kg_per_year_7) || 0;
   const consumed8 = parseInt(dataObj.crop_consumed_kg_per_year_8) || 0;
-
   const sold1 = parseInt(dataObj.crop_sold_kg_per_year_1) || 0;
   const sold2 = parseInt(dataObj.crop_sold_kg_per_year_2) || 0;
   const sold3 = parseInt(dataObj.crop_sold_kg_per_year_3) || 0;
@@ -125,16 +132,86 @@ const getCropUsed = (dataObj) => {
   const sold6 = parseInt(dataObj.crop_sold_kg_per_year_6) || 0;
   const sold7 = parseInt(dataObj.crop_sold_kg_per_year_7) || 0;
   const sold8 = parseInt(dataObj.crop_sold_kg_per_year_8) || 0;
+  var consumed_sold1 = [];
+  var consumed_sold2 = [];
+  var consumed_sold3 = [];
+  var consumed_sold4 = [];
+  var consumed_sold5 = [];
+  var consumed_sold6 = [];
+  var consumed_sold7 = [];
+  var consumed_sold8 = [];
+  if(typeof (name1) === "string"&&typeof (consumed1) === "number"&&typeof (sold1) === "number"&&consumed1>=0&&sold1>=0){
+    consumed_sold1.push(name1);
+    consumed_sold1.push(consumed1);
+    consumed_sold1.push(sold1);
+  }
+  if(typeof (name2) === "string"&&typeof (consumed2) === "number"&&typeof (sold2) === "number"&&consumed2>=0&&sold2>=0){
+    consumed_sold2.push(name2);
+    consumed_sold2.push(consumed2);
+    consumed_sold2.push(sold2);
+  }
+  if(typeof (name3) === "string"&&typeof (consumed3) === "number"&&typeof (sold3) === "number"&&consumed3>=0&&sold3>=0){
+    consumed_sold3.push(name3);
+    consumed_sold3.push(consumed3);
+    consumed_sold3.push(sold3);
+  }
+  if(typeof (name4) === "string"&&typeof (consumed4) === "number"&&typeof (sold4) === "number"&&consumed4>=0&&sold4>=0){
+    consumed_sold4.push(name4);
+    consumed_sold4.push(consumed4);
+    consumed_sold4.push(sold4);
+  }
+  if(typeof (name5) === "string"&&typeof (consumed5) === "number"&&typeof (sold5) === "number"&&consumed5>=0&&sold5>=0){
+    consumed_sold5.push(name5);
+    consumed_sold5.push(consumed5);
+    consumed_sold5.push(sold5);
+  }
+  if(typeof (name6) === "string"&&typeof (consumed6) === "number"&&typeof (sold6) === "number"&&consumed6>=0&&sold6>=0){
+    consumed_sold6.push(name6);
+    consumed_sold6.push(consumed6);
+    consumed_sold6.push(sold6);
+  }
+  if(typeof (name7) === "string"&&typeof (consumed7) === "number"&&typeof (sold7) === "number"&&consumed7>=0&&sold7>=0){
+    consumed_sold7.push(name7);
+    consumed_sold7.push(consumed7);
+    consumed_sold7.push(sold7);
+  }
+  if(typeof (name8) === "string"&&typeof (consumed8) === "number"&&typeof (sold8) === "number"&&consumed8>=0&&sold8>=0){
+    consumed_sold8.push(name8);
+    consumed_sold8.push(consumed8);
+    consumed_sold8.push(sold8);
+  }
+  return{consumed_sold1,consumed_sold2,consumed_sold3,consumed_sold4,consumed_sold5,consumed_sold6,consumed_sold7,consumed_sold8};
 
-  const consumedAve = (consumed1+consumed2+consumed3+consumed4+consumed5+consumed6+consumed7+consumed8) / 8;
-  const soldAve = (sold1+sold2+sold3+sold4+sold5+sold6+sold7+sold8) / 8;
-
-  return {
-    api_crop_consumed_kg_per_year: consumedAve,
-    api_crop_sold_kg_per_year: soldAve
-  };
 };
 exports.getCropUsed = getCropUsed;
+// const getCropUsed = (dataObj) => {
+//   const consumed1 = parseInt(dataObj.crop_consumed_kg_per_year_1) || 0;
+//   const consumed2 = parseInt(dataObj.crop_consumed_kg_per_year_2) || 0;
+//   const consumed3 = parseInt(dataObj.crop_consumed_kg_per_year_3) || 0;
+//   const consumed4 = parseInt(dataObj.crop_consumed_kg_per_year_4) || 0;
+//   const consumed5 = parseInt(dataObj.crop_consumed_kg_per_year_5) || 0;
+//   const consumed6 = parseInt(dataObj.crop_consumed_kg_per_year_6) || 0;
+//   const consumed7 = parseInt(dataObj.crop_consumed_kg_per_year_7) || 0;
+//   const consumed8 = parseInt(dataObj.crop_consumed_kg_per_year_8) || 0;
+
+//   const sold1 = parseInt(dataObj.crop_sold_kg_per_year_1) || 0;
+//   const sold2 = parseInt(dataObj.crop_sold_kg_per_year_2) || 0;
+//   const sold3 = parseInt(dataObj.crop_sold_kg_per_year_3) || 0;
+//   const sold4 = parseInt(dataObj.crop_sold_kg_per_year_4) || 0;
+//   const sold5 = parseInt(dataObj.crop_sold_kg_per_year_5) || 0;
+//   const sold6 = parseInt(dataObj.crop_sold_kg_per_year_6) || 0;
+//   const sold7 = parseInt(dataObj.crop_sold_kg_per_year_7) || 0;
+//   const sold8 = parseInt(dataObj.crop_sold_kg_per_year_8) || 0;
+
+//   const consumedAve = (consumed1+consumed2+consumed3+consumed4+consumed5+consumed6+consumed7+consumed8) / 8;
+//   const soldAve = (sold1+sold2+sold3+sold4+sold5+sold6+sold7+sold8) / 8;
+
+//   return {
+//     api_crop_consumed_kg_per_year: consumedAve,
+//     api_crop_sold_kg_per_year: soldAve
+//   };
+// };
+// exports.getCropUsed = getCropUsed;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*               Functions for getting Crop yields data                 */
