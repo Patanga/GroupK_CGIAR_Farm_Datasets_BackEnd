@@ -1,10 +1,6 @@
 # API Usage
 ## data
 #### get
-/api/data/raw_data/:datatype\
-/api/data/raw_data/:datatype?projectid=xxx&formid=xxx\
-\
-\
 /api/data/all_pages\
 /api/data/all_pages?projectid=xxx&formid=xxx\
 \
@@ -52,6 +48,10 @@
 \
 /api/data/off_farm\
 /api/data/off_farm?projectid=xxx&formid=xxx\
+\
+\
+/api/data/raw_data/:datatype\
+/api/data/raw_data/:datatype?projectid=xxx&formid=xxx\
 \
 
 #### post
