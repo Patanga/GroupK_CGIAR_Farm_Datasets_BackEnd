@@ -76,15 +76,15 @@ describe("testProcessor", () => {
 
 describe("testAverageIncome", () => {
 
-  it("test_calAppendIncome", () => {
+  it("test_getIncome", () => {
     //console.log(selectedDataList[0]);
-    let result0 = liveProcessor.calAppendIncome(selectedDataList[0]);
+    let result0 = liveProcessor.getIncome(selectedDataList[0]);
     console.log(result0);
     assert.equal(result0["api_tot_ppp_income_pd_pmae"], null);
 
 
     //console.log(selectedDataList[8]);
-    let result8 = liveProcessor.calAppendIncome(selectedDataList[8]);
+    let result8 = liveProcessor.getIncome(selectedDataList[8]);
     console.log(result8);
   });
 
