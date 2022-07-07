@@ -24,6 +24,10 @@ describe("数据类型相关", () => {
     console.log(d < 1);
   });
 
+  it("数字", () => {
+    console.log()
+  });
+
   it("test2", () => {
     console.log(parseInt(b));
     console.log(parseInt("1a"));
