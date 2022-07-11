@@ -18,16 +18,6 @@ const count = (dataForAPIList, countType) => {
     return treeNode;
   }
 
-  function flattenForPie(treeNode) {
-    if (treeNode === null) {
-      return [];
-    } else {
-      return [...flattenForPie(treeNode.left),
-        {"value": treeNode.count, "name": treeNode.Name},
-        ...flattenForPie(treeNode.right)];
-    }
-  }
-
   function flattenForBar(treeNode) {
     if (treeNode === null) {
       return [];
@@ -51,11 +41,19 @@ const count = (dataForAPIList, countType) => {
       });
       return flattenForBar(root);
 
+    case "Breeds":
+      dataForAPIList.forEach(data => {
+        let animals = data.api_breed_improved;
+        animals.forEach(animal => root = insert(animal, root));
+      });
+      return flattenForBar(root);
+
     default:
       return null;
   }
 };
 exports.count = count;
+
 
 //
 exports.buildHeadsData = (dataForAPIList) => {
@@ -72,5 +70,49 @@ exports.buildHeadsData = (dataForAPIList) => {
 
   });
 
+  return result;
+};
+
+//
+exports.buildUseData = (dataForAPIList) => {
+  const sum = dataForAPIList.length;
+  let meatSold = dataForAPIList.reduce(
+    (preResult, data) => preResult + data.api_meat_sold_consumed[0], 0
+  );
+  let meatConsumed = dataForAPIList.reduce(
+    (preResult, data) => preResult+data.api_meat_sold_consumed[1], 0
+  );
+  let eggsSold = dataForAPIList.reduce(
+    (preResult, data) => preResult+data.api_eggs_sold_consumed[0], 0
+  );
+  let eggsConsumed = dataForAPIList.reduce(
+    (preResult, data) => preResult+data.api_eggs_sold_consumed[1], 0
+  );
+  let milkSold = dataForAPIList.reduce(
+    (preResult, data) => preResult+data.api_milk_sold_consumed[0], 0
+  );
+  let milkConsumed = dataForAPIList.reduce(
+    (preResult, data) => preResult+data.api_milk_sold_consumed[1], 0
+  );
+
+  meatSold = Math.round(meatSold / sum * 100);
+  meatConsumed = Math.round(meatConsumed / sum * 100);
+  eggsSold = Math.round(eggsSold / sum * 100);
+  eggsConsumed = Math.round(eggsConsumed / sum * 100);
+  milkSold = Math.round(milkSold / sum * 100);
+  milkConsumed = Math.round(milkConsumed / sum * 100);
+
+  return [
+    ["meat", meatSold, meatConsumed],
+    ["eggs", eggsSold, eggsConsumed],
+    ["milk", milkSold, milkConsumed]
+  ];
+}
+
+//
+exports.buildBreedsData = (dataForAPIList) => {
+  const sum = dataForAPIList.length;
+  let result = count(dataForAPIList, "Breeds");
+  result.forEach(animal => animal[1] = Math.round(animal[1] / sum * 100));
   return result;
 };

@@ -1,41 +1,30 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
 const dataList = dt.dataList;
-const basic = require("../app/data_processors/grouping.processor");
-const livestockProcessor = require("../app/data_processors/livestock.processor");
+const index = require("../app/data_processors/all.index");
 const livestockCalculator = require("../app/data_calculators/livestock.calculator");
 
+const basic = require("../app/data_processors/grouping.processor");
+const livestockProcessor = require("../app/data_processors/livestock.processor");
 
-const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  livestockProcessor.keysOfSelect);
+
+
+const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+  index.pageMap["livestock"].keysOfSelect);
 
 
 describe("testFoodSecurity", () => {
 
-  it("test_count_FoodConsumed", () => {
-    let tmpResult = foodSecProcessor.combineAttributes(dataList);
+  it("test_Use", () => {
+    let tmpResult = index.combineAttributes(dataList, "livestock");
     //console.log(tmpResult);
-    let resultOfCount = foodSecCalculator.count(tmpResult, "FoodConsumed");
-    //console.log(resultOfCount);
-    let result = foodSecCalculator.buildFoodConsumedData(tmpResult);
-    console.log(result);
-
-    assert.equal(result[0][0], "grainsrootstubers");
-    assert.equal(result[0][1], 3);
-    assert.equal(result[0][2], 2);
-    assert.equal(result[3][0], "veg_leafy");
-    assert.equal(result[3][1], 1);
-    assert.equal(result[3][2], 3);
-    assert.equal(result[6][0], "fruits");
-    assert.equal(result[6][1], 0);
-    assert.equal(result[6][2], 1);
+    let result = livestockCalculator.buildUseData(tmpResult);
+    //console.log(result);
 
 
-    tmpResult = foodSecProcessor.combineAttributes(selectedDataList);
+    tmpResult = index.combineAttributes(selectedDataList, "livestock");
     //console.log(tmpResult);
-    //resultOfCount = fs.count(tmpResult, "FoodConsumed");
-    //console.log(resultOfCount);
-    result = foodSecCalculator.buildFoodConsumedData(tmpResult);
+    result = livestockCalculator.buildUseData(tmpResult);
     console.log(result);
 
     assert.equal(result[1][0], "legumes");
@@ -50,13 +39,13 @@ describe("testFoodSecurity", () => {
   });
 
   it("test_Heads", () => {
-    let tmpResult = livestockProcessor.combineAttributes(dataList);
+    let tmpResult = index.combineAttributes(dataList, "livestock");
     //console.log(tmpResult);
     let result = livestockCalculator.buildHeadsData(tmpResult);
     //console.log(result);
 
 
-    tmpResult = livestockProcessor.combineAttributes(selectedDataList);
+    tmpResult = index.combineAttributes(selectedDataList, "livestock");
     //console.log(tmpResult);
     //console.log(tmpResult[3]);
     result = livestockCalculator.buildHeadsData(tmpResult);
@@ -68,38 +57,22 @@ describe("testFoodSecurity", () => {
     assert.equal(result[1].includes(-1), false);
   });
 
-  it("test_count_FoodShortage", () => {
-    let tmpResult = foodSecProcessor.combineAttributes(dataList);
+  it("test_Use", () => {
+    let tmpResult = index.combineAttributes(dataList, "livestock");
     //console.log(tmpResult);
-    let result = foodSecCalculator.buildFoodShortageData(tmpResult);
-    console.log(result);
-    let dataset = result.dataset;
-    assert.equal(dataset[5][0], "Jun");
-    assert.equal(dataset[5][1], 3);
-    assert.equal(dataset[7][0], "Aug");
-    assert.equal(dataset[7][1], 4);
-    assert.equal(dataset[9][0], "Oct");
-    assert.equal(dataset[9][1], 3);
+    let result = livestockCalculator.buildBreedsData(tmpResult);
+    //console.log(result);
 
-    assert.equal(result.average, 2);
 
-    tmpResult = foodSecProcessor.combineAttributes(selectedDataList);
+    tmpResult = index.combineAttributes(selectedDataList, "livestock");
     //console.log(tmpResult);
-    result = foodSecCalculator.buildFoodShortageData(tmpResult);
+    result = livestockCalculator.buildUseData(tmpResult);
     console.log(result);
-    dataset = result.dataset;
-    assert.equal(dataset[5][0], "Jun");
-    assert.equal(dataset[5][1], 33);
-    assert.equal(dataset[7][0], "Aug");
-    assert.equal(dataset[7][1], 35);
-    assert.equal(dataset[9][0], "Oct");
-    assert.equal(dataset[9][1], 2);
 
-    assert.equal(result.average.toFixed(2), 2.52);
   });
 
   it("test_count_Frequency", () => {
-    let tmpResult = livestockProcessor.combineAttributes(dataList);
+    let tmpResult = index.combineAttributes(dataList, "livestock");
     //console.log(tmpResult);
     let result = livestockCalculator.count(tmpResult, "Frequency");
     //console.log(result);
@@ -107,12 +80,26 @@ describe("testFoodSecurity", () => {
     //assert.equal(result[0].value, 2);
 
 
-    tmpResult = livestockProcessor.combineAttributes(selectedDataList);
+    tmpResult = index.combineAttributes(selectedDataList, "livestock");
     //console.log(tmpResult);
     result = livestockCalculator.count(tmpResult, "Frequency");
     console.log(result);
     assert.equal(result[0].name, "food_secure");
     assert.equal(result[0].value, 2);
+  });
+
+  it("test_count_Breeds", () => {
+    let tmpResult = index.combineAttributes(dataList, "livestock");
+    //console.log(tmpResult);
+    let result = livestockCalculator.buildBreedsData(tmpResult);
+    //console.log(result);
+
+
+    tmpResult = index.combineAttributes(selectedDataList, "livestock");
+    //console.log(tmpResult);
+    result = livestockCalculator.buildBreedsData(tmpResult);
+    console.log(result);
+
   });
 
 });
