@@ -24,8 +24,16 @@ describe("数据类型相关", () => {
     console.log(d < 1);
   });
 
-  it("数字", () => {
-    console.log()
+  it("正则", () => {
+    const regex = new RegExp("^[\\w\\s]+$");
+    console.log(regex);
+    console.log(regex.test("hauts bassins"));
+    assert.equal(regex.test(""), false);
+    assert.equal(regex.test("A1 d在"), false);
+    assert.equal(regex.test(" "), true);
+    assert.equal(regex.test("12 3"), true);
+    assert.equal(regex.test("A1 d"), true);
+    assert.equal(regex.test(" A1 d "), true);
   });
 
   it("test2", () => {
