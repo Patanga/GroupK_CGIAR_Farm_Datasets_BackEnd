@@ -2,7 +2,10 @@ module.exports = app => {
   const express = require("express");
   const router = express.Router();
   const data = require("../controllers/data.controller.js");
-  
+  const { getDashboardData, getGroupingLists } = require("../data_generator/dashboard_controller");
+  const { updateDashboard } = require("../data_generator/generator");
+
+
   // Define REST APIs
   router.get("/all_pages", data.getAllPages);
 
@@ -31,6 +34,12 @@ module.exports = app => {
 
   // Retrieve data by dataType
   router.get("/raw_data/:datatype", data.findRawDataByDataType);
+
+
+  // Experimental dashboard api
+  router.get("/dashboard/groupinglists", getGroupingLists);
+  router.get("/dashboard", getDashboardData);
+  router.get("/dashboard/update", updateDashboard);
 
 
   app.use("/api/data", router);

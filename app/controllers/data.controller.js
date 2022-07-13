@@ -31,7 +31,8 @@ const buildAPIData = async (pageType, project, form) => {
   console.log(dataForAPI.length + ": APIData of " + pageType); // wzj
   return dataForAPI;
 };
-
+// Export for data_generator of Cached DB
+exports.buildAPIData = buildAPIData;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*              Functions for getting API data for All Pages                */
