@@ -75,21 +75,22 @@ const countryMap = {
 };
 
 const getCountry = (dataObj) => {
-  let country = "other";
+  let country = "others";
   if (typeof(dataObj.id_country) === "string") {
     country = countryMap[dataObj.id_country.toUpperCase()];
-    country = country || "other";
+    country = country || "others";
   }
 
   return {id_country: country};
 };
 
 const getRegion = (dataObj) => {
-  let region = "other";
+  let region = "others";
   if (typeof(dataObj.region) === "string") {
     const regex = new RegExp("^[\\w\\s]+$");
     region = dataObj.region.toLowerCase();
-    region = regex.test(region) ? region : "other";
+    region = region.replace(/[_-]/g, " ");
+    region = regex.test(region) ? region : "others";
   }
 
   return {region: region};
