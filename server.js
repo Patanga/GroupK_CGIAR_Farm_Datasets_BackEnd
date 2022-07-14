@@ -59,7 +59,7 @@ tunnel(sshTunnelConfig, (error, server) => {
 const mongoose = require("mongoose");
 
 let connectWithRetry = function() {
-  console.log("Connecting to datase");
+  console.log("Connecting to database");
   return mongoose.connect(dbHost, 
     {useNewUrlParser: true, useUnifiedTopology: true} ,
     function (err) {
