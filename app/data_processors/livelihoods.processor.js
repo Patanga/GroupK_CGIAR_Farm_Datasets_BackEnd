@@ -71,7 +71,8 @@ const getIncome = (doc) => {
   else {
     res = parseFloat(doc.total_income_lcu_per_year) / days / mae / rate;
   }
-  return { api_tot_ppp_income_pd_pmae: res }
+  // NaN to 0
+  return { api_tot_ppp_income_pd_pmae: res ? res : 0 }
 };
 exports.getIncome = getIncome;
 
