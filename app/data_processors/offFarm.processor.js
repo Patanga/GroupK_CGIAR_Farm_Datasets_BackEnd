@@ -1,5 +1,4 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
-  omitProperties} = require("./basic.processor.js");
+const group = require("./grouping.processor.js");
 
 const offfarm_month = [
   "offfarm_month_1",//个人
@@ -11,24 +10,31 @@ const offfarm_month = [
 ];
 
 let keysOfProcessed = [
+  "id_unique",
+
   "offfarm_income_proportion",//个人
   "offfarm_incomes",//个人
   "spending_off_farm_income",//个人
 ];
-keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed, offfarm_month);
+keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed,
+  offfarm_month);
 
 let keysOfIndicator = [
   "id_unique"
 ];
 
 
+// Define which original keys to be selected
 const keysOfSelect = {
   indicator: keysOfIndicator,
   processed: keysOfProcessed
 };
-exports.keysOfSelect = keysOfSelect; // export for test
+exports.keysOfSelect = keysOfSelect;
 
+
+// Define which original keys to be omitted
 let keysOfOmit = [
+  "offfarm_income_proportion",
   "offfarm_incomes",
   "spending_off_farm_income",
 ];
@@ -36,26 +42,24 @@ keysOfOmit = keysOfOmit.concat(offfarm_month);
 exports.keysOfOmit = keysOfOmit;
 
 
-//
-const combineAttributes = (selectedDataList) => {
-  return selectedDataList.map(selectedDataObj => {
-    let newObj = {};
-    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj),
-      getOffFarmMonth(selectedDataObj),getOffFarmActivity(selectedDataObj),
-      getOffFarmSpendPie(selectedDataObj),
-    );
-    return omitProperties(newObj, keysOfOmit);
-  });
+
+// Define how to transform original keys to API keys
+const getAPIKeys = (dataObj) => {
+  let newObj = {};
+  Object.assign( newObj, group.getAPIKeys(dataObj), getOffFarmMonth(dataObj),
+    getOffFarmActivity(dataObj), getOffFarmSpendPie(dataObj),getOffFarmPropotion(dataObj));
+  return newObj;
 };
-exports.combineAttributes = combineAttributes;
+exports.getAPIKeys = getAPIKeys;
 
-
-exports.getDataForAPI = (indicatorDataList, processedDataList) => {
-  const selectedDataList = getSelectedRawData(indicatorDataList, processedDataList,
-    keysOfSelect);
-  return combineAttributes(selectedDataList);
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*           Functions for getting offfarm income proportion                */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getOffFarmPropotion = (dataObj) => {
+  let proportion= dataObj.offfarm_income_proportion;
+  return { api_off_farm_propotion: proportion };
 };
-
+exports.getOffFarmPropotion = getOffFarmPropotion;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*           Functions for getting offfarm way of spend data                */

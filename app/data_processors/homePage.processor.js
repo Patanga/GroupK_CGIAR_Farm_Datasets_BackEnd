@@ -1,53 +1,53 @@
-const {keysOfGroupingInProcessed, getSelectedRawData, getGroupingData,
-  omitProperties} = require("./basic.processor.js");
+const group = require("./grouping.processor.js");
 
 let keysOfProcessed = [
+  "id_unique",
+
   "gps_lat",//个人
   "gps_lon",//个人
 ];
-keysOfProcessed = keysOfProcessed.concat(keysOfGroupingInProcessed,);
+keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed);
 
 let keysOfIndicator = [
   "id_unique"
 ];
 
 
+// Define which original keys to be selected
 const keysOfSelect = {
   indicator: keysOfIndicator,
   processed: keysOfProcessed
 };
-exports.keysOfSelect = keysOfSelect; // export for test
+exports.keysOfSelect = keysOfSelect;
 
+
+// Define which original keys to be omitted
 let keysOfOmit = [
+  "gps_lat",
+  "gps_lon",
 ];
 keysOfOmit = keysOfOmit.concat();
 exports.keysOfOmit = keysOfOmit;
 
 
-//
-const combineAttributes = (selectedDataList) => {
-  return selectedDataList.map(selectedDataObj => {
-    let newObj = {};
-    Object.assign( newObj, selectedDataObj, getGroupingData(selectedDataObj)
-    );
-    return omitProperties(newObj, keysOfOmit);
-  });
+// Define how to transform original keys to API keys
+const getAPIKeys = (dataObj) => {
+  let newObj = {};
+  Object.assign( newObj, group.getAPIKeys(dataObj),getGps(dataObj));
+  return newObj;
 };
-exports.combineAttributes = combineAttributes;
-
-
-exports.getDataForAPI = (indicatorDataList, processedDataList) => {
-  const selectedDataList = getSelectedRawData(indicatorDataList, processedDataList,
-    keysOfSelect);
-  return combineAttributes(selectedDataList);
-};
+exports.getAPIKeys = getAPIKeys;
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*           Functions for getting  data            */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-const get = (dataObj) => {
+const getGps = (dataObj) => {
+  var gpslat=Number(dataObj.gps_lat);
+  var gpslon=Number(dataObj.gps_lon);
+  return {api_gps:[gpslat,gpslon]}
+
 };
-exports.get = get;
+exports.getGps = getGps;
 
 
