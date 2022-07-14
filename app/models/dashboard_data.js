@@ -18,7 +18,7 @@ let dashboardDataSchema = new Schema(
         region: String,
         id_proj: String,
         id_form: String,
-        api_income_tot_ppp_pd_pmae: Number, // total income per day per mae in usd
+        api_tot_ppp_income_pd_pmae: Number, // total income per day per mae in usd
 
         // Home Page
         gps_lat: String, // Don't we need to parse it first?
