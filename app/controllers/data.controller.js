@@ -1,25 +1,12 @@
-const allPagesProcessor = require("../data_processors/allPages.processor");
+const processor = require("../data_processors/all.index");
 
-const liveProcessor = require("../data_processors/livelihoods.processor");
 const livelihood = require("../data_calculators/livelihood.calculator");
-
-const foodSecProcessor = require("../data_processors/foodSecurity.processor.js");
 const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
-
-const livestockProcessor = require("../data_processors/livestock.processor");
+const livestockCalculator = require("../data_calculators/livestock.calculator");
 
 
 // Get Schema
 const data = require("../models/data.model.js");
-
-
-//Choose which page of API
-const APIPageMap = {
-  livelihoods: liveProcessor.getDataForAPI,
-  foodSecurity: foodSecProcessor.getDataForAPI,
-  livestock: livestockProcessor.getDataForAPI,
-  allPages: allPagesProcessor.getDataForAPI,
-};
 
 
 // Retrieve raw data by condition from the MongoDB database
@@ -40,11 +27,12 @@ const getRawData = async (dataType, project, form) => {
 const buildAPIData = async (pageType, project, form) => {
   const indicatorDataList = await getRawData("indicator_data", project, form);
   const processedDataList = await getRawData("processed_data", project, form);
-  const dataForAPI = APIPageMap[pageType](indicatorDataList, processedDataList);
+  const dataForAPI = processor.getDataForAPI(pageType, indicatorDataList, processedDataList);
   console.log(dataForAPI.length + ": APIData of " + pageType); // wzj
   return dataForAPI;
 };
-
+// Export for data_generator of Cached DB
+exports.buildAPIData = buildAPIData;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*              Functions for getting API data for All Pages                */
@@ -67,7 +55,27 @@ exports.getAllPages = (req, res) => {
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-/*          Functions for getting API data for Livelihoods Page           */
+/*               Functions for getting API data for Home Page               */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllHomePage = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("home", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*          Functions for getting API data for Livelihoods Page             */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 exports.getAllLivelihoods = (req, res) => {
   const projectID = req.query.projectid;
@@ -222,6 +230,26 @@ exports.findFoodConsumed = (req, res) => {
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*              Functions for getting API data for Crops Page               */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllCrops = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("crops", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*            Functions for getting API data for Livestock Page             */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 exports.getAllLivestock = (req, res) => {
@@ -238,6 +266,59 @@ exports.getAllLivestock = (req, res) => {
         {message: err.message || "Some error occurred while retrieving data."}
       );
     })
+};
+
+//
+exports.findFrequency = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("livestock", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livestockCalculator.count(data, "Frequency"));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findHeads = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("livestock", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livestockCalculator.buildHeadsData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*            Functions for getting API data for Off Farm Page              */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+exports.getAllOffFarm = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("offFarm", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
 };
 
 

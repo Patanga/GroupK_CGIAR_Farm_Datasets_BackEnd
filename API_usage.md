@@ -1,12 +1,12 @@
 # API Usage
 ## data
 #### get
-/api/data/raw_data/:datatype\
-/api/data/raw_data/:datatype?projectid=xxx&formid=xxx\
-\
-\
 /api/data/all_pages\
 /api/data/all_pages?projectid=xxx&formid=xxx\
+\
+\
+/api/data/home\
+/api/data/home?projectid=xxx&formid=xxx\
 \
 \
 /api/data/livelihood\
@@ -38,8 +38,20 @@
 /api/data/food_security/food_consumed?projectid=xxx&formid=xxx\
 \
 \
+/api/data/crops\
+/api/data/crops?projectid=xxx&formid=xxx\
+\
+\
 /api/data/livestock\
 /api/data/livestock?projectid=xxx&formid=xxx\
+\
+\
+/api/data/off_farm\
+/api/data/off_farm?projectid=xxx&formid=xxx\
+\
+\
+/api/data/raw_data/:datatype\
+/api/data/raw_data/:datatype?projectid=xxx&formid=xxx\
 \
 
 #### post

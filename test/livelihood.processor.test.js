@@ -1,11 +1,24 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
-const basic = require("../app/data_processors/basic.processor");
+const index = require("../app/data_processors/all.index");
 const liveProcessor = require("../app/data_processors/livelihoods.processor");
 
 
-const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  liveProcessor.keysOfSelect);
+const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+  index.pageMap["livelihoods"].keysOfSelect);
+
+
+describe("print", () => {
+
+  it("test_getDataForAPI", () => {
+    let idx = 6;
+    console.log(selectedDataList[idx]);
+    let result = index.combineAttributes(selectedDataList, "livelihoods");
+    //console.log(result);
+    console.log(result[idx]);
+  });
+
+});
 
 
 describe("testProcessor", () => {
@@ -20,8 +33,8 @@ describe("testProcessor", () => {
   ];
 
   it("test_getDataForAPI", () => {
-    //console.log(selectedDataList[3]);
-    let result = liveProcessor.combineAttributes(selectedDataList);
+    console.log(selectedDataList[3]);
+    let result = index.combineAttributes(selectedDataList, "ll");
     console.log(result);
     //console.log(result[3]);
 
@@ -63,15 +76,15 @@ describe("testProcessor", () => {
 
 describe("testAverageIncome", () => {
 
-  it("test_calAppendIncome", () => {
+  it("test_getIncome", () => {
     //console.log(selectedDataList[0]);
-    let result0 = liveProcessor.calAppendIncome(selectedDataList[0]);
+    let result0 = liveProcessor.getIncome(selectedDataList[0]);
     console.log(result0);
     assert.equal(result0["api_tot_ppp_income_pd_pmae"], null);
 
 
     //console.log(selectedDataList[8]);
-    let result8 = liveProcessor.calAppendIncome(selectedDataList[8]);
+    let result8 = liveProcessor.getIncome(selectedDataList[8]);
     console.log(result8);
   });
 

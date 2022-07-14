@@ -1,11 +1,24 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
-const basic = require("../app/data_processors/basic.processor");
+const index = require("../app/data_processors/all.index");
 const livestockProcessor = require("../app/data_processors/livestock.processor");
 
 
-const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  livestockProcessor.keysOfSelect);
+const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+  index.pageMap["livestock"].keysOfSelect);
+
+
+describe("print", () => {
+
+  it("test_getDataForAPI", () => {
+    let idx = 0;
+    console.log(selectedDataList[idx]);
+    let result = index.combineAttributes(selectedDataList, "livestock");
+    //console.log(result);
+    console.log(result[idx]);
+  });
+
+});
 
 
 describe("testProcessor", () => {
@@ -20,10 +33,11 @@ describe("testProcessor", () => {
   ];
 
   it("test_getDataForAPI", () => {
-    //console.log(selectedDataList[3]);
-    let result = livestockProcessor.combineAttributes(selectedDataList);
+    console.log(selectedDataList[3]);
+    let result = index.combineAttributes(selectedDataList, "livestock");
     //console.log(result);
-    console.log(result[3]);
+    //console.log(result[3]);
+    console.log(result[0]);
 
     const testPropAPI = (obj, props) => {
       assert.equal(obj[props[0][0]], props[0][1]);
