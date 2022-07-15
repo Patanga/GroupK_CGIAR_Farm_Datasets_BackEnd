@@ -6,13 +6,13 @@ const parseReq2Condition = (req) => {
     if (req.query.income !== undefined && req.query.income !== null) {
         switch (req.query.income) {
             case 'under1':
-                condition.api_income_tot_ppp_pd_pmae = { $lte: 1 };
+                condition.api_tot_ppp_income_pd_pmae = { $lte: 1 };
                 break;
             case '1to1.9':
-                condition.api_income_tot_ppp_pd_pmae = { $gt: 1, $lte: 1.9 };
+                condition.api_tot_ppp_income_pd_pmae = { $gt: 1, $lte: 1.9 };
                 break;
             case 'over1.9':
-                condition.api_income_tot_ppp_pd_pmae = { $gt: 1.9 };
+                condition.api_tot_ppp_income_pd_pmae = { $gt: 1.9 };
                 break;
             case 'global':
             default:
