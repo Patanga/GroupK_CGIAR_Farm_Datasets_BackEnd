@@ -23,8 +23,6 @@ exports.keysOfSelect = keysOfSelect;
 
 // Define which original keys to be omitted
 let keysOfOmit = [
-  "gps_lat",
-  "gps_lon",
 ];
 keysOfOmit = keysOfOmit.concat();
 exports.keysOfOmit = keysOfOmit;
@@ -33,7 +31,7 @@ exports.keysOfOmit = keysOfOmit;
 // Define how to transform original keys to API keys
 const getAPIKeys = (dataObj) => {
   let newObj = {};
-  Object.assign( newObj, group.getAPIKeys(dataObj),getGps(dataObj));
+  Object.assign( newObj, group.getAPIKeys(dataObj));
   return newObj;
 };
 exports.getAPIKeys = getAPIKeys;
@@ -42,12 +40,8 @@ exports.getAPIKeys = getAPIKeys;
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*           Functions for getting  data            */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-const getGps = (dataObj) => {
-  var gpslat=Number(dataObj.gps_lat);
-  var gpslon=Number(dataObj.gps_lon);
-  return {api_gps:[gpslat,gpslon]}
-
+const get = (dataObj) => {
 };
-exports.getGps = getGps;
+exports.get = get;
 
 
