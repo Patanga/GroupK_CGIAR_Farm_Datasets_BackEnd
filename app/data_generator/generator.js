@@ -30,7 +30,6 @@ const generate = async () => {
             return ("Updating collection \'dashboard\' failed.");
         }
     })
-    console.log("Succeed in update db");
     return ("Succeed in update db");
 }
 exports.generate = generate;
