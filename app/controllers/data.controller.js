@@ -1,8 +1,9 @@
 const processor = require("../data_processors/all.index");
-
+const home = require("../data_calculators/home.calculator");
 const livelihood = require("../data_calculators/livelihood.calculator");
 const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
 const livestockCalculator = require("../data_calculators/livestock.calculator");
+const offfarm = require("../data_calculators/offfarm.calculator");
 
 
 // Get Schema
@@ -72,6 +73,22 @@ exports.getAllHomePage = (req, res) => {
       );
     });
 };
+
+exports.findGps=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("home", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(home.buildHomeMap(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -321,7 +338,69 @@ exports.getAllOffFarm = (req, res) => {
     });
 };
 
+exports.findOffFarmHis=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
 
+  buildAPIData("offFarm", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(offfarm.buildOfffarmHis(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findOffFarmMon=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("offFarm", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(offfarm.buildOfffarmMonth(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findOffFarmBar=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("offFarm", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(offfarm.buildOfffarmBar(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findOffFarmPie=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("offFarm", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(offfarm.buildOfffarmPie(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*             Functions for retrieving raw data by dataType                */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
