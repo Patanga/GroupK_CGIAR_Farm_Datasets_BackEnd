@@ -10,6 +10,7 @@ module.exports = app => {
   router.get("/all_pages", data.getAllPages);
 
   router.get("/home", data.getAllHomePage);
+  router.get("/home/gps", data.findGps);
 
   // Livelihood
   router.get("/livelihood", data.getAllLivelihoods);
@@ -30,6 +31,10 @@ module.exports = app => {
   router.get("/livestock/heads", data.findHeads);
 
   router.get("/off_farm", data.getAllOffFarm);
+  router.get("/off_farm/his", data.findOffFarmHis);
+  router.get("/off_farm/mon", data.findOffFarmMon);
+  router.get("/off_farm/bar", data.findOffFarmBar);
+  router.get("/off_farm/pie", data.findOffFarmPie);
 
 
   // Retrieve data by dataType
