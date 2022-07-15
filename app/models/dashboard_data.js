@@ -21,8 +21,7 @@ let dashboardDataSchema = new Schema(
         api_tot_ppp_income_pd_pmae: Number, // total income per day per mae in usd
 
         // Home Page
-        gps_lat: String, // Don't we need to parse it first?
-        gps_lon: String, // Don't we need to parse it first?
+        api_gps: Array,
 
         // Livelihood Page
         // year: Number,
@@ -71,6 +70,7 @@ let dashboardDataSchema = new Schema(
 
         // Off farm Page
         // offfarm_income_proportion: // Type undefined, 'api_' prefix missing
+        api_off_farm_propotion:String,
         api_off_farm_months: Array,
         api_off_farm_activities: Array,
         api_off_farm_spending: Array,

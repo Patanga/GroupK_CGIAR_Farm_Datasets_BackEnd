@@ -34,6 +34,7 @@ exports.keysOfSelect = keysOfSelect;
 
 // Define which original keys to be omitted
 let keysOfOmit = [
+  "offfarm_income_proportion",
   "offfarm_incomes",
   "spending_off_farm_income",
 ];
@@ -46,11 +47,19 @@ exports.keysOfOmit = keysOfOmit;
 const getAPIKeys = (dataObj) => {
   let newObj = {};
   Object.assign( newObj, group.getAPIKeys(dataObj), getOffFarmMonth(dataObj),
-    getOffFarmActivity(dataObj), getOffFarmSpendPie(dataObj));
+    getOffFarmActivity(dataObj), getOffFarmSpendPie(dataObj),getOffFarmPropotion(dataObj));
   return newObj;
 };
 exports.getAPIKeys = getAPIKeys;
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*           Functions for getting offfarm income proportion                */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getOffFarmPropotion = (dataObj) => {
+  let proportion= dataObj.offfarm_income_proportion;
+  return { api_off_farm_propotion: proportion };
+};
+exports.getOffFarmPropotion = getOffFarmPropotion;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*           Functions for getting offfarm way of spend data                */
