@@ -137,8 +137,8 @@ exports.buildCropUsed=(dataForAPIList)=>{
         }
     }
     for(var i=0;i<cropName.length;i++){
-        consumed[i]=consumed[i]/7078;
-        sold[i]=sold[i]/7078;
+        consumed[i]= Number((consumed[i]/dataForAPIList.length).toFixed(2));
+        sold[i]=Number((sold[i]/dataForAPIList.length).toFixed(2));
     }
     return {cropName, consumed, sold};
 }

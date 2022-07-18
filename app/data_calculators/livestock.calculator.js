@@ -111,8 +111,18 @@ exports.buildUseData = (dataForAPIList) => {
 
 //
 exports.buildBreedsData = (dataForAPIList) => {
-  const sum = dataForAPIList.length;
   let result = count(dataForAPIList, "Breeds");
-  result.forEach(animal => animal[1] = Math.round(animal[1] / sum * 100));
+  var sum = 0
+  result.map(doc=>{
+    sum=sum + doc[1]
+  })
+  if(sum==0){
+    return [
+      [
+          "No Breeds Count",
+          0
+      ]]
+  }
+  result.forEach(animal => animal[1] = Number((animal[1] / sum * 100).toFixed(2)));
   return result;
 };
