@@ -18,23 +18,33 @@ module.exports = app => {
   router.get("/livelihood/income_cat", data.findIncomeCat);
   router.get("/livelihood/annual_value", data.findAnnualValue);
 
+  //food security
   router.get("/food_security", data.getAllFoodSecurity);
   router.get("/food_security/hfias", data.findHFIAS);
   router.get("/food_security/food_shortage", data.findFoodShortage);
   router.get("/food_security/hdds", data.findHDDS);
   router.get("/food_security/food_consumed", data.findFoodConsumed);
 
+  //crops
   router.get("/crops", data.getAllCrops);
+  router.get("/crops/land", data.findCropLand);
+  router.get("/crops/cropGrown", data.findCropGrown);
+  router.get("/crops/cropUsed", data.findCropUsed);
+  router.get("/crops/cropYields", data.findCropYields);
 
+  //livestock
   router.get("/livestock", data.getAllLivestock);
-  router.get("/livestock/frequency", data.findFrequency);
-  router.get("/livestock/heads", data.findHeads);
+  router.get("/livestock/frequency", data.findLsFrequency);
+  router.get("/livestock/heads", data.findLsHeads);
+  router.get("/livestock/usages", data.findLsUsages);
+  router.get("/livestock/breeds", data.findLsBreeds);
 
+  //off farm
   router.get("/off_farm", data.getAllOffFarm);
-  router.get("/off_farm/his", data.findOffFarmHis);
-  router.get("/off_farm/mon", data.findOffFarmMon);
-  router.get("/off_farm/bar", data.findOffFarmBar);
-  router.get("/off_farm/pie", data.findOffFarmPie);
+  router.get("/off_farm/income", data.findOffFarmIncome);
+  router.get("/off_farm/month", data.findOffFarmMonth);
+  router.get("/off_farm/activity", data.findOffFarmActivity);
+  router.get("/off_farm/usage", data.findOffFarmUsage);
 
 
   // Retrieve data by dataType

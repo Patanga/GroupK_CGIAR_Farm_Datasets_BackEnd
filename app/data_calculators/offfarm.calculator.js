@@ -1,5 +1,5 @@
 //off_farm1
-exports.buildOfffarmHis=(dataForAPIList)=>{
+exports.buildOfffarmIncome=(dataForAPIList)=>{
     const percent_change = {
         all  : 0,
         most  : 0,
@@ -48,12 +48,13 @@ exports.buildOfffarmHis=(dataForAPIList)=>{
     if(count===0){
         return output
     }
-    output['0%']=(percent_change.zero/count)*100
-    output['10%']=(percent_change.little/count)*100
-    output['20%']=(percent_change.underhalf/count)*100
-    output['50%']=(percent_change.half/count)*100
-    output['70%']=(percent_change.most/count)*100
-    output['90%']=(percent_change.all/count)*100
+    //Number((xxx).toFixed(2))
+    output['0%']=parseFloat(((percent_change.zero/count)*100).toFixed(2))
+    output['10%']=parseFloat(((percent_change.little/count)*100).toFixed(2))
+    output['20%']=parseFloat(((percent_change.underhalf/count)*100).toFixed(2))
+    output['50%']=parseFloat(((percent_change.half/count)*100).toFixed(2))
+    output['70%']=parseFloat(((percent_change.most/count)*100).toFixed(2))
+    output['90%']=parseFloat(((percent_change.all/count)*100).toFixed(2))
     return {
         percentage:Object.keys(output),
         rate:Object.values(output)
@@ -91,7 +92,7 @@ exports.buildOfffarmMonth=(dataForAPIList)=>{
 }
 
 //off_farm3
-exports.buildOfffarmBar=(dataForAPIList)=>{
+exports.buildOfffarmActivity=(dataForAPIList)=>{
     var output=[]
     dataForAPIList.map(doc=>{
         output=output.concat(doc.api_off_farm_activities)
@@ -108,7 +109,7 @@ exports.buildOfffarmBar=(dataForAPIList)=>{
 }
 
 //off_farm4
-exports.buildOfffarmPie=(dataForAPIList)=>{
+exports.buildOfffarmUsage=(dataForAPIList)=>{
     var output=[]
     dataForAPIList.map(doc=>{
         output=output.concat(doc.api_off_farm_spending)
