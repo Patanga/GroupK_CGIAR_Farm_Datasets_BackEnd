@@ -7,7 +7,7 @@ exports.buildCropLand=(dataForAPIList)=>{
         if(i_landcultivated==null||i_landcultivated<0){
             continue
         }
-        histogramData.push(i_landcultivated)
+        histogramData.push([i_landcultivated])
     }
     return histogramData
 }
@@ -101,7 +101,7 @@ exports.buildCropUsed=(dataForAPIList)=>{
         sold[i]=0;
     }
     for(var i=0;i<cropName.length;i++){
-        for(j in dataForAPIList){
+        for(var j in dataForAPIList){
             if(dataForAPIList[j].api_consumed_sold1[0]==cropName[i]){
                 consumed[i]= consumed[i]+dataForAPIList[j].api_consumed_sold1[1];
                 sold[i] = sold[i]+dataForAPIList[j].api_consumed_sold1[2];
@@ -146,7 +146,7 @@ exports.buildCropUsed=(dataForAPIList)=>{
 exports.buildCropYields=(dataForAPIList)=>{
     var cropName = [];
     var yields = [];
-    for(i in dataForAPIList){
+    for(var i in dataForAPIList){
         if(dataForAPIList[i].api_name_yield1[0]!=null){
             cropName.push(dataForAPIList[i].api_name_yield1[0]);
         }
@@ -184,7 +184,7 @@ exports.buildCropYields=(dataForAPIList)=>{
 
     for(var i=0;i<cropName.length;i++){
         var harvest = [];
-        for(j in dataForAPIList){
+        for(var j in dataForAPIList){
             if(cropName[i]==dataForAPIList[j].api_name_yield1[0]){
                 harvest.push(dataForAPIList[j].api_name_yield1[1]);
             }
