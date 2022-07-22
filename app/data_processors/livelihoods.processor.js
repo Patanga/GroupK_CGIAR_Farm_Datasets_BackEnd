@@ -117,9 +117,8 @@ valueConvert = function (doc, keyName) {
   }
   // Does it need illegal value like null check here?
   if (!year || !days || !mae || !rate || !doc[keyName]) {
-    console.log('Invalid record for valueConvert, id_unique: ' + doc.id_unique)
-    console.log('\tyear: ' + year + ' mae:' + mae +
-      ' rate: ' + rate + ' ' + keyName + ': ' + doc[keyName])
+    //console.log('Invalid record for valueConvert, id_unique: ' + doc.id_unique)
+    //console.log('\tyear: ' + year + ' mae:' + mae + ' rate: ' + rate + ' ' + keyName + ': ' + doc[keyName])
     return 0
   }
   return doc[keyName] / rate / mae / days
