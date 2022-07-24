@@ -58,6 +58,12 @@
 #### put
 #### delete
 #
+## dashboard
+#### get
+/api/data/dashboard\
+
+#
+#
 ## projectData
 #### get
 /api/project-data\
