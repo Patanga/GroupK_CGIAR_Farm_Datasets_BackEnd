@@ -1,19 +1,18 @@
 const assert = require("assert");
 const dt = require("../data_test/data_test.js");
 const dataList = dt.dataList;
-const basic = require("../app/data_processors/grouping.processor");
 const foodSecProcessor = require("../app/data_processors/foodSecurity.processor.js");
 const foodSecCalculator = require("../app/data_calculators/foodSecurity.calculator.js");
+const index = require("../app/data_processors/all.index");
 
-
-const selectedDataList = basic.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
-  foodSecProcessor.keysOfSelect);
+const selectedDataList = index.getSelectedRawData(dt.indicatorDataList, dt.processedDataList,
+  index.pageMap["foodSecurity"].keysOfSelect);
 
 
 describe("testFoodSecurity", () => {
 
   it("test_count_FoodConsumed", () => {
-    let tmpResult = foodSecProcessor.combineAttributes(dataList);
+    let tmpResult = index.combineAttributes(dataList, "foodSecurity");
     //console.log(tmpResult);
     let resultOfCount = foodSecCalculator.count(tmpResult, "FoodConsumed");
     //console.log(resultOfCount);
@@ -31,7 +30,7 @@ describe("testFoodSecurity", () => {
     assert.equal(result[6][2], 1);
 
 
-    tmpResult = foodSecProcessor.combineAttributes(selectedDataList);
+    tmpResult = index.combineAttributes(selectedDataList, "foodSecurity");
     //console.log(tmpResult);
     //resultOfCount = fs.count(tmpResult, "FoodConsumed");
     //console.log(resultOfCount);
@@ -50,7 +49,7 @@ describe("testFoodSecurity", () => {
   });
 
   it("test_HDDS", () => {
-    let tmpResult = foodSecProcessor.combineAttributes(dataList);
+    let tmpResult = index.combineAttributes(dataList, "foodSecurity");
     //console.log(tmpResult);
     let result = foodSecCalculator.buildHDDSData(tmpResult);
     //console.log(result);
@@ -61,7 +60,7 @@ describe("testFoodSecurity", () => {
     assert.equal(result[1].includes(-1), false);
 
 
-    tmpResult = foodSecProcessor.combineAttributes(selectedDataList);
+    tmpResult = index.combineAttributes(selectedDataList, "foodSecurity");
     //console.log(tmpResult);
     result = foodSecCalculator.buildHDDSData(tmpResult);
     //console.log(result);
@@ -73,7 +72,7 @@ describe("testFoodSecurity", () => {
   });
 
   it("test_count_FoodShortage", () => {
-    let tmpResult = foodSecProcessor.combineAttributes(dataList);
+    let tmpResult = index.combineAttributes(dataList, "foodSecurity");
     //console.log(tmpResult);
     let result = foodSecCalculator.buildFoodShortageData(tmpResult);
     console.log(result);
@@ -87,7 +86,7 @@ describe("testFoodSecurity", () => {
 
     assert.equal(result.average, 2);
 
-    tmpResult = foodSecProcessor.combineAttributes(selectedDataList);
+    tmpResult = index.combineAttributes(selectedDataList, "foodSecurity");
     //console.log(tmpResult);
     result = foodSecCalculator.buildFoodShortageData(tmpResult);
     console.log(result);
@@ -103,7 +102,7 @@ describe("testFoodSecurity", () => {
   });
 
   it("test_count_HFIAS", () => {
-    let tmpResult = foodSecProcessor.combineAttributes(dataList);
+    let tmpResult = index.combineAttributes(dataList, "foodSecurity");
     console.log(tmpResult);
     let result = foodSecCalculator.count(tmpResult, "HFIAS");
     assert.equal(result[0].name, "food_secure");
@@ -115,7 +114,7 @@ describe("testFoodSecurity", () => {
     assert.equal(result[3].name, "severely_fi");
     assert.equal(result[3].value, 1);
 
-    tmpResult = foodSecProcessor.combineAttributes(selectedDataList);
+    tmpResult = index.combineAttributes(selectedDataList, "foodSecurity");
     //console.log(tmpResult);
     result = foodSecCalculator.count(tmpResult, "HFIAS");
     //console.log(result);

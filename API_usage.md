@@ -58,6 +58,14 @@
 #### put
 #### delete
 #
+
+## dashboard
+#### get
+/api/dashboard\
+/api/dashboard/groupinglists\
+/api/dashboard/update
+
+#
 ## projectData
 #### get
 /api/project-data\

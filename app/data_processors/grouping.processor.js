@@ -28,7 +28,7 @@ exports.keysOfOmit = keysOfOmit;
 // Define how to transform original keys to API keys
 const getAPIKeys = (dataObj) => {
   let newObj = {};
-  Object.assign( newObj, getCountry(dataObj));
+  Object.assign( newObj, getCountry(dataObj), getRegion(dataObj));
   return newObj;
 };
 exports.getAPIKeys = getAPIKeys;
@@ -75,11 +75,23 @@ const countryMap = {
 };
 
 const getCountry = (dataObj) => {
-  let country = "other";
+  let country = "others";
   if (typeof(dataObj.id_country) === "string") {
     country = countryMap[dataObj.id_country.toUpperCase()];
-    country = country || "other";
+    country = country || "others";
   }
+
   return {id_country: country};
 };
 
+const getRegion = (dataObj) => {
+  let region = "others";
+  if (typeof(dataObj.region) === "string") {
+    const regex = new RegExp("^[\\w\\s]+$");
+    region = dataObj.region.toLowerCase();
+    region = region.replace(/[_-]/g, " ");
+    region = regex.test(region) ? region : "others";
+  }
+
+  return {region: region};
+};

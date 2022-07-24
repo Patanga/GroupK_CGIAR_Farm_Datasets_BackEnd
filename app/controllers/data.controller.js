@@ -1,8 +1,10 @@
 const processor = require("../data_processors/all.index");
-
+const home = require("../data_calculators/home.calculator");
 const livelihood = require("../data_calculators/livelihood.calculator");
 const foodSecCalculator = require("../data_calculators/foodSecurity.calculator.js");
 const livestockCalculator = require("../data_calculators/livestock.calculator");
+const offfarm = require("../data_calculators/offfarm.calculator");
+const crops = require("../data_calculators/crops.calculator");
 
 
 // Get Schema
@@ -31,7 +33,8 @@ const buildAPIData = async (pageType, project, form) => {
   console.log(dataForAPI.length + ": APIData of " + pageType); // wzj
   return dataForAPI;
 };
-
+// Export for dashboard_generator of Cached DB
+exports.buildAPIData = buildAPIData;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*              Functions for getting API data for All Pages                */
@@ -71,6 +74,22 @@ exports.getAllHomePage = (req, res) => {
       );
     });
 };
+
+exports.findGps=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("home", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(home.buildHomeMap(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -247,6 +266,70 @@ exports.getAllCrops = (req, res) => {
     });
 };
 
+exports.findCropLand=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("crops", projectID, formID)
+    .then(data => {
+      console.log(data.length); // pzz
+      res.send(crops.buildCropLand(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findCropGrown=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("crops", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(crops.buildCropGrown(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findCropUsed=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("crops", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(crops.buildCropUsed(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findCropYields=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("crops", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(crops.buildCropYields(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 /*            Functions for getting API data for Livestock Page             */
@@ -268,7 +351,7 @@ exports.getAllLivestock = (req, res) => {
 };
 
 //
-exports.findFrequency = (req, res) => {
+exports.findLsFrequency = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
@@ -284,7 +367,7 @@ exports.findFrequency = (req, res) => {
     });
 };
 
-exports.findHeads = (req, res) => {
+exports.findLsHeads = (req, res) => {
   const projectID = req.query.projectid;
   const formID = req.query.formid;
 
@@ -292,6 +375,38 @@ exports.findHeads = (req, res) => {
     .then(data => {
       console.log(data.length); // wzj
       res.send(livestockCalculator.buildHeadsData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findLsUsages = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("livestock", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livestockCalculator.buildUseData(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+};
+
+exports.findLsBreeds = (req, res) => {
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("livestock", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(livestockCalculator.buildBreedsData(data));
     })
     .catch(err => {
       res.status(500).send(
@@ -319,6 +434,70 @@ exports.getAllOffFarm = (req, res) => {
       );
     });
 };
+
+exports.findOffFarmIncome=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("offFarm", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(offfarm.buildOfffarmIncome(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findOffFarmMonth=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("offFarm", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(offfarm.buildOfffarmMonth(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findOffFarmActivity=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("offFarm", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(offfarm.buildOfffarmActivity(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
+
+exports.findOffFarmUsage=(req,res)=>{
+  const projectID = req.query.projectid;
+  const formID = req.query.formid;
+
+  buildAPIData("offFarm", projectID, formID)
+    .then(data => {
+      console.log(data.length); // wzj
+      res.send(offfarm.buildOfffarmUsage(data));
+    })
+    .catch(err => {
+      res.status(500).send(
+        {message: err.message || "Some error occurred while retrieving data."}
+      );
+    });
+}
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//

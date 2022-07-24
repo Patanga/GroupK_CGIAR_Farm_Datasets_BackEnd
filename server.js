@@ -59,7 +59,7 @@ tunnel(sshTunnelConfig, (error, server) => {
 const mongoose = require("mongoose");
 
 let connectWithRetry = function() {
-  console.log("Connecting to datase");
+  console.log("Connecting to database");
   return mongoose.connect(dbHost, 
     {useNewUrlParser: true, useUnifiedTopology: true} ,
     function (err) {
@@ -86,8 +86,9 @@ app.get("/", (req, res) => {
 });
 
 // Define routes
-require("./app/routes/projectData.routes")(app);
 require("./app/routes/data.routes")(app);
+require("./app/routes/dashboard.routes")(app);
+require("./app/routes/projectData.routes")(app);
 
 
 // Set port, Listen for requests
