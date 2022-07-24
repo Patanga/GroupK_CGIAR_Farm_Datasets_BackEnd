@@ -95,4 +95,3 @@ const getRegion = (dataObj) => {
 
   return {region: region};
 };
-

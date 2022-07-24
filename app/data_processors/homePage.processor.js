@@ -49,5 +49,3 @@ const getGps = (dataObj) => {
 
 };
 exports.getGps = getGps;
-
-
