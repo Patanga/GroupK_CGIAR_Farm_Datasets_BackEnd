@@ -60,7 +60,9 @@
 #
 ## dashboard
 #### get
-/api/data/dashboard\
+/api/dashboard\
+/api/dashboard/groupinglists\
+/api/dashboard/update\
 
 #
 ## projectData

@@ -1,4 +1,3 @@
-
 // Get Schema
 const projectData = require("../models/projectData.model.js");
 
