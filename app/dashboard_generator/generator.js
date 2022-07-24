@@ -1,9 +1,5 @@
-let dashboardDB = require("../models/dashboard_data");
+let dashboardDB = require("../models/dashboard.model");
 const { buildAPIData } = require("../controllers/data.controller");
-
-exports.updateDashboard = async (req, res) => {
-    res.send(await generate());
-}
 
 const generate = async () => {
     console.log("Start to update collection \'dashboard\' for db")
