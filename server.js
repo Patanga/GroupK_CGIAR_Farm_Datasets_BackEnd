@@ -12,19 +12,18 @@ const app = express();
 // Configuration files
 let config = require("config"); // we load the db location from the JSON files
 const dbHost = config.get("dbConfig.host");
-const port = config.get("dbConfig.port");
-dotenv.config(); // wzj???
+const configPort = config.get("dbConfig.port");
+dotenv.config();
 
 
 // Config Cors
-// 前端的端口必须与此相符 wzj!
 let corsOption = 
-  { origin: "http://localhost:8081"};
+  { origin: '*'};
 app.use(cors(corsOption));
 
 
 // Config BodyParser
-// Ensuring that queries are not limited by size ??
+// Ensuring that queries are not limited by size  ?? wzj
 // parse requests of content-type - application/json
 app.use(bodyParser.json({ limit: "200mb" }));
 // parse requests of content-type - application/x-www-form-urlencoded
@@ -37,7 +36,7 @@ app.use(bodyParser.urlencoded({ limit: "200mb", extended: true }));
 const tunnel = require("tunnel-ssh");
 const sshTunnelConfig = {
   keepAlive: true,
-  host: 'freeedm.top',
+  host: '43.142.47.221',
   port: 22,
   dstHost: 'localhost',
   dstPort: '27017',
@@ -82,7 +81,7 @@ db.once("open", () => {
 // Config REST Routes
 // simple route for test
 app.get("/", (req, res) => {
-  res.json({message: "Welcome to rhomis_dashboard_api application."})
+  res.json({message: "Welcome to RHoMIS_Dashboard API application."})
 });
 
 // Define routes
@@ -92,7 +91,8 @@ require("./app/routes/projectData.routes")(app);
 
 
 // Set port, Listen for requests
-const PORT = process.env.PORT || 8080;
+// Port in environment variables will take precedence
+const PORT = process.env.PORT || configPort;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}.`);
 });
