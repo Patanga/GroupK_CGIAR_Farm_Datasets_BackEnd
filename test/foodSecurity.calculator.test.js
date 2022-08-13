@@ -1,5 +1,5 @@
 const assert = require("assert");
-const dt = require("../data_test/data_test.js");
+const dt = require("../test_data/test_data.js");
 const dataList = dt.dataList;
 const foodSecProcessor = require("../app/data_processors/foodSecurity.processor.js");
 const foodSecCalculator = require("../app/data_calculators/foodSecurity.calculator.js");

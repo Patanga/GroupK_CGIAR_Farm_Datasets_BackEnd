@@ -1,5 +1,5 @@
 const assert = require("assert");
-const dt = require("../data_test/data_test.js");
+const dt = require("../test_data/test_data.js");
 const index = require("../app/data_processors/all.index");
 const liveProcessor = require("../app/data_processors/livelihoods.processor");
 
