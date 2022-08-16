@@ -111,8 +111,7 @@ valueConvert = function (doc, keyName) {
   const mae = parseFloat(doc.hh_size_mae)
   const rate = parseFloat(doc.currency_conversion_lcu_to_ppp)
   if (!doc.hasOwnProperty(keyName)) {
-    console.log('Invalid record for valueConvert, missing' + keyName + ' as property'
-      + 'id_unique: ' + doc.id_unique)
+    //console.log('Invalid record for valueConvert, missing' + keyName + ' as property' + 'id_unique: ' + doc.id_unique)
     return 0
   }
   // Does it need illegal value like null check here?

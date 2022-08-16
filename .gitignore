@@ -1,6 +1,7 @@
 .idea/
 node_modules/
 data/
+.nyc_output/
 .env
 id_txserver
 test_wzj.js

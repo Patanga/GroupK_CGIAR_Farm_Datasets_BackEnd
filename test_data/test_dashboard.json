@@ -1,0 +1,9382 @@
+[{
+  "id_unique": "01a38d9dfc65f16aa9defa64abab0d3b",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Aug",
+    "Sep"
+  ],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1200,
+    0
+  ],
+  "api_consumed_sold2": [
+    "sorghum",
+    0,
+    300
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    1200
+  ],
+  "api_name_yield2": [
+    "sorghum",
+    600
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 1.5,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      3
+    ],
+    [
+      "sheep",
+      5
+    ],
+    [
+      "goats",
+      5
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      15
+    ],
+    [
+      "otherpoultry",
+      13
+    ],
+    [
+      "rabbits",
+      2
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    1,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "022cc1e76da47b71fe9c8074016781dc",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun"
+  ],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 4,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1800,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    1800
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 4,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      30
+    ],
+    [
+      "sheep",
+      20
+    ],
+    [
+      "goats",
+      15
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      44
+    ],
+    [
+      "otherpoultry",
+      56
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    1,
+    1
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "underhalf",
+  "api_off_farm_months": [
+    "jan",
+    "feb"
+  ],
+  "api_off_farm_activities": [
+    "otherfarms"
+  ],
+  "api_off_farm_spending": [
+    "possessions",
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "0cad497fdb56c3dccbd5f4529ebecf1e",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 8,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "groundnut",
+    "cowpea",
+    "rice",
+    "sesame",
+    "vegetables",
+    "potato"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    20000
+  ],
+  "api_consumed_sold2": [
+    "maize",
+    21000,
+    15000
+  ],
+  "api_consumed_sold3": [
+    "rice",
+    2000,
+    0
+  ],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    20000
+  ],
+  "api_name_yield2": [
+    "maize",
+    30000
+  ],
+  "api_name_yield3": [
+    "rice",
+    2000
+  ],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 31,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      32
+    ],
+    [
+      "goats",
+      25
+    ],
+    [
+      "pigs",
+      25
+    ],
+    [
+      "chicken",
+      23
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    1
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "0ccb14dd3c0262f22a30120f5e65b721",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jan",
+    "Dec"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes",
+    "eggs"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1700,
+    680
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    3400
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 3,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "1223a86e2aa69face0f23b79234e15f6",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "fruits",
+    "meat",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "vegetables",
+    "nuts_seeds"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "rice"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    450,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    450
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 3,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      2
+    ],
+    [
+      "goats",
+      16
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "125dc07885257c33dd33cb9639352236",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 7,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    8000
+  ],
+  "api_consumed_sold2": [
+    "maize",
+    10000,
+    0
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    8000
+  ],
+  "api_name_yield2": [
+    "maize",
+    10000
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 10,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      10
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      10
+    ],
+    [
+      "pigs",
+      12
+    ],
+    [
+      "chicken",
+      30
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "15d84fcb81b90a91069766de45dff354",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 9,
+  "api_hdds_lean": 4,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables",
+    "meat"
+  ],
+  "api_crops_all": [
+    "sorghum",
+    "groundnut"
+  ],
+  "api_consumed_sold1": [
+    "groundnut",
+    300,
+    120
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "groundnut",
+    600
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 2,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      25
+    ],
+    [
+      "sheep",
+      6
+    ],
+    [
+      "goats",
+      6
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      7
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "most",
+  "api_off_farm_months": [
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "oct",
+    "nov",
+    "dec"
+  ],
+  "api_off_farm_activities": [
+    "localbusiness"
+  ],
+  "api_off_farm_spending": [
+    "food",
+    "possessions",
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "16759afae49a361768a39008540ffd83",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun",
+    "Jul"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "maize",
+    "millet",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    700,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    700
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 3,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      3
+    ],
+    [
+      "sheep",
+      10
+    ],
+    [
+      "goats",
+      20
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      2
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "16ec2ccb06a4489041e17d84a39777c6",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun",
+    "Jul"
+  ],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "sorghum",
+    "groundnut",
+    "cowpea",
+    "other1"
+  ],
+  "api_consumed_sold1": [
+    "groundnut",
+    70,
+    20
+  ],
+  "api_consumed_sold2": [
+    "cowpea",
+    90,
+    0
+  ],
+  "api_consumed_sold3": [
+    "cowpea",
+    90,
+    0
+  ],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "groundnut",
+    100
+  ],
+  "api_name_yield2": [
+    "cowpea",
+    90
+  ],
+  "api_name_yield3": [
+    "cowpea",
+    90
+  ],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 2,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "underhalf",
+  "api_off_farm_months": [
+    "jan",
+    "feb"
+  ],
+  "api_off_farm_activities": [
+    "otherfarms"
+  ],
+  "api_off_farm_spending": [
+    "possessions",
+    "invest_people"
+  ]
+},{
+  "id_unique": "1b98d868df6fe952468f072df84884b8",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 9,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    24000
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    24000
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 55,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      12
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      14
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      30
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "1c5196e68336e1960f996c27ab740b03",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jan",
+    "Feb",
+    "Dec"
+  ],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "legumes",
+    "nuts_seeds",
+    "eggs"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea",
+    "sesame",
+    "rosselle_sorrel"
+  ],
+  "api_consumed_sold1": [
+    "sorghum",
+    700,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "sorghum",
+    700
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 3,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "1d9af279f706d55c9f1828e81095aa74",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jan",
+    "Dec"
+  ],
+  "api_hdds_flush": 2,
+  "api_hdds_lean": 0,
+  "api_food_flush": [
+    "legumes",
+    "vegetables"
+  ],
+  "api_food_lean": [],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    1000
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    1000
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 8,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      9
+    ],
+    [
+      "sheep",
+      4
+    ],
+    [
+      "goats",
+      4
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "1eeb7943b7f7e42dca87d5008ee119b7",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Aug"
+  ],
+  "api_hdds_flush": 3,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "legumes",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_food_lean": [
+    "legumes"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "groundnut"
+  ],
+  "api_consumed_sold1": [],
+  "api_consumed_sold2": [
+    "sorghum",
+    80,
+    200
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [],
+  "api_name_yield2": [
+    "sorghum",
+    400
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 3,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      16
+    ],
+    [
+      "sheep",
+      100
+    ],
+    [
+      "goats",
+      3
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "underhalf",
+  "api_off_farm_months": [
+    "jun",
+    "jul",
+    "aug"
+  ],
+  "api_off_farm_activities": [
+    "remittances"
+  ],
+  "api_off_farm_spending": [
+    "possessions"
+  ]
+},{
+  "id_unique": "29968ba9a9d595af40db7ebe8cfaa113",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Dec"
+  ],
+  "api_hdds_flush": 2,
+  "api_hdds_lean": 0,
+  "api_food_flush": [
+    "nuts_seeds",
+    "vegetables"
+  ],
+  "api_food_lean": [],
+  "api_crops_all": [
+    "sorghum",
+    "soy"
+  ],
+  "api_consumed_sold1": [],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 0.25,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "half",
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [
+    "other"
+  ],
+  "api_off_farm_spending": [
+    "food"
+  ]
+},{
+  "id_unique": "2bedfa653713a7eb7fcbcb2b6d3043c4",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    0,
+    0
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Mar",
+    "Apr"
+  ],
+  "api_hdds_flush": 5,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "milk_dairy"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    3300,
+    0
+  ],
+  "api_consumed_sold2": [
+    "cowpea",
+    210,
+    30
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    3300
+  ],
+  "api_name_yield2": [
+    "cowpea",
+    300
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 3,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      30
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    1,
+    1
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "2fbcc32c97219891bf68114bc4856a73",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun",
+    "Jul"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "millet",
+    "soy"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    2800,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    2800
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 8,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      3
+    ],
+    [
+      "sheep",
+      1
+    ],
+    [
+      "goats",
+      4
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      5
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "323e6100ec88873f2e6f175dafad9f74",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 5,
+  "api_hdds_lean": 0,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "vegetables",
+    "meat"
+  ],
+  "api_food_lean": [],
+  "api_crops_all": [
+    "sorghum",
+    "soy"
+  ],
+  "api_consumed_sold1": [],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": null,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "384fd2b7825117592f1a5c57838a4566",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    0,
+    0
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct"
+  ],
+  "api_hdds_flush": 2,
+  "api_hdds_lean": 0,
+  "api_food_flush": [
+    "nuts_seeds",
+    "vegetables"
+  ],
+  "api_food_lean": [],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": null,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "underhalf",
+  "api_off_farm_months": [
+    "aug",
+    "sep",
+    "oct"
+  ],
+  "api_off_farm_activities": [
+    "other"
+  ],
+  "api_off_farm_spending": [
+    "food",
+    "invest_people"
+  ]
+},{
+  "id_unique": "3bd26f87f1dbf5c9378029302f7f40fe",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "vegetables",
+    "fruits",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "groundnut",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    600,
+    4200
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    6000
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 15,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      8
+    ],
+    [
+      "sheep",
+      6
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      20
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "3bf89711fb7e4d571c1c553d0261af69",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 5,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "millet"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    3000
+  ],
+  "api_consumed_sold2": [
+    "sorghum",
+    140,
+    490
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    3000
+  ],
+  "api_name_yield2": [
+    "sorghum",
+    700
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 10,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      5
+    ],
+    [
+      "sheep",
+      16
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      2
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    1
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "41ad09a7dd1b131fda75b57c9d2a8859",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea",
+    "rice",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    8000
+  ],
+  "api_consumed_sold2": [
+    "maize",
+    4600,
+    0
+  ],
+  "api_consumed_sold3": [
+    "groundnut",
+    0,
+    700
+  ],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    8000
+  ],
+  "api_name_yield2": [
+    "maize",
+    4600
+  ],
+  "api_name_yield3": [
+    "groundnut",
+    700
+  ],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 20,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      10
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      5
+    ],
+    [
+      "pigs",
+      15
+    ],
+    [
+      "chicken",
+      20
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "45332811cbd03d5c26b0016a5bb51d98",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.35,
+    -3.12
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun"
+  ],
+  "api_hdds_flush": 9,
+  "api_hdds_lean": 4,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    14000,
+    2000
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    20000
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 20,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      10
+    ],
+    [
+      "sheep",
+      10
+    ],
+    [
+      "goats",
+      15
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      20
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "487bc6169d834767d7b41555fc900136",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "food_secure",
+  "api_food_shortage_months": [
+    "Jan",
+    "Dec"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "meat"
+  ],
+  "api_food_lean": [
+    "legumes"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "millet",
+    "groundnut",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1260,
+    180
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    1800
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 4,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "most",
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [
+    "remittances"
+  ],
+  "api_off_farm_spending": [
+    "possessions",
+    "invest_people"
+  ]
+},{
+  "id_unique": "4a09a2432fe041932d4df7d6556e532f",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 9,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    5740
+  ],
+  "api_consumed_sold2": [
+    "groundnut",
+    300,
+    0
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    5740
+  ],
+  "api_name_yield2": [
+    "groundnut",
+    300
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 21,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      4
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "4f60c11233a08edff1f7e47fc994db33",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 4,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables",
+    "meat"
+  ],
+  "api_crops_all": [
+    "sorghum",
+    "millet",
+    "groundnut",
+    "vegetables"
+  ],
+  "api_consumed_sold1": [
+    "millet",
+    675,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "millet",
+    675
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 6,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      2
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      2
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "5647f0c42a084b40ae718cff688e4e27",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jan",
+    "Dec"
+  ],
+  "api_hdds_flush": 4,
+  "api_hdds_lean": 0,
+  "api_food_flush": [
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_food_lean": [],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "millet",
+    "groundnut",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1950,
+    2730
+  ],
+  "api_consumed_sold2": [
+    "sesame",
+    0,
+    100
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    3900
+  ],
+  "api_name_yield2": [
+    "sesame",
+    100
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 16,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      6
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      7
+    ],
+    [
+      "pigs",
+      5
+    ],
+    [
+      "chicken",
+      12
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "5af949c7d22bb17e8a73d4f3d5cccb2b",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct"
+  ],
+  "api_hdds_flush": 3,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "nuts_seeds",
+    "vegetables"
+  ],
+  "api_food_lean": [
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "sorghum"
+  ],
+  "api_consumed_sold1": [
+    "sorghum",
+    1575,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "sorghum",
+    1575
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 5,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      1
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      2
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "5c5abe213751682d384dd70020bbe42b",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 5,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "vegetables",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1200,
+    3000
+  ],
+  "api_consumed_sold2": [
+    "sesame",
+    0,
+    1000
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    6000
+  ],
+  "api_name_yield2": [
+    "sesame",
+    1000
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 10,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      2
+    ],
+    [
+      "pigs",
+      5
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "6058b1eea3d0f01590f62e6c20eec2bc",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.35,
+    -3.12
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 4,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "meat"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables",
+    "meat"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea",
+    "rice"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    13000
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    13000
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 30,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      20
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      5
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      40
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "616fc521359d08b5de2772db7d8b80f0",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Aug",
+    "Sep"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "millet"
+  ],
+  "api_consumed_sold1": [
+    "millet",
+    675,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "millet",
+    675
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": null,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      300
+    ],
+    [
+      "goats",
+      300
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      15
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      2
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    1,
+    1
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "73c16cff7ac4648cd8f9fb6e6e60b4d5",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jan",
+    "Dec"
+  ],
+  "api_hdds_flush": 2,
+  "api_hdds_lean": 0,
+  "api_food_flush": [
+    "legumes",
+    "vegetables"
+  ],
+  "api_food_lean": [],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "millet"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1000,
+    3500
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    5000
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 12,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      10
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      20
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "7710a877e0235b28ebc47b4989a24c33",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "mildly_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 3,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "legumes",
+    "vegetables",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "legumes"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "millet",
+    "groundnut",
+    "cowpea",
+    "pigeon_pea",
+    "sesame",
+    "soy"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1500,
+    0
+  ],
+  "api_consumed_sold2": [
+    "cowpea",
+    20,
+    70
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    1500
+  ],
+  "api_name_yield2": [
+    "cowpea",
+    100
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 5,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      2
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      10
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "all",
+  "api_off_farm_months": [
+    "oct",
+    "nov"
+  ],
+  "api_off_farm_activities": [
+    "otherfarms"
+  ],
+  "api_off_farm_spending": [
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "7850427a9d524e82a54e4a589e08c5f0",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 6,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "sesame",
+    "soy"
+  ],
+  "api_consumed_sold1": [],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 28,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      15
+    ],
+    [
+      "sheep",
+      36
+    ],
+    [
+      "goats",
+      11
+    ],
+    [
+      "pigs",
+      3
+    ],
+    [
+      "chicken",
+      99
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "little",
+  "api_off_farm_months": [
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "nov",
+    "dec"
+  ],
+  "api_off_farm_activities": [
+    "localbusiness"
+  ],
+  "api_off_farm_spending": [
+    "possessions",
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "7b9e488737d1615837ac97ba2ef83aeb",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep"
+  ],
+  "api_hdds_flush": 4,
+  "api_hdds_lean": 0,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_food_lean": [],
+  "api_crops_all": [
+    "sorghum"
+  ],
+  "api_consumed_sold1": [
+    "sorghum",
+    385,
+    110
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "sorghum",
+    550
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 1.5,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "84f9cd295f96229a615d439ef56c797a",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 5,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "meat"
+  ],
+  "api_food_lean": [
+    "nuts_seeds"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    740,
+    2590
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    3700
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 3,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      5
+    ],
+    [
+      "sheep",
+      12
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "underhalf",
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [
+    "otherfarms"
+  ],
+  "api_off_farm_spending": [
+    "possessions",
+    "invest_farm"
+  ]
+},{
+  "id_unique": "85d88f124318ea38b2c474dd53249947",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Aug",
+    "Sep"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "legumes"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "cowpea",
+    "soy"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    7000
+  ],
+  "api_consumed_sold2": [
+    "maize",
+    4000,
+    1600
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    7000
+  ],
+  "api_name_yield2": [
+    "maize",
+    8000
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 20,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      18
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      8
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    1
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "88fd304a5766515e48c8451d19d68ae3",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1100,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    1100
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 4,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      2
+    ],
+    [
+      "sheep",
+      4
+    ],
+    [
+      "goats",
+      6
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "8f749f035421184b93ad919fb14cd6e6",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 9,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "groundnut"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    8000
+  ],
+  "api_consumed_sold2": [
+    "maize",
+    7000,
+    0
+  ],
+  "api_consumed_sold3": [
+    "groundnut",
+    80,
+    280
+  ],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    8000
+  ],
+  "api_name_yield2": [
+    "maize",
+    7000
+  ],
+  "api_name_yield3": [
+    "groundnut",
+    400
+  ],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 16,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      5
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      3
+    ],
+    [
+      "pigs",
+      2
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "9653b961474dbe1de58cdb7551bc0c66",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    2500,
+    0
+  ],
+  "api_consumed_sold2": [
+    "sorghum",
+    0,
+    800
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    2500
+  ],
+  "api_name_yield2": [
+    "sorghum",
+    800
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 13,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      7
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "993df6476fae439ba2492585ef0a6bd8",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Aug",
+    "Sep"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 4,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    800,
+    0
+  ],
+  "api_consumed_sold2": [
+    "sorghum",
+    1200,
+    0
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    800
+  ],
+  "api_name_yield2": [
+    "sorghum",
+    1200
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 4,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      5
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "most",
+  "api_off_farm_months": [
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "may"
+  ],
+  "api_off_farm_activities": [
+    "otherfarms"
+  ],
+  "api_off_farm_spending": [
+    "food",
+    "possessions",
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "9fe912605ba9d374f03cd53c1bc3641b",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun",
+    "Jul"
+  ],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 4,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    7000
+  ],
+  "api_consumed_sold2": [
+    "maize",
+    4000,
+    0
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    7000
+  ],
+  "api_name_yield2": [
+    "maize",
+    4000
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 16,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      10
+    ],
+    [
+      "sheep",
+      4
+    ],
+    [
+      "goats",
+      9
+    ],
+    [
+      "pigs",
+      5
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      2
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "a02f6f812e9b5a5150d30e79c88b005f",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 3,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "vegetables"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea",
+    "pigeon_pea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1150,
+    460
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    2300
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 7,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      1
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "a419558a6091a8794f07c3f78b5a9832",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    0,
+    0
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jul",
+    "Aug",
+    "Sep"
+  ],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "cowpea",
+    "vegetables"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    600,
+    0
+  ],
+  "api_consumed_sold2": [
+    "sorghum",
+    100,
+    350
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    600
+  ],
+  "api_name_yield2": [
+    "sorghum",
+    500
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 2.5,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      25
+    ],
+    [
+      "sheep",
+      10
+    ],
+    [
+      "goats",
+      12
+    ],
+    [
+      "pigs",
+      11
+    ],
+    [
+      "chicken",
+      40
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      2
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "a7145d875dbb25fb0c858df8104c21b7",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Aug",
+    "Sep"
+  ],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    7550
+  ],
+  "api_consumed_sold2": [
+    "maize",
+    1400,
+    4900
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    7550
+  ],
+  "api_name_yield2": [
+    "maize",
+    7000
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 17,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      6
+    ],
+    [
+      "sheep",
+      2
+    ],
+    [
+      "goats",
+      1
+    ],
+    [
+      "pigs",
+      3
+    ],
+    [
+      "chicken",
+      15
+    ],
+    [
+      "otherpoultry",
+      2
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "c271d5e72c2e9f1348746ed7e9019fde",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "mildly_fi",
+  "api_food_shortage_months": [
+    "Apr",
+    "May",
+    "Jun"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "sorghum",
+    "groundnut",
+    "soy",
+    "other1"
+  ],
+  "api_consumed_sold1": [
+    "groundnut",
+    105,
+    30
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "groundnut",
+    150
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 1.5,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      3
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      2
+    ],
+    [
+      "pigs",
+      4
+    ],
+    [
+      "chicken",
+      15
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    1
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "most",
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [
+    "ownbusiness"
+  ],
+  "api_off_farm_spending": [
+    "possessions",
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "c45594dc8f117923f9c3a37b7849ed9f",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    0,
+    0
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Mar",
+    "Apr"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    500,
+    1750
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    2500
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 12,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      1
+    ],
+    [
+      "goats",
+      2
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "underhalf",
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [
+    "otherfarms"
+  ],
+  "api_off_farm_spending": [
+    "invest_farm"
+  ]
+},{
+  "id_unique": "ce41c385c80fb25ca4951d3f6fa161ea",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "mildly_fi",
+  "api_food_shortage_months": [],
+  "api_hdds_flush": 10,
+  "api_hdds_lean": 10,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "nuts_seeds",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "nuts_seeds",
+    "eggs"
+  ],
+  "api_crops_all": [
+    "millet",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "millet",
+    300,
+    0
+  ],
+  "api_consumed_sold2": [
+    "cowpea",
+    100,
+    0
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "millet",
+    300
+  ],
+  "api_name_yield2": [
+    "cowpea",
+    100
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 1.25,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      5
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      32
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      2
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "most",
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [
+    "gov_institution"
+  ],
+  "api_off_farm_spending": [
+    "food",
+    "possessions",
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "d066a47ab31c6f2f1c21822142d3cc9d",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 9,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1500,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    1500
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 6,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      15
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "d1c17756e862736cfdca002f6305b319",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun"
+  ],
+  "api_hdds_flush": 4,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "vegetables"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "millet",
+    "groundnut",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    3000
+  ],
+  "api_consumed_sold2": [
+    "sorghum",
+    300,
+    1050
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    3000
+  ],
+  "api_name_yield2": [
+    "sorghum",
+    1500
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 15,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      8
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      11
+    ],
+    [
+      "pigs",
+      5
+    ],
+    [
+      "chicken",
+      20
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "d2c4d2dcbb43e763fae4982b3651c093",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Aug"
+  ],
+  "api_hdds_flush": 9,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "millet",
+    "groundnut",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    840,
+    120
+  ],
+  "api_consumed_sold2": [
+    "sorghum",
+    560,
+    80
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    1200
+  ],
+  "api_name_yield2": [
+    "sorghum",
+    800
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 3,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      12
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "dd0c939d0cdf5311e469b835df5684a8",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 4,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "legumes",
+    "nuts_seeds",
+    "vegetables",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "legumes"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    5950,
+    1700
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    8500
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 20,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      7
+    ],
+    [
+      "sheep",
+      6
+    ],
+    [
+      "goats",
+      9
+    ],
+    [
+      "pigs",
+      2
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "e08ddb1d746fe0c1090db33f12b326a4",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jan",
+    "Dec"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 0,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "vegetables",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "sorghum",
+    600,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "sorghum",
+    600
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 1.5,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "e0c3f672566c9cd28c142e814423d5e1",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    0,
+    0
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 5,
+  "api_hdds_lean": 1,
+  "api_food_flush": [
+    "legumes",
+    "nuts_seeds",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat"
+  ],
+  "api_food_lean": [
+    "legumes"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea",
+    "soy"
+  ],
+  "api_consumed_sold1": [],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 6,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      6
+    ],
+    [
+      "sheep",
+      4
+    ],
+    [
+      "goats",
+      2
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "underhalf",
+  "api_off_farm_months": [
+    "jun",
+    "jul",
+    "aug",
+    "oct"
+  ],
+  "api_off_farm_activities": [
+    "remittances"
+  ],
+  "api_off_farm_spending": [
+    "possessions",
+    "invest_farm"
+  ]
+},{
+  "id_unique": "e2863e663e2392a1084394a897a4199c",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "mildly_fi",
+  "api_food_shortage_months": [
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul"
+  ],
+  "api_hdds_flush": 9,
+  "api_hdds_lean": 6,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_crops_all": [],
+  "api_consumed_sold1": [],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": null,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      10
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "all",
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [
+    "gov_institution"
+  ],
+  "api_off_farm_spending": [
+    "food",
+    "possessions",
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "e696f762ccda7752e3ea5575c24a2119",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "sorghum",
+    "millet",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "sorghum",
+    675,
+    0
+  ],
+  "api_consumed_sold2": [
+    "millet",
+    450,
+    0
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "sorghum",
+    675
+  ],
+  "api_name_yield2": [
+    "millet",
+    450
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 3.5,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      2
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      20
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "underhalf",
+  "api_off_farm_months": [
+    "jan",
+    "feb",
+    "mar",
+    "aug",
+    "sep",
+    "oct"
+  ],
+  "api_off_farm_activities": [
+    "otherfarms"
+  ],
+  "api_off_farm_spending": [
+    "food",
+    "possessions",
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "e70057de6427f966f643258f319845a8",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jan",
+    "Feb",
+    "Dec"
+  ],
+  "api_hdds_flush": 3,
+  "api_hdds_lean": 0,
+  "api_food_flush": [
+    "nuts_seeds",
+    "vita_veg_fruit",
+    "vegetables"
+  ],
+  "api_food_lean": [],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    5600,
+    1600
+  ],
+  "api_consumed_sold2": [
+    "sorghum",
+    0,
+    900
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    8000
+  ],
+  "api_name_yield2": [
+    "sorghum",
+    1000
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 15,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      11
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "e80b1b259f96fbf97b8afd11d2220e70",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 2,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "legumes",
+    "vegetables"
+  ],
+  "api_food_lean": [
+    "vegetables",
+    "nuts_seeds"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "cowpea",
+    "soy"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    2450,
+    700
+  ],
+  "api_consumed_sold2": [
+    "sorghum",
+    0,
+    600
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    3500
+  ],
+  "api_name_yield2": [
+    "sorghum",
+    600
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 6,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      1
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      4
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      10
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "ebfc0084440267b1d7cc7436b779794d",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    0,
+    0
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "food_secure",
+  "api_food_shortage_months": [
+    "Aug"
+  ],
+  "api_hdds_flush": 9,
+  "api_hdds_lean": 5,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "fruits",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vegetables",
+    "meat"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sorghum",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    1300,
+    4550
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    6500
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 17,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      7
+    ],
+    [
+      "sheep",
+      2
+    ],
+    [
+      "goats",
+      1
+    ],
+    [
+      "pigs",
+      4
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "most",
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [
+    "other"
+  ],
+  "api_off_farm_spending": [
+    "food",
+    "possessions",
+    "invest_people"
+  ]
+},{
+  "id_unique": "edff658552e87254248943063bdc1fc6",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun",
+    "Jul"
+  ],
+  "api_hdds_flush": 4,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "vegetables",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "millet",
+    "groundnut",
+    "cowpea",
+    "rice",
+    "vegetables"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    5000
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    5000
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 11,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      4
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      2
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      20
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "half",
+  "api_off_farm_months": [
+    "jan",
+    "feb",
+    "mar",
+    "apr"
+  ],
+  "api_off_farm_activities": [
+    "otherfarms"
+  ],
+  "api_off_farm_spending": [
+    "food",
+    "possessions",
+    "invest_farm",
+    "invest_people"
+  ]
+},{
+  "id_unique": "ee2d381ccb7ffc821e7a9e030ec2c22b",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "Apr",
+    "May",
+    "Jun",
+    "Jul"
+  ],
+  "api_hdds_flush": 7,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "cowpea",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    8000
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    8000
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 8,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      8
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      3
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "f18f6115a35b29515e7e5bade3869890",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "nuts_seeds",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "meat",
+    "milk_dairy",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "maize",
+    "sweet_potato",
+    "vegetables"
+  ],
+  "api_consumed_sold1": [],
+  "api_consumed_sold2": [
+    "sweet_potato",
+    0,
+    5000
+  ],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [],
+  "api_name_yield2": [
+    "sweet_potato",
+    5000
+  ],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 6,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "f9071ee5403c9b0e4f58463bb12dee70",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jan",
+    "Feb",
+    "Dec"
+  ],
+  "api_hdds_flush": 8,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "fruits",
+    "meat",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "vita_veg_fruit",
+    "vegetables",
+    "eggs"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "millet",
+    "cowpea"
+  ],
+  "api_consumed_sold1": [
+    "maize",
+    3500,
+    0
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "maize",
+    3500
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 15,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": "underhalf",
+  "api_off_farm_months": [
+    "jan",
+    "may",
+    "dec"
+  ],
+  "api_off_farm_activities": [
+    "other"
+  ],
+  "api_off_farm_spending": [
+    "food",
+    "possessions",
+    "invest_people"
+  ]
+},{
+  "id_unique": "f910b449834548faa68130f37634e574",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.57,
+    -3.4
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jan",
+    "Dec"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 2,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "veg_leafy",
+    "vita_veg_fruit",
+    "vegetables",
+    "milk_dairy"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "sesame"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    6000
+  ],
+  "api_consumed_sold2": [
+    "maize",
+    2500,
+    0
+  ],
+  "api_consumed_sold3": [
+    "groundnut",
+    500,
+    0
+  ],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    6000
+  ],
+  "api_name_yield2": [
+    "maize",
+    5000
+  ],
+  "api_name_yield3": [
+    "groundnut",
+    500
+  ],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 15,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      15
+    ],
+    [
+      "sheep",
+      25
+    ],
+    [
+      "goats",
+      4
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      15
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    1
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "fa37d9c20ea9393fba8463b4643e43d3",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "moderately_fi",
+  "api_food_shortage_months": [
+    "Jun",
+    "Jul",
+    "Aug"
+  ],
+  "api_hdds_flush": 6,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "legumes",
+    "nuts_seeds",
+    "veg_leafy",
+    "vegetables",
+    "meat"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton",
+    "maize",
+    "sorghum",
+    "groundnut",
+    "cowpea",
+    "sesame",
+    "soy"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    120300
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    120300
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 15,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      5
+    ],
+    [
+      "sheep",
+      4
+    ],
+    [
+      "goats",
+      0
+    ],
+    [
+      "pigs",
+      2
+    ],
+    [
+      "chicken",
+      14
+    ],
+    [
+      "otherpoultry",
+      0
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      1
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+},{
+  "id_unique": "faa4e8ee7163544ce271b91d249176dc",
+  "id_country": "Burkina Faso",
+  "region": "hauts bassins",
+  "id_proj": "cir",
+  "id_form": "bf_cir_2018",
+  "api_tot_ppp_income_pd_pmae": 0,
+  "api_gps": [
+    11.45,
+    -3.23
+  ],
+  "api_mae": 0,
+  "api_currency_conversion": 198.7925,
+  "api_income_lstk_ppp_pd_pmae": 0,
+  "api_income_crop_ppp_pd_pmae": 0,
+  "api_income_offfarm_ppp_pd_pmae": 0,
+  "api_cons_lstk_ppp_pd_pmae": 0,
+  "api_cons_crop_ppp_pd_pmae": 0,
+  "api_hfias_status": "severely_fi",
+  "api_food_shortage_months": [
+    "May",
+    "Jun",
+    "Jul"
+  ],
+  "api_hdds_flush": 5,
+  "api_hdds_lean": 3,
+  "api_food_flush": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables",
+    "meat",
+    "eggs"
+  ],
+  "api_food_lean": [
+    "grainsrootstubers",
+    "veg_leafy",
+    "vegetables"
+  ],
+  "api_crops_all": [
+    "cotton"
+  ],
+  "api_consumed_sold1": [
+    "cotton",
+    0,
+    2000
+  ],
+  "api_consumed_sold2": [],
+  "api_consumed_sold3": [],
+  "api_consumed_sold4": [],
+  "api_consumed_sold5": [],
+  "api_consumed_sold6": [],
+  "api_consumed_sold7": [],
+  "api_consumed_sold8": [],
+  "api_name_yield1": [
+    "cotton",
+    2000
+  ],
+  "api_name_yield2": [],
+  "api_name_yield3": [],
+  "api_name_yield4": [],
+  "api_name_yield5": [],
+  "api_name_yield6": [],
+  "api_name_yield7": [],
+  "api_name_yield8": [],
+  "api_landArea": 2,
+  "api_livestocks_kept": [
+    [
+      "cattle",
+      0
+    ],
+    [
+      "sheep",
+      0
+    ],
+    [
+      "goats",
+      10
+    ],
+    [
+      "pigs",
+      0
+    ],
+    [
+      "chicken",
+      0
+    ],
+    [
+      "otherpoultry",
+      4
+    ],
+    [
+      "rabbits",
+      0
+    ],
+    [
+      "fish",
+      0
+    ],
+    [
+      "other_lstk",
+      0
+    ],
+    [
+      "other2_lstk",
+      0
+    ],
+    [
+      "other3_lstk",
+      0
+    ],
+    [
+      "donkeys_horses",
+      0
+    ],
+    [
+      "bees",
+      0
+    ]
+  ],
+  "api_meat_sold_consumed": [
+    0,
+    0
+  ],
+  "api_eggs_sold_consumed": [
+    0,
+    0
+  ],
+  "api_milk_sold_consumed": [
+    0,
+    0
+  ],
+  "api_breed_improved": [],
+  "api_off_farm_propotion": null,
+  "api_off_farm_months": [],
+  "api_off_farm_activities": [],
+  "api_off_farm_spending": []
+}]
