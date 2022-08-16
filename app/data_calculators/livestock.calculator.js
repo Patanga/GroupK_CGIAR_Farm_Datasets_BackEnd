@@ -112,11 +112,11 @@ exports.buildUseData = (dataForAPIList) => {
 //
 exports.buildBreedsData = (dataForAPIList) => {
   let result = count(dataForAPIList, "Breeds");
-  var sum = 0
+  let sum = 0
   result.map(doc=>{
     sum=sum + doc[1]
   })
-  if(sum==0){
+  if(sum === 0){
     return [
       [
           "No Breeds Count",

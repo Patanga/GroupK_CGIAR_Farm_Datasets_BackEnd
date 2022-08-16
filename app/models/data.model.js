@@ -1,5 +1,6 @@
 let mongoose = require("mongoose");
 
+//Define a schema
 let Schema = mongoose.Schema;
 
 let dataSchema = new Schema(
