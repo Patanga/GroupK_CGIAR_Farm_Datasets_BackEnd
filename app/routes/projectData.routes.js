@@ -9,5 +9,5 @@ module.exports = app => {
   router.get("/", projectData.findByProID);
 
 
-  app.use("/api/project-data", router);
+  app.use("/api/project_data", router);
 }

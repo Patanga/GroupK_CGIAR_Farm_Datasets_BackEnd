@@ -1,6 +1,7 @@
-.env
 .idea/
 node_modules/
 data/
+.env
 id_txserver
+test_wzj.js
 .DS_Store
