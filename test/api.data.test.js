@@ -43,8 +43,11 @@ describe("Get Data_API Data", () => {
         console.log("Deleting collection \'data\' failed.")
         console.log(err);
       }
+      done();
     });
+  });
 
+  before(function (done) {
     //console.log(testCase);
     data.insertMany(testCase, (err,doc) => {
       if (err) {
