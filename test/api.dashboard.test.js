@@ -60,7 +60,7 @@ describe("Get Dashboard_API Data", () => {
           obj => obj["id_unique"] === "0cad497fdb56c3dccbd5f4529ebecf1e"
         );
         assert.equal(result.length, 1);
-        assert.equal(result[0]["api_hfias_status"], "moderately_fii");
+        assert.equal(result[0]["api_hfias_status"], "moderately_fi");
 
         done();
       });
