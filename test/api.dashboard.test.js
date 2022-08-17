@@ -67,18 +67,3 @@ describe("Get Dashboard_API Data", () => {
   });
 
 });
-
-
-
-
-
-
-
-{/*
-describe("PROCESS DATA ROUTE", function () {
-  it("Works", async function () {
-      let result = await data.getIndicatorData();
-      console.log(result);
-  })
-})
-//*/}
