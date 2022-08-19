@@ -1,0 +1,40 @@
+# 
+
+name: Deploy on production env CD
+
+on: 
+  workflow_run:
+    workflows: [Test Node.js CI]
+    branches: 
+      - release
+    types: 
+      - completed
+    
+jobs:
+  deploy:
+    # `if` required because a workflow run is triggered regardless of
+    # the result of the previous workflow (see the documentation page)
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    # ... your implementation to deploy your project
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Deploying API server code to production server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+          script: |
+            cd "/home/zhijun/github/GroupK_CGIAR_Farm_Datasets_BackEnd/"
+            pm2 stop server
+            pm2 delete server
+            echo -n "Try to restart API server at: " >> .deployment_log
+            echo $(date +%F%n%T) >> .deployment_log
+            git fetch
+            git pull
+            npm install
+            npm run prod
+            cat .deployment_log
