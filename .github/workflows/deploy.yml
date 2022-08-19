@@ -23,10 +23,10 @@ jobs:
       - name: Deploying API server code to production server
         uses: appleboy/ssh-action@master
         with:
-          host: 43.142.47.221
-          USERNAME: zhijun
-          PORT: 22
-          password: Zhijun@GROUPK
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          password: ${{ secrets.PASSWORD }}
           script: |
             cd "/home/zhijun/github/GroupK_CGIAR_Farm_Datasets_BackEnd/"
             pm2 stop server
