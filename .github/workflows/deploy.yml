@@ -25,7 +25,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
+          PORT: 22
           KEY: ${{ secrets.SSHKEY }}
           script: |
             cd "/home/zhijun/github/GroupK_CGIAR_Farm_Datasets_BackEnd/"
