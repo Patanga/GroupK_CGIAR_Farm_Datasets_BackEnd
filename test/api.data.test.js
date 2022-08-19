@@ -16,7 +16,7 @@ const testData = require("../test_data/test_data");
 const testCase = [...testData.indicatorDataList, ...testData.processedDataList];
 
 
-// Testing whether the server can start
+// Testing whether the server can start.
 describe("API ROUTE", () => {
   it("Works", (done) => {
     chai.request(apiUrl)
