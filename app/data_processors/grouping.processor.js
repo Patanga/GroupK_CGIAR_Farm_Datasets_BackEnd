@@ -83,6 +83,7 @@ const getCountry = (dataObj) => {
 
   return {id_country: country};
 };
+exports.getCountry = getCountry; // export for test
 
 const getRegion = (dataObj) => {
   let region = "others";
@@ -95,3 +96,4 @@ const getRegion = (dataObj) => {
 
   return {region: region};
 };
+exports.getRegion = getRegion; // export for test

@@ -1,11 +1,14 @@
 {
   "name": "rhomis_dashboard_api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An API for RHoMIS Dashboard",
+  "main": "server.js",
   "scripts": {
-    "test": "mocha --timeout 30000 --exit",
-    "dev": "nodemon server.js"
+    "dev": "cross-env NODE_ENV=dev nodemon server.js",
+    "prod": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/pm2 start ./server.js",
+    "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --recursive",
+    "test-coverage": "cross-env NODE_ENV=test nyc --report=text ./node_modules/.bin/mocha --recursive",
+    "test-api": "cross-env NODE_ENV=test ./node_modules/.bin/mocha"
   },
   "keywords": [],
   "author": "",
@@ -14,14 +17,18 @@
     "body-parser": "^1.20.0",
     "config": "^3.3.6",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.18.1",
-    "mongoose": "^6.3.5"
+    "mongoose": "^6.3.5",
+    "pm2": "^5.2.0"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
     "mocha": "^9.0.3",
     "nodemon": "^2.0.16",
-    "supertest": "^6.2.3",
+    "nyc": "^15.1.0",
     "tunnel-ssh": "^4.1.6"
   }
 }
