@@ -6,3 +6,4 @@ data/
 id_txserver
 test_wzj.js
 .DS_Store
+.deployment_log
