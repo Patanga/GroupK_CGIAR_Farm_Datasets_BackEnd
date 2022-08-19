@@ -73,7 +73,7 @@ describe("Get Data_API Data", () => {
           obj => obj["id_unique"] === "01a38d9dfc65f16aa9defa64abab0d3b"
         );
         assert.equal(result.length, 1);
-        assert.equal(result[0]["api_hfias_status"], "severely_fii");
+        assert.equal(result[0]["api_hfias_status"], "severely_fi");
 
         result = res.body.filter(
           obj => obj["id_unique"] === "0cad497fdb56c3dccbd5f4529ebecf1e"
