@@ -10,4 +10,4 @@ The front-end of this project is [GroupK_CGIAR_Farm_Datasets_FrontEnd](https://g
 [Installation](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_BackEnd/wiki/Installation-Guide) - 
 [API Reference](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_BackEnd/wiki/API-Reference) - 
 [Test](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_BackEnd/wiki/Test) - 
-[FAQ](https://github.com/onevcat/Kingfisher/wiki/FAQ)
+[FAQ](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_BackEnd/wiki/FAQ)
