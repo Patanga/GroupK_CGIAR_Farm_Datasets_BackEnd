@@ -1,8 +1,13 @@
 # GroupK_CGIAR_Farm_Datasets_BackEnd
-An API for querying the RHoMIS data-base.\
-Based on [RHoMIS 2.0 API](https://github.com/l-gorman/rhomis-api).\
+Welcome to the GroupK_Rhomis_Dashboard_API Wiki!  
+
+This is the API for querying the publicly available RHoMIS data, which can be found [here](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TFXQJN).
+
 The front-end of this project is [GroupK_CGIAR_Farm_Datasets_FrontEnd](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_FrontEnd.git).
 
-## Branches Diagram
-![](./resources/branches_diagram.png)
-
+#
+[Home](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_BackEnd/wiki) - 
+[Installation](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_BackEnd/wiki/Installation-Guide) - 
+[API Reference](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_BackEnd/wiki/API-Reference) - 
+[Test](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_BackEnd/wiki/Test) - 
+[FAQ](https://github.com/Patanga/GroupK_CGIAR_Farm_Datasets_BackEnd/wiki/FAQ)

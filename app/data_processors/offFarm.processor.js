@@ -1,0 +1,148 @@
+const group = require("./grouping.processor.js");
+
+const offfarm_month = [
+  "offfarm_month_1",
+  "offfarm_month_2",
+  "offfarm_month_3",
+  "offfarm_month_4",
+  "offfarm_month_5",
+  "offfarm_month_6",
+];
+
+let keysOfProcessed = [
+  "id_unique",
+
+  "offfarm_income_proportion",
+  "offfarm_incomes",
+  "spending_off_farm_income",
+];
+keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed,
+  offfarm_month);
+
+let keysOfIndicator = [
+  "id_unique"
+];
+
+
+// Define which original keys to be selected
+const keysOfSelect = {
+  indicator: keysOfIndicator,
+  processed: keysOfProcessed
+};
+exports.keysOfSelect = keysOfSelect;
+
+
+// Define which original keys to be omitted
+let keysOfOmit = [
+  "offfarm_income_proportion",
+  "offfarm_incomes",
+  "spending_off_farm_income",
+];
+keysOfOmit = keysOfOmit.concat(offfarm_month);
+exports.keysOfOmit = keysOfOmit;
+
+
+
+// Define how to transform original keys to API keys
+const getAPIKeys = (dataObj) => {
+  let newObj = {};
+  Object.assign( newObj, group.getAPIKeys(dataObj), getOffFarmMonth(dataObj),
+    getOffFarmActivity(dataObj), getOffFarmSpendPie(dataObj),getOffFarmPropotion(dataObj));
+  return newObj;
+};
+exports.getAPIKeys = getAPIKeys;
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*           Functions for getting offfarm income proportion                */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getOffFarmPropotion = (dataObj) => {
+  let proportion= dataObj.offfarm_income_proportion;
+  return { api_off_farm_propotion: proportion };
+};
+exports.getOffFarmPropotion = getOffFarmPropotion;
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*           Functions for getting offfarm way of spend data                */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getOffFarmSpendPie = (dataObj) => {
+  let pie= dataObj.spending_off_farm_income;
+  let result=[]
+  if(pie&&pie!="no_answer"&&pie!="null"){
+    const str=pie.split(" ")
+    for(var i=0;i<str.length;i++){
+      result.push(str[i]);
+    }
+  }
+  return { api_off_farm_spending: result };
+};
+exports.getOffFarmSpendPie = getOffFarmSpendPie;
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*           Functions for getting offfarm activities data                  */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getOffFarmActivity = (dataObj) => {
+  let act= dataObj.offfarm_incomes;
+  let result=[]
+  if(act&&!act.includes("(")&&act!="no_answer"&&act!="null"){
+    const acts=act.split(" ")
+    for(var i=0;i<acts.length;i++){
+      result.push(acts[i]);
+    }
+  }
+  return { api_off_farm_activities: result };
+};
+exports.getOffFarmActivity = getOffFarmActivity;
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+/*           Functions for getting offfarm month data                       */
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+const getOffFarmMonth = (dataObj) => {
+  const rset=new Set();
+  let m1= dataObj.offfarm_month_1;
+  let m2= dataObj.offfarm_month_2;
+  let m3= dataObj.offfarm_month_3;
+  let m4= dataObj.offfarm_month_4;
+  let m5= dataObj.offfarm_month_5;
+  let m6= dataObj.offfarm_month_6;
+  if(m1&&m1!="no_answer"){
+    var sm1=m1.split(" ");
+    for(var i=0;i<sm1.length;i++){
+      rset.add(sm1[i]);
+    }
+  }
+  if(m2&&m2!="no_answer"){
+    var sm2=m2.split(" ");
+    for(var i=0;i<sm2.length;i++){
+      rset.add(sm2[i]);
+    }
+  }
+  if(m3&&m3!="no_answer"){
+    var sm3=m3.split(" ");
+    for(var i=0;i<sm3.length;i++){
+      rset.add(sm3[i]);
+    }
+  }
+  if(m4&&m4!="no_answer"){
+    var sm4=m4.split(" ");
+    for(var i=0;i<sm4.length;i++){
+      rset.add(sm4[i]);
+    }
+  }
+  if(m5&&m5!="no_answer"){
+    var sm5=m5.split(" ");
+    for(var i=0;i<sm5.length;i++){
+      rset.add(sm5[i]);
+    }
+  }
+  if(m6&&m6!="no_answer"){
+    var sm6=m6.split(" ");
+    for(var i=0;i<sm6.length;i++){
+      rset.add(sm6[i]);
+    }
+  }
+  let result = [...rset];
+  
+  return { api_off_farm_months: result };
+};
+exports.getOffFarmMonth = getOffFarmMonth;
