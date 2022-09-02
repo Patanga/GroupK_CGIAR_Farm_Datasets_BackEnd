@@ -26,7 +26,7 @@ exports.buildOfffarmIncome=(dataForAPIList)=>{
         if(!pro_string){
             percent_change.zero++
         }
-        //将string转化为百分比
+
         if(pro_string==="all"){
             percent_change.all++
         }

@@ -3,8 +3,8 @@ const group = require("./grouping.processor.js");
 let keysOfProcessed = [
   "id_unique",
 
-  "gps_lat",//个人
-  "gps_lon",//个人
+  "gps_lat",
+  "gps_lon",
 ];
 keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed);
 

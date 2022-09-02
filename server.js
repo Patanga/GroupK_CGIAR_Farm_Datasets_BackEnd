@@ -23,35 +23,11 @@ app.use(cors(corsOption));
 
 
 // Config BodyParser
-// Ensuring that queries are not limited by size  ?? wzj
+// Ensuring that queries are not limited by size
 // parse requests of content-type - application/json
 app.use(bodyParser.json({ limit: "200mb" }));
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ limit: "200mb", extended: true }));
-
-
-
-{/*
-// 配置tunnel映射 wzj
-const tunnel = require("tunnel-ssh");
-const sshTunnelConfig = {
-  keepAlive: true,
-  host: '43.142.47.221',
-  port: 22,
-  dstHost: 'localhost',
-  dstPort: '27017',
-  localHost: '127.0.0.1',
-  localPort: '27017',
-  username: 'zhijun',
-  privateKey: require('fs').readFileSync('./id_txserver')
-};
-tunnel(sshTunnelConfig, (error, server) => {
-  if (error) {
-    console.log("SSH connection error: ", error);
-  }
-})
-//*/}
-
 
 
 // Config Mongoose
@@ -71,7 +47,7 @@ let connectWithRetry = function() {
 }
 connectWithRetry();
 
-// 监听数据库连接状态 wzj
+// Listening for database connection status
 const db = mongoose.connection;
 db.once("open", () => {
   console.log("Database connected:", dbHost);

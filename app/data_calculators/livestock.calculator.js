@@ -1,4 +1,4 @@
-// wzj
+
 const count = (dataForAPIList, countType) => {
   function insert(counter, treeNode) {
     if (treeNode === null) {

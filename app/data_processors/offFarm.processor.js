@@ -1,20 +1,20 @@
 const group = require("./grouping.processor.js");
 
 const offfarm_month = [
-  "offfarm_month_1",//个人
-  "offfarm_month_2",//个人
-  "offfarm_month_3",//个人
-  "offfarm_month_4",//个人
-  "offfarm_month_5",//个人
-  "offfarm_month_6",//个人
+  "offfarm_month_1",
+  "offfarm_month_2",
+  "offfarm_month_3",
+  "offfarm_month_4",
+  "offfarm_month_5",
+  "offfarm_month_6",
 ];
 
 let keysOfProcessed = [
   "id_unique",
 
-  "offfarm_income_proportion",//个人
-  "offfarm_incomes",//个人
-  "spending_off_farm_income",//个人
+  "offfarm_income_proportion",
+  "offfarm_incomes",
+  "spending_off_farm_income",
 ];
 keysOfProcessed = keysOfProcessed.concat(group.keysOfGroupingInProcessed,
   offfarm_month);
@@ -98,7 +98,7 @@ exports.getOffFarmActivity = getOffFarmActivity;
 /*           Functions for getting offfarm month data                       */
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 const getOffFarmMonth = (dataObj) => {
-  const rset=new Set();//做一个set，用于剔除重复的月份
+  const rset=new Set();
   let m1= dataObj.offfarm_month_1;
   let m2= dataObj.offfarm_month_2;
   let m3= dataObj.offfarm_month_3;

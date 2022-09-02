@@ -292,7 +292,7 @@ exports.getLivestockUse = getLivestockUse;
 
 
 function isNumber(val){
-  let regPos = /^[0-9]+.?[0-9]*/; //判断是否是数字。
+  let regPos = /^[0-9]+.?[0-9]*/;
   return regPos.test(val);
 }
 
